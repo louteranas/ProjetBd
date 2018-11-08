@@ -51,3 +51,6 @@ public class ReqParam {
         new ReqParam();
     }
 }
+
+//javac -d bin -classpath bin/ojdbc6.jar -sourcepath Documents Documents/Exemples-Java-et-SQL/ExemplesJava/ReqParam.java
+//java -classpath bin:bin/ojdbc6.jar Documents/Exemples-Java-et-SQL/ExemplesJava/ReqParam
