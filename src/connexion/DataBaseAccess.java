@@ -12,7 +12,7 @@ public class DataBaseAccess {
 	private String password;
 	private Connection conn;
 	
-	public DataBaseAccess(String user, String password) {
+	public DataBaseAccess() {
 		this.USER = setUser();
 		this.password = setPassword();
 		try {
@@ -40,8 +40,16 @@ public class DataBaseAccess {
 		return scan.nextLine();
 		
 	}
-		
+	
 	public String setPassword() {
+		@SuppressWarnings("resource")
+		Scanner scan = new Scanner(System.in);
+		System.out.print("veuillez entrez votre MDP");
+		return scan.nextLine();
+		
+	}
+	
+	public String setPasswordConsole() {
 		Console console = System.console();
         if (console == null) {
             System.out.println("Ce programme doit s'exécuter dans une console." );
@@ -61,6 +69,6 @@ public class DataBaseAccess {
 	public void closeConnection() throws SQLException {
 		this.conn.close();
 	}
+	
 		
 }
-

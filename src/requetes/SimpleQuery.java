@@ -7,9 +7,7 @@ import java.sql.SQLException;
 import connexion.DataBaseAccess;
 
 public class SimpleQuery extends Query {
-	protected DataBaseAccess data;
-	protected String requete;
-	
+
 	public SimpleQuery(DataBaseAccess data, String requete){
 		super(data, requete);	
 		try {
