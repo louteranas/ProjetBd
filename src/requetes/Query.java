@@ -8,6 +8,7 @@ import java.sql.SQLException;
 public abstract class Query {
 	protected DataBaseAccess data;
 	protected String requete;
+	protected ResultSet result;
 	
 	public Query(DataBaseAccess data, String requete){
 		this.data= data;
@@ -24,4 +25,8 @@ public abstract class Query {
 	    System.out.println();
         }
     }
+	
+	public ResultSet getResult() {
+		return this.result;
+	}
 }
