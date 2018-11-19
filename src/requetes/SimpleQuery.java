@@ -27,4 +27,5 @@ public class SimpleQuery extends Query {
 		
 		 
 	}
+	
 }
