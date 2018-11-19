@@ -24,7 +24,12 @@ public class SimpleQuery extends Query {
 	    // Fermeture 
 		//result.close();
 		//statement.close();
-		
-		 
+
 	}
+	public SimpleQuery getCategories () {
+		SimpleQuery categories = new SimpleQuery(data, "select * from categories");
+		return categories;
+	}
+
+	
 }
