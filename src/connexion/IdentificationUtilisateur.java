@@ -7,10 +7,11 @@ import requetes.*;
 
 public class IdentificationUtilisateur {
 	DataBaseAccess data;
+	String email;
 	
 	public IdentificationUtilisateur(DataBaseAccess data) throws SQLException {
 		this.data = data;
-		String email = this.getEmail();
+		this.email = this.getEmail();
 		String rechercheUtilisateur = "select nom from utilisateur where email ='" + email+"'";
 		try{
 			SimpleQuery requeteRecherche = new SimpleQuery(this.data, rechercheUtilisateur);
@@ -48,7 +49,8 @@ public class IdentificationUtilisateur {
 	}
 	
 	public void addUtilisateur(String email, String nom, String prenom, String addresse) throws SQLException {
-		String addUser = "INSERT INTO utilisateur VALUES ("+email+","+nom+","+prenom+","+addresse+");";
+		
+		String addUser = "insert into utilisateur values('"+email+"','"+nom+"','"+prenom+"','"+addresse+"')";
 		SimpleQuery add = new SimpleQuery(this.data, addUser);
 	}
 

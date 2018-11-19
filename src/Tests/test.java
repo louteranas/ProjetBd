@@ -10,7 +10,7 @@ public class test {
 	public static void main(String[] args){
 		try {
 		DataBaseAccess data = new DataBaseAccess();	
-		new IdentificationUtilisateur(data);
+		IdentificationUtilisateur user = new IdentificationUtilisateur(data);
 		//String requete = "select nom from utilisateur where email = 'truc@gmail.com'";
 		//SimpleQuery req = new SimpleQuery(data, requete);
 		}
