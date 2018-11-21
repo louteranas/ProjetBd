@@ -29,7 +29,6 @@ public class IdentificationUtilisateur {
 				System.out.println("Super !");
 				this.addUtilisateur(email, nom, prenom, addresse);
 				
-				
 			}
 			
 		}

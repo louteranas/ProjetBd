@@ -17,9 +17,9 @@ public class SimpleQuery extends Query {
 		this.result = statement.executeQuery();
 		
 		 // Affichage du resultat
-	    //System.out.println("Resultats:");
-	    //this.affichageResultat(this.result);
-	    //System.out.println("");
+	    System.out.println("Resultats:");
+	    this.affichageResultat(this.result);
+	    System.out.println("");
 	    
 	    // Fermeture 
 		//result.close();
@@ -27,10 +27,7 @@ public class SimpleQuery extends Query {
 
 	}
 
-	public SimpleQuery getCategories () {
-		SimpleQuery categories = new SimpleQuery(data, "select * from categories");
-		return categories;
-	}
+
 
 
 	
