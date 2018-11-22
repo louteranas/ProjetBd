@@ -11,19 +11,34 @@ public class Actions {
     
     private String utilisateur;
     private StringRequete strreq;
+    private DataBaseAccess data;
     
     public Actions(String mail_utilisateur){
         utilisateur = mail_utilisateur;
         strreq = new StringRequete();
     }
     
-    public void enchere(DataBaseAccess data) throws SQLException {
-        SimpleQuery sreq = new SimpleQuery(data, strreq.getSalles());
-        System.out.println("Sélectionnez votre salle de vente");
-        Scanner scan = new Scanner(System.in);
-        String salle = scan.nextLine();
-        SimpleQuery nr =  new SimpleQuery(data, strreq.getProduitsSalle(salle));
+    public void enchere() throws SQLException {
+
     }
+
+    public void affichageSallesDeVente(){
+        try {
+            SimpleQuery sreq = new SimpleQuery(data, strreq.getSalles());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void produitsSalle(int id_salle){
+        try {
+            SimpleQuery nr =  new SimpleQuery(data, strreq.getProduitsSalle(id_salle));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
 
 

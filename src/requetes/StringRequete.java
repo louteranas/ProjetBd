@@ -16,17 +16,21 @@ public class StringRequete {
         return("SELECT * from SALLE_VENTE");
     }
 
-    public String getProduitsSalle(String salle){
-        return("SELECT * from PRODUIT where id_salle_vente = '" + salle + "'");
+    public String getProduitsSalle(int id_salle){
+        return("SELECT * from PRODUIT where id_salle_vente = '" + id_salle + "'");
     }
 
-    public String nvEnchere(int prixAchat, int quantite){
+    public String nvEnchere(int prixAchat, int quantite, int idTypeEnchere){
         String date = getDate();
-        return ("INSERT INTO ENCHERE values(");
+        return ("INSERT INTO ENCHERE values(id_enchere.nextval, " + prixAchat +", "+getDate()+", "+ quantite+", " + idTypeEnchere + ")");
     }
 
     public String getDate(){
         return("select to_char(sysdate, 'dd/mm/yyyy; HH:MI:SS' from dual");
+    }
+
+    public String getTypeEnchere(int salle){
+        return ("select id_type_enchere from salle_vente where id_salle_vente = " + salle + ")");
     }
 
 }
