@@ -27,6 +27,17 @@ public abstract class Query {
         }
     }
 	
+	public int nbreSalleVente(ResultSet resultat) throws SQLException{
+			
+	        ResultSetMetaData rsetmd = resultat.getMetaData();
+	        int i = rsetmd.getColumnCount();
+	        int nbreSalleVente = 0;
+	        while (resultat.next()) {
+	        	nbreSalleVente = nbreSalleVente + 1;
+		    }
+	        return nbreSalleVente;
+	    }
+	
 	public boolean affichageResultatUser(ResultSet resultat) throws SQLException{
         ResultSetMetaData rsetmd = resultat.getMetaData();
         int i = rsetmd.getColumnCount();
