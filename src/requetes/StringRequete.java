@@ -30,7 +30,7 @@ public class StringRequete {
     }
 
     public String getTypeEnchere(int salle){
-        return ("select id_type_enchere from salle_vente where id_salle_vente = " + salle + ")");
+        return ("select id_type_enchere from salle_vente where id_salle_vente = " + salle );
     }
 
 }

@@ -19,9 +19,7 @@ public abstract class Query {
 		
         ResultSetMetaData rsetmd = resultat.getMetaData();
         int i = rsetmd.getColumnCount();
-        System.out.println("i = "+i);
         while (resultat.next()) {
-        	System.out.println("boucle");
             for (int j = 1; j <= i; j++) {
                 System.out.print(resultat.getString(j) + "\t");
 	    }
@@ -54,4 +52,14 @@ public abstract class Query {
 	public ResultSet getResult() {
 		return this.result;
 	}
+
+	/**
+	 * Renvoie le résultat sous forme d'un entier
+	 * (lorsque le résultat attendu est un id par exemple)
+	 */
+	public int getSimpleResult(Result){
+		ResultSetMetaData rsetmd = resultat.getMetaData();
+	}
+
+
 }
