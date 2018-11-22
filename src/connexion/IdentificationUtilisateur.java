@@ -18,28 +18,8 @@ public class IdentificationUtilisateur {
 	public Boolean VerificationUser() {
 		String rechercheUtilisateur = "select * from utilisateur where email ='" + email+"'";
 		try{
-			SimpleQuery requeteRecherche = new SimpleQuery(this.data, rechercheUtilisateur);
-//			System.out.println(requeteRecherche.getResult().next());
-			
-			//return requeteRecherche.affichageResultatUser(requeteRecherche.getResult());
-			return requeteRecherche.affichageResultatUser(requeteRecherche.getResult());
-//			if(requeteRecherche.affichageResultatUser(requeteRecherche.getResult())) {
-//				System.out.println("Vous n'etes pas inscrit askip! ");
-//				System.out.println("Veuillez entrer votre nom");
-//				@SuppressWarnings("resource")
-//				Scanner scan = new Scanner(System.in);
-//				String nom = scan.nextLine();
-//				System.out.println("Veuillez entrer votre prenom");
-//				String prenom = scan.nextLine();
-//				System.out.println("Veuillez entrer votre adresse");
-//				String addresse = scan.nextLine();
-//				System.out.println("Super !");
-//				this.addUtilisateur(email, nom, prenom, addresse);
-//				System.out.println("inscription réussite, voici vos donnée");
-//				requeteRecherche = new SimpleQuery(this.data, rechercheUtilisateur);
-//				requeteRecherche.affichageResultat(requeteRecherche.getResult());
-//			}
-		
+			SimpleQuery requeteRecherche = new SimpleQuery(this.data, rechercheUtilisateur);		
+			return requeteRecherche.affichageResultatUser(requeteRecherche.getResult());		
 		}
 		catch(SQLException excep) {
 			System.err.println("failed");

@@ -15,16 +15,11 @@ public class SimpleQuery extends Query {
 		
 		// on execute la requete
 		this.result = statement.executeQuery();
-		
-		// Affichage du resultat
 	    
 	    // Fermeture 
 		//result.close();
 		//statement.close();
 
 	}
-
-
-
 	
 }
