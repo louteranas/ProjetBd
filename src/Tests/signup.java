@@ -118,7 +118,7 @@ public class signup {
 						JOptionPane.showMessageDialog(null, "sql error");
 						e.printStackTrace();
 					}
-					choixDebut windowDebut = new choixDebut(data);
+					choixDebut windowDebut = new choixDebut(data, email.getText());
 					windowDebut.frame.setVisible(true);
 					frame.dispose();
 				}
