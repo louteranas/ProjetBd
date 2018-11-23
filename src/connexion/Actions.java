@@ -24,6 +24,9 @@ public class Actions {
 
     }
 
+    /**
+     * Affiche toutes les salles de vente
+     */
     public void affichageSallesDeVente(){
         try {
             SimpleQuery sreq = new SimpleQuery(data, strreq.getSalles());
@@ -32,6 +35,10 @@ public class Actions {
         }
     }
 
+    /**
+     * Affiche tous les produits en vente dans la salle de l'id indiqué
+     * @param id_salle
+     */
     public void produitsSalle(int id_salle){
         try {
             SimpleQuery nr =  new SimpleQuery(data, strreq.getProduitsSalle(id_salle));
@@ -48,6 +55,8 @@ public class Actions {
             e.printStackTrace();
         }
         ResultSet result = sreq.getResult();
+        String a = sreq.getSimpleResult(result);
+        System.out.println("a" +a);
         try {
             sreq.affichageResultat(result);
         } catch (SQLException e) {

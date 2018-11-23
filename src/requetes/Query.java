@@ -68,8 +68,12 @@ public abstract class Query {
 	 * Renvoie le résultat sous forme d'un entier
 	 * (lorsque le résultat attendu est un id par exemple)
 	 */
-	public int getSimpleResult(Result){
-		ResultSetMetaData rsetmd = resultat.getMetaData();
+	public String getSimpleResult(ResultSet resultat){
+		try {
+			String str = resultat.getString(1);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 

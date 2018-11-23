@@ -61,33 +61,33 @@ public class login {
 		frame.setBounds(100, 100, 500, 266);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+
 		JPanel panel = new JPanel();
 		panel.setBounds(177, 12, 134, 46);
 		frame.getContentPane().add(panel);
-		
+
 		JLabel lblLeCoincoin = new JLabel("Le coincoin");
 		panel.add(lblLeCoincoin);
-		
+
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(36, 107, 96, 25);
 		frame.getContentPane().add(panel_1);
-		
+
 		JLabel lblEmail = new JLabel("Email");
 		panel_1.add(lblEmail);
-		
+
 		JPanel panel_2 = new JPanel();
 		panel_2.setBounds(177, 105, 134, 27);
 		frame.getContentPane().add(panel_2);
-		
+
 		email = new JTextField();
 		panel_2.add(email);
 		email.setColumns(10);
-		
+
 		JPanel panel_3 = new JPanel();
 		panel_3.setBounds(177, 184, 139, 25);
 		frame.getContentPane().add(panel_3);
-		
+
 		JButton btnLogin = new JButton("login");
 		btnLogin.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0) {
@@ -113,12 +113,12 @@ public class login {
 					} catch (SQLException e) {
 						// TODO Auto-generated catch block
 						JOptionPane.showMessageDialog(null, "sql error");
-						e.printStackTrace();	
+						e.printStackTrace();
 					}
 				}
 			}
 		});
 		panel_3.add(btnLogin);
- 
+
 	}
 }

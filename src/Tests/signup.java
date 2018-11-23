@@ -45,54 +45,54 @@ public class signup {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+
 		JPanel panel = new JPanel();
 		panel.setBounds(159, 12, 142, 25);
 		frame.getContentPane().add(panel);
-		
+
 		JLabel lblSignup = new JLabel("Signup");
 		panel.add(lblSignup);
-		
+
 		JLabel lblEmail = new JLabel("Email");
 		lblEmail.setBounds(29, 73, 106, 15);
 		frame.getContentPane().add(lblEmail);
-		
+
 		JLabel lblNom = new JLabel("Nom");
 		lblNom.setBounds(29, 114, 106, 15);
 		frame.getContentPane().add(lblNom);
-		
+
 		JLabel lblPrenom = new JLabel("Prénom");
 		lblPrenom.setBounds(29, 150, 106, 15);
 		frame.getContentPane().add(lblPrenom);
-		
+
 		JLabel lblNewLabel = new JLabel("Addresse");
 		lblNewLabel.setBounds(29, 186, 106, 15);
 		frame.getContentPane().add(lblNewLabel);
-		
+
 		JLabel label = new JLabel("");
 		label.setBounds(231, 73, 174, 15);
 		frame.getContentPane().add(label);
-		
+
 		email = new JTextField();
 		email.setBounds(159, 71, 229, 17);
 		frame.getContentPane().add(email);
 		email.setColumns(10);
-		
+
 		nom = new JTextField();
 		nom.setBounds(159, 112, 234, 17);
 		frame.getContentPane().add(nom);
 		nom.setColumns(10);
-		
+
 		prenom = new JTextField();
 		prenom.setBounds(159, 148, 234, 17);
 		frame.getContentPane().add(prenom);
 		prenom.setColumns(10);
-		
+
 		addresse = new JTextField();
 		addresse.setBounds(159, 184, 234, 17);
 		frame.getContentPane().add(addresse);
 		addresse.setColumns(10);
-		
+
 		JButton btnSignup = new JButton("Signup");
 		btnSignup.setBounds(169, 222, 117, 25);
 		frame.getContentPane().add(btnSignup);
@@ -122,7 +122,7 @@ public class signup {
 					windowDebut.frame.setVisible(true);
 					frame.dispose();
 				}
-		
+
 			}
 		});
 	}
