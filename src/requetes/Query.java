@@ -4,6 +4,7 @@ import connexion.DataBaseAccess;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.util.Vector;
 
 public abstract class Query {
 	protected DataBaseAccess data;
@@ -27,17 +28,15 @@ public abstract class Query {
         }
     }
 	
-	public int nbreSalleVente(ResultSet resultat) throws SQLException{
-			
-	        ResultSetMetaData rsetmd = resultat.getMetaData();
-	        int i = rsetmd.getColumnCount();
-	        int nbreSalleVente = 0;
-	        while (resultat.next()) {
-	        	nbreSalleVente = nbreSalleVente + 1;
-		    }
-	        return nbreSalleVente;
+	public Vector<String> getSallesVente() throws SQLException{
+		Vector<String> salles = new Vector<String>();
+        ResultSetMetaData rsetmd = this.result.getMetaData();
+        while (this.result.next()) {
+        	salles.add(this.result.getString(2));
 	    }
-	
+        return salles;
+    }
+
 	public boolean affichageResultatUser(ResultSet resultat) throws SQLException{
         ResultSetMetaData rsetmd = resultat.getMetaData();
         int i = rsetmd.getColumnCount();

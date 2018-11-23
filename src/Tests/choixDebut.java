@@ -19,13 +19,15 @@ public class choixDebut {
 
 	public JFrame frame;
 	private DataBaseAccess data;
+	private String email;
 
 
 	/**
 	 * Create the application.
 	 */
-	public choixDebut(DataBaseAccess data) {
+	public choixDebut(DataBaseAccess data, String email) {
 		this.data = data;
+		this.email = email;
 		initialize();
 	}
 
@@ -55,6 +57,13 @@ public class choixDebut {
 		btnAcheter.setBounds(282, 89, 117, 25);
 		btnAcheter.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0) {
+				try {
+					sallesVente window = new sallesVente(data, email);
+					window.frame.setVisible(true);
+					frame.dispose();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
 		});
 		frame.getContentPane().add(btnAcheter);

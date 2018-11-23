@@ -100,7 +100,7 @@ public class login {
 						IdentificationUtilisateur user = new IdentificationUtilisateur(data, email.getText());
 						//System.out.println("user.VerificationUser() = "+user.VerificationUser());
 						if(!user.VerificationUser()) {
-							choixDebut windowDebut = new choixDebut(data);
+							choixDebut windowDebut = new choixDebut(data,email.getText());
 							windowDebut.frame.setVisible(true);
 							frame.dispose();
 						}
