@@ -64,17 +64,17 @@ public abstract class Query {
 		return this.result;
 	}
 
+
 	/**
 	 * Renvoie le résultat sous forme d'un entier
 	 * (lorsque le résultat attendu est un id par exemple)
 	 */
-	public String getSimpleResult(ResultSet resultat){
-		try {
-			String str = resultat.getString(1);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+	public int getSimpleResult(ResultSet resultat) throws SQLException {
+		resultat.next();
+		return(resultat.getInt(1));
 	}
+
+
 
 
 }

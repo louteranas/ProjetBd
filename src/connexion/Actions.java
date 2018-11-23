@@ -24,45 +24,45 @@ public class Actions {
 
     }
 
+
     /**
-     * Affiche toutes les salles de vente
+     * Exécute la commande pour avoir accès à toutes les salles de vente
      */
-    public void affichageSallesDeVente(){
+
+    public SimpleQuery affichageSallesDeVente(){
+
         try {
             SimpleQuery sreq = new SimpleQuery(data, strreq.getSalles());
+            return sreq;
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     /**
      * Affiche tous les produits en vente dans la salle de l'id indiqué
      * @param id_salle
      */
-    public void produitsSalle(int id_salle){
+    public SimpleQuery produitsSalle(int id_salle){
         try {
             SimpleQuery nr =  new SimpleQuery(data, strreq.getProduitsSalle(id_salle));
+            return nr;
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
-    public void getIdTypeEnchere(int id_salle){
+
+    public int getIdTypeEnchere(int id_salle) throws SQLException {
         SimpleQuery sreq = null;
-        try {
-            sreq = new SimpleQuery(data, strreq.getTypeEnchere(1));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        ResultSet result = sreq.getResult();
-        String a = sreq.getSimpleResult(result);
-        System.out.println("a" +a);
-        try {
-            sreq.affichageResultat(result);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        sreq = new SimpleQuery(data, strreq.getTypeEnchere(1));
+        return(sreq.getSimpleResult(sreq.getResult()));
     }
+
+
+
 
     
     
