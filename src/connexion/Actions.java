@@ -24,12 +24,14 @@ public class Actions {
 
     }
 
-    public void affichageSallesDeVente(){
+    public SimpleQuery affichageSallesDeVente(){
         try {
             SimpleQuery sreq = new SimpleQuery(data, strreq.getSalles());
+            return sreq;
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     public void produitsSalle(int id_salle){

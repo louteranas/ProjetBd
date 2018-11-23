@@ -64,13 +64,5 @@ public abstract class Query {
 		return this.result;
 	}
 
-	/**
-	 * Renvoie le résultat sous forme d'un entier
-	 * (lorsque le résultat attendu est un id par exemple)
-	 */
-	public int getSimpleResult(Result){
-		ResultSetMetaData rsetmd = resultat.getMetaData();
-	}
-
 
 }

@@ -14,9 +14,15 @@ public class test {
      * Launch the application.
      */
     public static void main(String[] args) {
-        DataBaseAccess data = new DataBaseAccess();
-        Actions act = new Actions("leila.kany@gmail.com", data );
-        act.getIdTypeEnchere(1);
+//        DataBaseAccess data = new DataBaseAccess();
+//        Actions act = new Actions("leila.kany@gmail.com", data );
+//        act.getIdTypeEnchere(1);
 
+        try {
+			login window = new login();
+			window.frame.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
     }
 }
