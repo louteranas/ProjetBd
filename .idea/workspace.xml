@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45cf48c9-7aa9-445b-9672-a232a9e9f7d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Tests/choixDebut.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/Tests/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetBd/Tests/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/connexion/Actions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetBd/connexion/Actions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tests/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connexion/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connexion/Actions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requetes/Query.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/requetes/Query.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requetes/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/requetes/Query.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/requetes/ParamQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/requetes/ParamQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/requetes/StringRequete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/requetes/StringRequete.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,7 +41,7 @@
     <session id="-932632356">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="2" />
@@ -63,16 +56,16 @@
         <counts>
           <entry key="AFFECTATION_ENCHERE" value="1" />
           <entry key="CATEGORIE_PRODUIT" value="2" />
-          <entry key="ENCHERE" value="4" />
+          <entry key="ENCHERE" value="6" />
           <entry key="PRODUIT" value="2" />
           <entry key="SALLE_VENTE" value="3" />
           <entry key="SE_VEND" value="1" />
           <entry key="UTILISATEUR" value="4" />
-          <entry key="VENTE" value="1" />
+          <entry key="VENTE" value="2" />
           <entry key="class" value="3" />
           <entry key="classpath" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="22" />
+          <entry key="java" value="23" />
           <entry key="project" value="1" />
           <entry key="sql" value="2" />
         </counts>
@@ -80,9 +73,9 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="3" />
-          <entry key="Database Element" value="18" />
+          <entry key="Database Element" value="21" />
           <entry key="Eclipse" value="2" />
-          <entry key="JAVA" value="22" />
+          <entry key="JAVA" value="23" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="2" />
         </counts>
@@ -90,19 +83,19 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="3539" />
+          <entry key="java" value="3686" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="3539" />
+          <entry key="JAVA" value="3686" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.40795287">
+    <splitter split-orientation="horizontal" split-proportion="0.4429029">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -117,7 +110,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/connexion/DataBaseAccess.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="870">
+                <state relative-caret-position="659">
                   <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
                 </state>
               </provider>
@@ -127,7 +120,7 @@
             <entry file="file://$PROJECT_DIR$/src/Tests/test.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="255">
-                  <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+                  <caret line="17" selection-start-line="17" selection-end-line="17" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -136,10 +129,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/ENCHERE">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
+            <entry file="file://$PROJECT_DIR$/src/requetes/ParamQuery.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="168">
+                  <caret line="77" column="76" selection-start-line="77" selection-start-column="76" selection-end-line="77" selection-end-column="76" />
                 </state>
               </provider>
             </entry>
@@ -147,8 +140,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/connexion/Actions.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="515">
-                  <caret line="63" selection-start-line="63" selection-end-line="63" />
+                <state relative-caret-position="449">
+                  <caret line="46" column="10" selection-start-line="45" selection-start-column="5" selection-end-line="46" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -169,15 +162,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/requetes/StringRequete.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+                <state relative-caret-position="375">
+                  <caret line="28" column="73" selection-start-line="28" selection-start-column="73" selection-end-line="28" selection-end-column="73" />
                   <folding>
                     <element signature="e#115#116#0" expanded="true" />
                     <element signature="e#173#174#0" expanded="true" />
-                    <element signature="e#210#211#0" expanded="true" />
-                    <element signature="e#293#294#0" expanded="true" />
-                    <element signature="e#426#427#0" expanded="true" />
-                    <element signature="e#499#500#0" expanded="true" />
                     <element signature="e#1102#1103#0" expanded="true" />
                     <element signature="e#1122#1123#0" expanded="true" />
                   </folding>
@@ -186,19 +175,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/VENTE">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/requetes/Query.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="456">
-                  <caret line="72" column="24" lean-forward="true" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
+                  <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -238,6 +218,9 @@
     <findStrings>
       <find>getStr</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -253,8 +236,9 @@
         <option value="$PROJECT_DIR$/src/Tests/signup.java" />
         <option value="$PROJECT_DIR$/src/Tests/login.java" />
         <option value="$PROJECT_DIR$/src/requetes/Query.java" />
-        <option value="$PROJECT_DIR$/src/Tests/test.java" />
         <option value="$PROJECT_DIR$/src/connexion/Actions.java" />
+        <option value="$PROJECT_DIR$/src/Tests/test.java" />
+        <option value="$PROJECT_DIR$/src/requetes/ParamQuery.java" />
         <option value="$PROJECT_DIR$/src/requetes/StringRequete.java" />
       </list>
     </option>
@@ -266,9 +250,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="628" />
-    <option name="width" value="1262" />
-    <option name="height" value="715" />
+    <option name="x" value="632" />
+    <option name="width" value="1252" />
+    <option name="height" value="714" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -316,7 +300,7 @@
     <property name="DatabaseDriversLRU" value="oracle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542976731116" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543079446104" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/bin/ojdbc6.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -376,17 +360,47 @@
       <workItem from="1542795268330" duration="10697000" />
       <workItem from="1542896132221" duration="137000" />
       <workItem from="1542904300249" duration="1215000" />
-      <workItem from="1542968924976" duration="3385000" />
+      <workItem from="1542968924976" duration="5140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19790000" />
+    <option name="totallyTimeSpent" value="21545000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
+    <frame x="632" y="0" width="1252" height="714" extended-state="0" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.12966916" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21451104" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.22082019" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32912722" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.533123" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" weight="0.1456777" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12966916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
@@ -413,37 +427,6 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info active="true" anchor="right" id="Database" order="5" visible="true" weight="0.1456777" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1755603" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32912722" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32912722" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.533123" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.1456777" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
@@ -474,22 +457,8 @@
     <entry file="file://$PROJECT_DIR$/src/Tests/package-info.java" />
     <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/PRODUIT" />
     <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/UTILISATEUR" />
-    <entry file="file://$PROJECT_DIR$/src/connexion/IdentificationUtilisateur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/requetes/SimpleQuery.class">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/connexion/DataBaseAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tests/signup.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -525,24 +494,7 @@
     <entry file="file://$PROJECT_DIR$/src/requetes/Query.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
-          <caret line="72" column="24" lean-forward="true" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/connexion/Actions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
+          <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -550,6 +502,23 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/connexion/IdentificationUtilisateur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -567,17 +536,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/connexion/DataBaseAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/connexion/Actions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="46" column="10" selection-start-line="45" selection-start-column="5" selection-end-line="46" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/requetes/ParamQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="77" column="76" selection-start-line="77" selection-start-column="76" selection-end-line="77" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/requetes/StringRequete.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+        <state relative-caret-position="375">
+          <caret line="28" column="73" selection-start-line="28" selection-start-column="73" selection-end-line="28" selection-end-column="73" />
           <folding>
             <element signature="e#115#116#0" expanded="true" />
             <element signature="e#173#174#0" expanded="true" />
-            <element signature="e#210#211#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
             <element signature="e#1102#1103#0" expanded="true" />
             <element signature="e#1122#1123#0" expanded="true" />
           </folding>

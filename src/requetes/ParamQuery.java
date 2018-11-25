@@ -67,4 +67,31 @@ public class ParamQuery extends Query {
 
 	}
 
+	/**
+	 * pour insert into enchere
+	 * @param data
+	 * @param requete
+	 * @param str
+	 * @param nbr
+	 * @throws SQLException
+	 */
+	public ParamQuery(DataBaseAccess data, String requete, String str, int  ) throws SQLException{
+		super(data, requete);
+		// on crée la requete
+		PreparedStatement statement = this.data.getConn().prepareStatement(this.requete);
+		statement.setString(1, str);
+		statement.setInt(2, nbr);
+
+		// on execute la requete
+		this.result = statement.executeQuery();
+
+		// Fermeture
+		//result.close();
+		//statement.close();
+
+	}
+
+
+
+
 }
