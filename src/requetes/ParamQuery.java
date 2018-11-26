@@ -65,4 +65,25 @@ public class ParamQuery extends Query {
         this.result = statement.executeQuery();
     }
 
+    public ParamQuery(DataBaseAccess data, String requete, String st, int i) throws SQLException {
+        super(data, requete);
+        PreparedStatement statement = this.data.getConn().prepareStatement(this.requete);
+        statement.setString(1, st);
+        statement.setInt(2, i);
+        // on execute la requete
+        this.result = statement.executeQuery();
+    }
+
+    public ParamQuery(DataBaseAccess data, String requete, String s, int i, int j, String t, int k) throws SQLException {
+        super(data, requete);
+        PreparedStatement statement = this.data.getConn().prepareStatement(this.requete);
+        statement.setString(1, s);
+        statement.setInt(2, i);
+        statement.setInt(3, j);
+        statement.setString(4, t);
+        statement.setInt(5, k);
+        // on execute la requete
+        this.result = statement.executeQuery();
+    }
+
 }

@@ -16,8 +16,8 @@ public abstract class Query {
 		this.requete = requete;		 
 	}
 	
-	public void affichageResultat(ResultSet resultat) throws SQLException{
-		
+	public void affichageResultat() throws SQLException{
+		ResultSet resultat = this.getResult();
         ResultSetMetaData rsetmd = resultat.getMetaData();
         int i = rsetmd.getColumnCount();
         while (resultat.next()) {

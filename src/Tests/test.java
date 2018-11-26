@@ -14,5 +14,11 @@ public class test {
      */
     public static void main(String[] args) {
         DataBaseAccess data = new DataBaseAccess();
+        Actions act = new Actions("leila.kany@gmail.com", data);
+        try {
+            act.produitsCat("ordinateur").affichageResultat();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

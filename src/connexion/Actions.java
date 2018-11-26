@@ -40,7 +40,7 @@ public class Actions {
      */
     public ParamQuery produitsSalle(int id_salle){
         try {
-            return(new ParamQuery(data, "select * from produit where id_salle_vente = ?)", id_salle));
+            return(new ParamQuery(data, "select * from produit where id_salle_vente = ?", id_salle));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -71,6 +71,16 @@ public class Actions {
     }
 
     /**
+     * renvoie l'id de la salle dans laquelle se déroule une vente
+     * @return int
+     */
+    public int getIdSalleVente(int id_vente) throws SQLException {
+        ParamQuery sreq;
+        sreq = new ParamQuery(data,"select id_salle_vente from produit p, vente v where v.id_vente = ? and v.id_produit = p.id_produit", id_vente );
+        return(sreq.getSimpleResult(sreq.getResult()));
+    }
+
+    /**
      * Insertion dans la table Enchere
      */
     public ParamQuery insertIntoEnchere(int prixAchat, int quantite, int id_type_enchere){
@@ -85,9 +95,9 @@ public class Actions {
     /**
      * Insertion dans la table affectation enchere
      */
-    public ParamQuery insertIntoAfectationEnchere(String utilisateur, int id_enchere, int id_vente){
+    public ParamQuery insertIntoAffectationEnchere(int id_vente){
         try {
-            return(new ParamQuery(data, "insert into AFFECTATION_ENCHERE values(?, ?, ?)", utilisateur, id_enchere, id_vente);
+            return(new ParamQuery(data, "insert into AFFECTATION_ENCHERE values(id_enchere.nextval, ?, ?)", utilisateur, id_vente));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -102,12 +112,50 @@ public class Actions {
     }
 
     /**
+     * Renvoie les ventes concernant un produit
+     */
+    public ParamQuery ventesProduit(int id_produit){
+        try {
+            return(new ParamQuery(data, "select id_vente from produit where id_produit = ?", id_produit));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    /**
      * Rajoute un champ dans les tables Enchèeres et affectation enchère
      * @throws SQLException
      */
-    public void newEnchere() throws SQLException {
+    public void newEnchere(int id_vente, int prixAchat, int quantite) throws SQLException {
+        insertIntoAffectationEnchere(id_vente);
+        int id_typeEnchere = getIdTypeEnchere(getIdSalleVente(id_vente));
+        insertIntoEnchere(prixAchat, quantite, id_typeEnchere);
 
+    }
 
+    /**
+     * Mise en place d'une nouvelle salle de vente (admin)
+     */
+    public ParamQuery newSalle(String categorie_produit, int typeEnchere) throws SQLException {
+        try {
+            return(new ParamQuery(data, "insert into SALLE_VENTE values(id_salle_vente.nextval, ?, ?", categorie_produit, typeEnchere));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+
+    /**
+     * Insertion d'un nouveau produit
+     **/
+    public ParamQuery insertIntoProduit(String nom, int prix, int stock, String categorie, int id_salle){
+        try {
+            return(new ParamQuery(data, "insert into PRODUIT values(idi_produit.nextval, ?, ?, ?, ?, ?)", nom, prix, stock, categorie, id_salle);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 
