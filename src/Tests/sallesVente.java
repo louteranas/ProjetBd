@@ -19,22 +19,7 @@ public class sallesVente {
 	private static String email;
 	private static DataBaseAccess data;
 
-	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					sallesVente window = new sallesVente(data, email);
-//					window.frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
-
+	
 	/**
 	 * Create the application.
 	 */
@@ -82,16 +67,5 @@ public class sallesVente {
 			e.printStackTrace();
 		}
 		
-//		JButton btnNewButton = new JButton("New button");
-//		btnNewButton.setBounds(45, 51, 117, 25);
-//		frame.getContentPane().add(btnNewButton);
-//		
-//		JButton btnNewButton_1 = new JButton("New button");
-//		btnNewButton_1.setBounds(285, 51, 117, 25);
-//		frame.getContentPane().add(btnNewButton_1);
-//		
-//		JButton btnNewButton_2 = new JButton("New button");
-//		btnNewButton_2.setBounds(285, 78, 117, 25);
-//		frame.getContentPane().add(btnNewButton_2);
 	}
 }

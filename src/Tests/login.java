@@ -34,18 +34,7 @@ public class login {
 
 	public JFrame frame;
 	private JTextField email;
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					login window = new login();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+
 	/**
 	 * Create the application.
 	 */
