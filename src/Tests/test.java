@@ -16,7 +16,7 @@ public class test {
         DataBaseAccess data = new DataBaseAccess();
         Actions act = new Actions("leila.kany@gmail.com", data);
         try {
-            act.produitsCat("ordinateur").affichageResultat();
+            act.typeEnchere(2).affichageResultat();
         } catch (SQLException e) {
             e.printStackTrace();
         }
