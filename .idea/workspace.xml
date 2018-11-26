@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45cf48c9-7aa9-445b-9672-a232a9e9f7d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e8f4d8ad-a35b-4642-a940-9e24d5d3fee8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e8f4d8ad-a35b-4642-a940-9e24d5d3fee8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/storage_v2/_src_/schema/LOUTERA.knr9Pw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/storage_v2/_src_/schema/LOUTERA.knr9Pw.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analyse/projet_bd.dia" beforeDir="false" afterPath="$PROJECT_DIR$/Analyse/projet_bd.dia" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/connexion/Actions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetBd/connexion/Actions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/requetes/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetBd/requetes/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/requetes/Query.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetBd/requetes/Query.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/requetes/StringRequete.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connexion/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connexion/Actions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connexion/IdentificationUtilisateur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requetes/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/requetes/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requetes/ParamQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/requetes/ParamQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requetes/Query.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requetes/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/requetes/Query.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requetes/SimpleQuery.class" beforeDir="false" />
-    </list>
+    <list default="true" id="45cf48c9-7aa9-445b-9672-a232a9e9f7d3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,10 +134,10 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Tests/login.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-789">
+                <state relative-caret-position="160">
                   <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -178,10 +160,10 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/requetes/ParamQuery.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="523">
+                <state relative-caret-position="595">
                   <caret line="83" column="31" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -215,8 +197,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/connexion/Actions.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="509">
-                  <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+                <state relative-caret-position="581">
+                  <caret line="157" column="20" lean-forward="true" selection-start-line="157" selection-start-column="20" selection-end-line="157" selection-end-column="20" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -364,8 +346,8 @@
     <property name="DatabaseDriversLRU" value="oracle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543225027725" />
-    <property name="database.console.LAST_STATE" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543228163016" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/bin/ojdbc6.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -443,18 +425,18 @@
       <workItem from="1542896132221" duration="137000" />
       <workItem from="1542904300249" duration="1215000" />
       <workItem from="1542968924976" duration="5140000" />
-      <workItem from="1543147503911" duration="14469000" />
+      <workItem from="1543147503911" duration="14832000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36014000" />
+    <option name="totallyTimeSpent" value="36377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="0" width="1928" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12966916" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12966916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -473,7 +455,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32912722" />
-      <window_info active="true" anchor="bottom" id="Database Console" order="12" visible="true" weight="0.23869611" />
+      <window_info anchor="bottom" id="Database Console" order="12" visible="true" weight="0.115667716" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -774,18 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-789">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1152#1153#0" expanded="true" />
-            <element signature="e#1171#1172#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tests/choixDebut.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -873,9 +843,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/connexion/Actions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="157" column="20" lean-forward="true" selection-start-line="157" selection-start-column="20" selection-end-line="157" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/requetes/ParamQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
+        <state relative-caret-position="595">
           <caret line="83" column="31" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -883,12 +863,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/connexion/Actions.java">
+    <entry file="file://$PROJECT_DIR$/src/Tests/login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+        <state relative-caret-position="160">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1152#1153#0" expanded="true" />
+            <element signature="e#1171#1172#0" expanded="true" />
           </folding>
         </state>
       </provider>
