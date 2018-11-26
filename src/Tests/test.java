@@ -30,7 +30,7 @@ public class test {
         DataBaseAccess data = new DataBaseAccess();
         Actions act = new Actions("leila.kany@gmail.com", data);
         try {
-            act.getCaracteristiques(22).affichageResultat();
+            act.newSalle("voiture", 52);
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -165,6 +165,7 @@ public class Actions {
     public void newEnchereDesc(int id_vente, int prixAchat, int quantite) throws SQLException {
         int id_enchere = getIdEnchere();
         int id_typeEnchere = getIdTypeEnchere(getIdSalleVente(id_vente));
+        
 
         insertIntoEnchere(id_enchere, prixAchat, quantite, id_typeEnchere);
         insertIntoAffectationEnchere(id_enchere, id_vente);
@@ -224,8 +225,9 @@ public class Actions {
      * Renvoie les caractéristiques d'un produit
      */
     public ParamQuery getCaracteristiques(int idProduit) throws SQLException {
-        return (new ParamQuery(data, "select caracteristiques from CARACTERISTIQUES where id_produit = ?", idProduit));
+        return (new ParamQuery(data, "select ", idProduit));
 
     }
+
 
 }
