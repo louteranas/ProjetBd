@@ -91,6 +91,11 @@ public abstract class Query {
 		return(resultat.getInt(1));
 	}
 
+	public String getStrResult(ResultSet resultat) throws SQLException {
+		resultat.next();
+		return(resultat.getString(1));
+	}
+
 
 
 
