@@ -151,7 +151,7 @@ public class Actions {
      **/
     public ParamQuery insertIntoProduit(String nom, int prix, int stock, String categorie, int id_salle){
         try {
-            return(new ParamQuery(data, "insert into PRODUIT values(idi_produit.nextval, ?, ?, ?, ?, ?)", nom, prix, stock, categorie, id_salle);
+            return(new ParamQuery(data, "insert into PRODUIT values(idi_produit.nextval, ?, ?, ?, ?, ?)", nom, prix, stock, categorie, id_salle));
         } catch (SQLException e) {
             e.printStackTrace();
         }
