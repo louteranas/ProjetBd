@@ -37,7 +37,9 @@ public class sallesVente {
 		Actions act = new Actions(email, data);
 		
 		
-		Vector<String> salles = act.affichageSallesDeVente().getSallesVente();
+		Vector<String> salles = act.affichageSallesDeVente().getNomSallesVente();
+		Vector<Integer> idSalles = act.affichageSallesDeVente().getIdSallesVente();
+		Vector<Integer> idEnchereSalles = act.affichageSallesDeVente().getIdEnchereSallesVente();
 		int nbr_ligne = salles.size()%2;
 		int nbr_salle = salles.size();
 		frame = new JFrame();
@@ -51,7 +53,7 @@ public class sallesVente {
 		
 		
 		for(int j =0; j <= nbr_salle; j=j+2) {
-			String nom = salles.elementAt(j);
+			String nom = idSalles.elementAt(j) + salles.elementAt(j) + idEnchereSalles.elementAt(j);
 			JButton btnNewButton1 = new JButton(nom);
 			btnNewButton1.setBounds(45, 40+25*j, 117, 25);
 			frame.getContentPane().add(btnNewButton1);

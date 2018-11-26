@@ -12,6 +12,7 @@ public class test {
     /**
      * Launch the application.
      */
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -24,6 +25,7 @@ public class test {
 			}
 		});
 	}
+
 //    public static void main(String[] args) {
 //        DataBaseAccess data = new DataBaseAccess();
 //        Actions act = new Actions("leila.kany@gmail.com", data);

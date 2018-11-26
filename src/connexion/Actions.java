@@ -83,9 +83,9 @@ public class Actions {
     /**
      * Insertion dans la table Enchere
      */
-    public ParamQuery insertIntoEnchere(int prixAchat, int quantite, int id_type_enchere){
+    public ParamQuery insertIntoEnchere(int id_enchere, int prixAchat, int quantite, int id_type_enchere){
         try {
-            return(new ParamQuery(data, "insert into ENCHERE values(id_enchere.nextval, ?," + getDate()+"?, ?, ?", prixAchat, quantite, id_type_enchere));
+            return(new ParamQuery(data, "insert into ENCHERE values(?, ?," + getDate()+"?, ?, ?", id_enchere, prixAchat, quantite, id_type_enchere));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -95,9 +95,9 @@ public class Actions {
     /**
      * Insertion dans la table affectation enchere
      */
-    public ParamQuery insertIntoAffectationEnchere(int id_vente){
+    public ParamQuery insertIntoAffectationEnchere(int id_enchere, int id_vente){
         try {
-            return(new ParamQuery(data, "insert into AFFECTATION_ENCHERE values(id_enchere.nextval, ?, ?)", utilisateur, id_vente));
+            return(new ParamQuery(data, "insert into AFFECTATION_ENCHERE values(?, ?, ?)", utilisateur, id_vente));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -122,14 +122,28 @@ public class Actions {
         }
         return null;
     }
+
+
+    /**
+     * Retourne l'idEnchere à utiliser
+     */
+    private int getIdEnchere() throws SQLException {
+        SimpleQuery sreq;
+        sreq = new SimpleQuery(data, "select id_enchere.nextval from dual");
+        return(sreq.getSimpleResult(sreq.getResult()));
+    }
     /**
      * Rajoute un champ dans les tables Enchèeres et affectation enchère
      * @throws SQLException
      */
     public void newEnchere(int id_vente, int prixAchat, int quantite) throws SQLException {
-        insertIntoAffectationEnchere(id_vente);
+        int id_enchere = getIdEnchere();
         int id_typeEnchere = getIdTypeEnchere(getIdSalleVente(id_vente));
-        insertIntoEnchere(prixAchat, quantite, id_typeEnchere);
+        System.out.println(id_typeEnchere);
+        System.out.println(id_enchere);
+        insertIntoEnchere(id_enchere, prixAchat, quantite, id_typeEnchere);
+        insertIntoAffectationEnchere(id_enchere, id_vente);
+
 
     }
 
@@ -156,6 +170,13 @@ public class Actions {
             e.printStackTrace();
         }
         return null;
+    }
+
+    /**
+     * Affichage du type d'enchere à partir d'un id
+     */
+    public ParamQuery typeEnchere(int id) throws SQLException {
+        return(new ParamQuery(data, "select * from TYPE_ENCHERE where id_type_enchere = ?", id));
     }
 
 
