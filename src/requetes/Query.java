@@ -28,11 +28,29 @@ public abstract class Query {
         }
     }
 	
-	public Vector<String> getSallesVente() throws SQLException{
+	public Vector<String> getNomSallesVente() throws SQLException{
 		Vector<String> salles = new Vector<String>();
         ResultSetMetaData rsetmd = this.result.getMetaData();
         while (this.result.next()) {
         	salles.add(this.result.getString(2));
+	    }
+        return salles;
+    }
+	
+	public Vector<Integer> getIdSallesVente() throws SQLException{
+		Vector<Integer> salles = new Vector<Integer>();
+        ResultSetMetaData rsetmd = this.result.getMetaData();
+        while (this.result.next()) {
+        	salles.add(Integer.valueOf(this.result.getString(1)));
+	    }
+        return salles;
+    }
+	
+	public Vector<Integer> getIdEnchereSallesVente() throws SQLException{
+		Vector<Integer> salles = new Vector<Integer>();
+        ResultSetMetaData rsetmd = this.result.getMetaData();
+        while (this.result.next()) {
+        	salles.add(Integer.valueOf(this.result.getString(3)));
 	    }
         return salles;
     }
