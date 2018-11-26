@@ -28,10 +28,9 @@ public class IdentificationUtilisateur {
 		}
 		return null;
 	}
-	public void addUtilisateur(String email, String nom, String prenom, String addresse) throws SQLException {
-		
-		String addUser = "insert into utilisateur values('"+email+"','"+nom+"','"+prenom+"','"+addresse+"')";
+
+	public void addUtilisateur(String email, String nom, String prenom, String adresse) throws SQLException {
+		String addUser = "insert into utilisateur values('"+email+"','"+nom+"','"+prenom+"','"+adresse+"')";
 		SimpleQuery add = new SimpleQuery(this.data, addUser);
 	}
-
 }

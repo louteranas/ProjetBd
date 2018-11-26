@@ -6,9 +6,9 @@
     </root>
     <schema id="2" parent="1" name="LOUTERA">
       <ObjectId>2462</ObjectId>
-      <IntrospectionTimestamp>2018-11-20.15:30:52</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-11-26.09:57:56</IntrospectionTimestamp>
       <CreatedTimestamp>2018-11-15.11:00:09</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-19.13:41:27</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-22.11:01:54</ModifiedTimestamp>
       <CommentsHash>36567406607250</CommentsHash>
       <Current>1</Current>
       <Visible>1</Visible>
@@ -1378,46 +1378,47 @@
     <schema id="457" parent="1" name="XS$NULL">
       <ObjectId>2147483638</ObjectId>
     </schema>
-    <table id="458" parent="2" name="AFFECTATION_ENCHERE">
+    <sequence id="458" parent="2" name="ID_ENCHERE">
+      <ObjectId>1129508</ObjectId>
+      <CreatedTimestamp>2018-11-22.11:01:54</CreatedTimestamp>
+      <ModifiedTimestamp>2018-11-22.11:01:54</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>10000</CacheSize>
+    </sequence>
+    <table id="459" parent="2" name="AFFECTATION_ENCHERE">
       <ObjectId>1119899</ObjectId>
       <CreatedTimestamp>2018-11-15.11:44:30</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-15.11:44:49</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-21.12:37:08</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="459" parent="2" name="CARACTERISTIQUES">
+    <table id="460" parent="2" name="CARACTERISTIQUES">
       <ObjectId>1119903</ObjectId>
       <CreatedTimestamp>2018-11-15.11:50:50</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-19.13:34:01</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-21.12:45:21</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="460" parent="2" name="CATEGORIE_PRODUIT">
+    <table id="461" parent="2" name="CATEGORIE_PRODUIT">
       <ObjectId>1119799</ObjectId>
       <CreatedTimestamp>2018-11-15.11:16:07</CreatedTimestamp>
       <ModifiedTimestamp>2018-11-15.11:16:30</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="461" parent="2" name="ENCHERE">
+    <table id="462" parent="2" name="ENCHERE">
       <ObjectId>1119797</ObjectId>
       <CreatedTimestamp>2018-11-15.11:11:52</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-19.13:41:27</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-21.12:32:13</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="462" parent="2" name="PRODUIT">
+    <table id="463" parent="2" name="PRODUIT">
       <ObjectId>1119874</ObjectId>
       <CreatedTimestamp>2018-11-15.11:32:53</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-19.13:37:45</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-21.12:51:18</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="463" parent="2" name="SALLE_VENTE">
+    <table id="464" parent="2" name="SALLE_VENTE">
       <ObjectId>1119825</ObjectId>
       <CreatedTimestamp>2018-11-15.11:26:41</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-19.13:39:21</ModifiedTimestamp>
-      <TemporaryPreserve>1</TemporaryPreserve>
-    </table>
-    <table id="464" parent="2" name="SE_VEND">
-      <ObjectId>1119901</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:46:46</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-15.11:46:46</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-21.12:52:04</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="465" parent="2" name="TYPE_ENCHERE">
@@ -1441,25 +1442,25 @@
     <table id="468" parent="2" name="VENTE">
       <ObjectId>1119793</ObjectId>
       <CreatedTimestamp>2018-11-15.11:09:27</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-19.13:35:44</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-21.13:19:29</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <column id="469" parent="458" name="EMAIL">
+    <column id="469" parent="459" name="EMAIL">
       <Position>1</Position>
       <DataType>VARCHAR2(30 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="470" parent="458" name="ID_ENCHERE">
+    <column id="470" parent="459" name="ID_ENCHERE">
       <Position>2</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="471" parent="458" name="ID_VENTE">
+    <column id="471" parent="459" name="ID_VENTE">
       <Position>3</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="472" parent="458" name="AFFECTATION_ENCHERE_PK">
+    <index id="472" parent="459" name="AFFECTATION_ENCHERE_PK">
       <ObjectId>1119900</ObjectId>
       <CreatedTimestamp>2018-11-15.11:44:30</CreatedTimestamp>
       <ModifiedTimestamp>2018-11-15.11:44:30</ModifiedTimestamp>
@@ -1469,7 +1470,7 @@ ID_ENCHERE
 ID_VENTE</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="473" parent="458" name="AFFECTATION_ENCHERE_PK">
+    <key id="473" parent="459" name="AFFECTATION_ENCHERE_PK">
       <ModifiedTimestamp>2018-11-15.11:44:30</ModifiedTimestamp>
       <ColNames>EMAIL
 ID_ENCHERE
@@ -1478,34 +1479,58 @@ ID_VENTE</ColNames>
       <UnderlyingIndexName>AFFECTATION_ENCHERE_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="474" parent="459" name="CARACTERISTIQUES">
+    <foreign-key id="474" parent="459" name="FK_EMAIL">
+      <ModifiedTimestamp>2018-11-21.12:36:50</ModifiedTimestamp>
+      <ColNames>EMAIL</ColNames>
+      <RefSchemaName>LOUTERA</RefSchemaName>
+      <RefTableName>UTILISATEUR</RefTableName>
+      <RefKeyName>UTILISATEUR_PK</RefKeyName>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="475" parent="459" name="FK_ID_ENCHERE">
+      <ModifiedTimestamp>2018-11-21.12:36:59</ModifiedTimestamp>
+      <ColNames>ID_ENCHERE</ColNames>
+      <RefSchemaName>LOUTERA</RefSchemaName>
+      <RefTableName>ENCHERE</RefTableName>
+      <RefKeyName>ENCHERE_PK</RefKeyName>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="476" parent="459" name="FK_ID_VENTE">
+      <ModifiedTimestamp>2018-11-21.12:37:08</ModifiedTimestamp>
+      <ColNames>ID_VENTE</ColNames>
+      <RefSchemaName>LOUTERA</RefSchemaName>
+      <RefTableName>VENTE</RefTableName>
+      <RefKeyName>VENTE_PK</RefKeyName>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="477" parent="460" name="CARACTERISTIQUES">
       <Position>1</Position>
       <DataType>VARCHAR2(100 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="475" parent="459" name="ID_PRODUIT">
+    <column id="478" parent="460" name="ID_PRODUIT">
       <Position>2</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <foreign-key id="476" parent="459" name="FK_PRODUIT">
-      <ModifiedTimestamp>2018-11-19.13:34:01</ModifiedTimestamp>
+    <foreign-key id="479" parent="460" name="FK_PRODUIT">
+      <ModifiedTimestamp>2018-11-21.12:45:21</ModifiedTimestamp>
       <ColNames>ID_PRODUIT</ColNames>
       <RefSchemaName>LOUTERA</RefSchemaName>
       <RefTableName>PRODUIT</RefTableName>
       <RefKeyName>PRODUIT_PK</RefKeyName>
-      <OnDelete>restrict</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="477" parent="460" name="NOM_CATEGORIE_PRODUIT">
+    <column id="480" parent="461" name="NOM_CATEGORIE_PRODUIT">
       <Position>1</Position>
       <DataType>VARCHAR2(20 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="478" parent="460" name="DESCRIPTION">
+    <column id="481" parent="461" name="DESCRIPTION">
       <Position>2</Position>
       <DataType>VARCHAR2(100 byte)|0s</DataType>
     </column>
-    <index id="479" parent="460" name="CATEGORIE_PRODUIT_PK">
+    <index id="482" parent="461" name="CATEGORIE_PRODUIT_PK">
       <ObjectId>1119800</ObjectId>
       <CreatedTimestamp>2018-11-15.11:16:07</CreatedTimestamp>
       <ModifiedTimestamp>2018-11-15.11:16:07</ModifiedTimestamp>
@@ -1513,39 +1538,39 @@ ID_VENTE</ColNames>
       <ColNames>NOM_CATEGORIE_PRODUIT</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="480" parent="460" name="CATEGORIE_PRODUIT_PK">
+    <key id="483" parent="461" name="CATEGORIE_PRODUIT_PK">
       <ModifiedTimestamp>2018-11-15.11:16:07</ModifiedTimestamp>
       <ColNames>NOM_CATEGORIE_PRODUIT</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>CATEGORIE_PRODUIT_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="481" parent="461" name="ID_ENCHERE">
+    <column id="484" parent="462" name="ID_ENCHERE">
       <Position>1</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="482" parent="461" name="PRIX_ACHAT">
+    <column id="485" parent="462" name="PRIX_ACHAT">
       <Position>2</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="483" parent="461" name="DATE_ENCHERE">
+    <column id="486" parent="462" name="DATE_ENCHERE">
       <Position>3</Position>
       <DataType>DATE|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="484" parent="461" name="QUANTITE">
+    <column id="487" parent="462" name="QUANTITE">
       <Position>4</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="485" parent="461" name="ID_TYPE_ENCHERE">
+    <column id="488" parent="462" name="ID_TYPE_ENCHERE">
       <Position>5</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="486" parent="461" name="ENCHERE_PK">
+    <index id="489" parent="462" name="ENCHERE_PK">
       <ObjectId>1119798</ObjectId>
       <CreatedTimestamp>2018-11-15.11:11:52</CreatedTimestamp>
       <ModifiedTimestamp>2018-11-15.11:11:52</ModifiedTimestamp>
@@ -1553,53 +1578,53 @@ ID_VENTE</ColNames>
       <ColNames>ID_ENCHERE</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="487" parent="461" name="ENCHERE_PK">
+    <key id="490" parent="462" name="ENCHERE_PK">
       <ModifiedTimestamp>2018-11-15.11:11:52</ModifiedTimestamp>
       <ColNames>ID_ENCHERE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>ENCHERE_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="488" parent="461" name="FK_IDTYPEENCHERE">
-      <ModifiedTimestamp>2018-11-19.13:41:27</ModifiedTimestamp>
+    <foreign-key id="491" parent="462" name="FK_IDTYPEENCHERE">
+      <ModifiedTimestamp>2018-11-21.12:32:13</ModifiedTimestamp>
       <ColNames>ID_TYPE_ENCHERE</ColNames>
       <RefSchemaName>LOUTERA</RefSchemaName>
       <RefTableName>TYPE_ENCHERE</RefTableName>
       <RefKeyName>TYPE_ENCHERE_PK</RefKeyName>
-      <OnDelete>restrict</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="489" parent="462" name="ID_PRODUIT">
+    <column id="492" parent="463" name="ID_PRODUIT">
       <Position>1</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="490" parent="462" name="NOM_PRODUIT">
+    <column id="493" parent="463" name="NOM_PRODUIT">
       <Position>2</Position>
       <DataType>VARCHAR2(30 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="491" parent="462" name="PRIX_REVIENT">
+    <column id="494" parent="463" name="PRIX_REVIENT">
       <Position>3</Position>
       <DataType>NUMBER(*)|0s</DataType>
-      <DefaultExpression>0</DefaultExpression>
+      <DefaultExpression>0 </DefaultExpression>
     </column>
-    <column id="492" parent="462" name="STOCK">
+    <column id="495" parent="463" name="STOCK">
       <Position>4</Position>
       <Comment>Par défaut il y a un stock de 1.</Comment>
       <DataType>NUMBER(*)|0s</DataType>
-      <DefaultExpression>1</DefaultExpression>
+      <DefaultExpression>1 </DefaultExpression>
     </column>
-    <column id="493" parent="462" name="NOM_CATEGORIE_PRODUIT">
+    <column id="496" parent="463" name="NOM_CATEGORIE_PRODUIT">
       <Position>5</Position>
       <DataType>VARCHAR2(20 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="494" parent="462" name="ID_SALLE_VENTE">
+    <column id="497" parent="463" name="ID_SALLE_VENTE">
       <Position>6</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="495" parent="462" name="PRODUIT_PK">
+    <index id="498" parent="463" name="PRODUIT_PK">
       <ObjectId>1119875</ObjectId>
       <CreatedTimestamp>2018-11-15.11:32:53</CreatedTimestamp>
       <ModifiedTimestamp>2018-11-15.11:32:53</ModifiedTimestamp>
@@ -1607,45 +1632,45 @@ ID_VENTE</ColNames>
       <ColNames>ID_PRODUIT</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="496" parent="462" name="PRODUIT_PK">
+    <key id="499" parent="463" name="PRODUIT_PK">
       <ModifiedTimestamp>2018-11-15.11:32:53</ModifiedTimestamp>
       <ColNames>ID_PRODUIT</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>PRODUIT_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="497" parent="462" name="FK_CATEGORIEPRODUIT">
-      <ModifiedTimestamp>2018-11-19.13:37:22</ModifiedTimestamp>
+    <foreign-key id="500" parent="463" name="FK_CATEGORIEPRODUIT">
+      <ModifiedTimestamp>2018-11-21.12:51:18</ModifiedTimestamp>
       <ColNames>NOM_CATEGORIE_PRODUIT</ColNames>
       <RefSchemaName>LOUTERA</RefSchemaName>
       <RefTableName>CATEGORIE_PRODUIT</RefTableName>
       <RefKeyName>CATEGORIE_PRODUIT_PK</RefKeyName>
-      <OnDelete>restrict</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="498" parent="462" name="FK_IDSALLEVENTE">
-      <ModifiedTimestamp>2018-11-19.13:37:45</ModifiedTimestamp>
+    <foreign-key id="501" parent="463" name="FK_IDSALLEVENTE">
+      <ModifiedTimestamp>2018-11-21.12:51:18</ModifiedTimestamp>
       <ColNames>ID_SALLE_VENTE</ColNames>
       <RefSchemaName>LOUTERA</RefSchemaName>
       <RefTableName>SALLE_VENTE</RefTableName>
       <RefKeyName>SALLE_VENTE_PK</RefKeyName>
-      <OnDelete>restrict</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="499" parent="463" name="ID_SALLE_VENTE">
+    <column id="502" parent="464" name="ID_SALLE_VENTE">
       <Position>1</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="500" parent="463" name="NOM_CATEGORIE_PRODUIT">
+    <column id="503" parent="464" name="NOM_CATEGORIE_PRODUIT">
       <Position>2</Position>
       <DataType>VARCHAR2(20 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="501" parent="463" name="ID_TYPE_ENCHERE">
+    <column id="504" parent="464" name="ID_TYPE_ENCHERE">
       <Position>3</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="502" parent="463" name="SALLE_VENTE_PK">
+    <index id="505" parent="464" name="SALLE_VENTE_PK">
       <ObjectId>1119826</ObjectId>
       <CreatedTimestamp>2018-11-15.11:26:41</CreatedTimestamp>
       <ModifiedTimestamp>2018-11-15.11:26:41</ModifiedTimestamp>
@@ -1653,84 +1678,50 @@ ID_VENTE</ColNames>
       <ColNames>ID_SALLE_VENTE</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="503" parent="463" name="SALLE_VENTE_PK">
+    <key id="506" parent="464" name="SALLE_VENTE_PK">
       <ModifiedTimestamp>2018-11-15.11:26:41</ModifiedTimestamp>
       <ColNames>ID_SALLE_VENTE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>SALLE_VENTE_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="504" parent="463" name="FK_CATEGORIEPRODUCT">
-      <ModifiedTimestamp>2018-11-19.13:38:49</ModifiedTimestamp>
+    <foreign-key id="507" parent="464" name="FK_CATEGORIEPRODUCT">
+      <ModifiedTimestamp>2018-11-21.12:52:04</ModifiedTimestamp>
       <ColNames>NOM_CATEGORIE_PRODUIT</ColNames>
       <RefSchemaName>LOUTERA</RefSchemaName>
       <RefTableName>CATEGORIE_PRODUIT</RefTableName>
       <RefKeyName>CATEGORIE_PRODUIT_PK</RefKeyName>
-      <OnDelete>restrict</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="505" parent="463" name="FK_TYPEENCHERE">
-      <ModifiedTimestamp>2018-11-19.13:39:21</ModifiedTimestamp>
+    <foreign-key id="508" parent="464" name="FK_TYPEENCHERE">
+      <ModifiedTimestamp>2018-11-21.12:52:04</ModifiedTimestamp>
       <ColNames>ID_TYPE_ENCHERE</ColNames>
       <RefSchemaName>LOUTERA</RefSchemaName>
       <RefTableName>TYPE_ENCHERE</RefTableName>
       <RefKeyName>TYPE_ENCHERE_PK</RefKeyName>
-      <OnDelete>restrict</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="506" parent="464" name="ID_SALLE_VENTE">
+    <column id="509" parent="465" name="ID_TYPE_ENCHERE">
       <Position>1</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="507" parent="464" name="ID_PRODUIT">
-      <Position>2</Position>
-      <DataType>NUMBER(*)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="508" parent="464" name="ID_VENTE">
-      <Position>3</Position>
-      <DataType>NUMBER(*)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="509" parent="464" name="SE_VEND_PK">
-      <ObjectId>1119902</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:46:46</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-15.11:46:46</ModifiedTimestamp>
-      <TablespaceName>USERS</TablespaceName>
-      <ColNames>ID_SALLE_VENTE
-ID_PRODUIT
-ID_VENTE</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="510" parent="464" name="SE_VEND_PK">
-      <ModifiedTimestamp>2018-11-15.11:46:46</ModifiedTimestamp>
-      <ColNames>ID_SALLE_VENTE
-ID_PRODUIT
-ID_VENTE</ColNames>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <UnderlyingIndexName>SE_VEND_PK</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <column id="511" parent="465" name="ID_TYPE_ENCHERE">
-      <Position>1</Position>
-      <DataType>NUMBER(*)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="512" parent="465" name="MONTANTE_DESCENDANTE">
+    <column id="510" parent="465" name="MONTANTE_DESCENDANTE">
       <Position>2</Position>
       <Comment>Si null, alors l&apos;enchère est de type montante. Sinon, l&apos;enchère est de type descendante.</Comment>
       <DataType>VARCHAR2(20 byte)|0s</DataType>
     </column>
-    <column id="513" parent="465" name="PLUSIEURS_ENCHERES">
+    <column id="511" parent="465" name="PLUSIEURS_ENCHERES">
       <Position>3</Position>
       <Comment>Si null, alors l&apos;enchère accepte plusieurs enchères du même utilisateur. Sinon, elle ne l&apos;accepte pas.</Comment>
       <DataType>VARCHAR2(20 byte)|0s</DataType>
     </column>
-    <column id="514" parent="465" name="REVOCABLE">
+    <column id="512" parent="465" name="REVOCABLE">
       <Position>4</Position>
       <Comment>Si null, alors l&apos;enchère est de type revocable. Sinon, elle ne l&apos;est pas.</Comment>
       <DataType>VARCHAR2(20 byte)|0s</DataType>
     </column>
-    <index id="515" parent="465" name="TYPE_ENCHERE_PK">
+    <index id="513" parent="465" name="TYPE_ENCHERE_PK">
       <ObjectId>1119802</ObjectId>
       <CreatedTimestamp>2018-11-15.11:18:40</CreatedTimestamp>
       <ModifiedTimestamp>2018-11-15.11:18:40</ModifiedTimestamp>
@@ -1738,29 +1729,29 @@ ID_VENTE</ColNames>
       <ColNames>ID_TYPE_ENCHERE</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="516" parent="465" name="TYPE_ENCHERE_PK">
+    <key id="514" parent="465" name="TYPE_ENCHERE_PK">
       <ModifiedTimestamp>2018-11-15.11:18:40</ModifiedTimestamp>
       <ColNames>ID_TYPE_ENCHERE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>TYPE_ENCHERE_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="517" parent="466" name="ID_TYPE_VENTE">
+    <column id="515" parent="466" name="ID_TYPE_VENTE">
       <Position>1</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="518" parent="466" name="PRIX_DEPART">
+    <column id="516" parent="466" name="PRIX_DEPART">
       <Position>2</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="519" parent="466" name="DUREE">
+    <column id="517" parent="466" name="DUREE">
       <Position>3</Position>
       <Comment>Si duree est nulle, alors la vente se termine lorsqu&apos;il n&apos;y a plus d&apos;enchères pendant 10 minutes.</Comment>
       <DataType>NUMBER(*)|0s</DataType>
     </column>
-    <index id="520" parent="466" name="TYPE_VENTE_PK">
+    <index id="518" parent="466" name="TYPE_VENTE_PK">
       <ObjectId>1119794</ObjectId>
       <CreatedTimestamp>2018-11-15.11:10:36</CreatedTimestamp>
       <ModifiedTimestamp>2018-11-15.11:10:36</ModifiedTimestamp>
@@ -1768,34 +1759,34 @@ ID_VENTE</ColNames>
       <ColNames>ID_TYPE_VENTE</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="521" parent="466" name="TYPE_VENTE_PK">
+    <key id="519" parent="466" name="TYPE_VENTE_PK">
       <ModifiedTimestamp>2018-11-15.11:10:36</ModifiedTimestamp>
       <ColNames>ID_TYPE_VENTE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>TYPE_VENTE_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="522" parent="467" name="EMAIL">
+    <column id="520" parent="467" name="EMAIL">
       <Position>1</Position>
       <DataType>VARCHAR2(30 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="523" parent="467" name="NOM">
+    <column id="521" parent="467" name="NOM">
       <Position>2</Position>
       <DataType>VARCHAR2(30 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="524" parent="467" name="PRENOM">
+    <column id="522" parent="467" name="PRENOM">
       <Position>3</Position>
       <DataType>VARCHAR2(30 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="525" parent="467" name="ADRESSE">
+    <column id="523" parent="467" name="ADRESSE">
       <Position>4</Position>
       <DataType>VARCHAR2(50 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="526" parent="467" name="UTILISATEUR_PK">
+    <index id="524" parent="467" name="UTILISATEUR_PK">
       <ObjectId>1119795</ObjectId>
       <CreatedTimestamp>2018-11-15.11:10:51</CreatedTimestamp>
       <ModifiedTimestamp>2018-11-15.11:10:51</ModifiedTimestamp>
@@ -1803,24 +1794,29 @@ ID_VENTE</ColNames>
       <ColNames>EMAIL</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="527" parent="467" name="UTILISATEUR_PK">
+    <key id="525" parent="467" name="UTILISATEUR_PK">
       <ModifiedTimestamp>2018-11-15.11:10:51</ModifiedTimestamp>
       <ColNames>EMAIL</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>UTILISATEUR_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="528" parent="468" name="ID_VENTE">
+    <column id="526" parent="468" name="ID_VENTE">
       <Position>1</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="529" parent="468" name="ID_TYPE_VENTE">
+    <column id="527" parent="468" name="ID_TYPE_VENTE">
       <Position>2</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="530" parent="468" name="VENTE_PK">
+    <column id="528" parent="468" name="ID_PRODUIT">
+      <Position>3</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="529" parent="468" name="VENTE_PK">
       <ObjectId>1119796</ObjectId>
       <CreatedTimestamp>2018-11-15.11:11:03</CreatedTimestamp>
       <ModifiedTimestamp>2018-11-15.11:11:03</ModifiedTimestamp>
@@ -1828,20 +1824,28 @@ ID_VENTE</ColNames>
       <ColNames>ID_VENTE</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="531" parent="468" name="VENTE_PK">
+    <key id="530" parent="468" name="VENTE_PK">
       <ModifiedTimestamp>2018-11-15.11:11:03</ModifiedTimestamp>
       <ColNames>ID_VENTE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>VENTE_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="532" parent="468" name="FK_TYPEVENTE">
-      <ModifiedTimestamp>2018-11-19.13:32:22</ModifiedTimestamp>
+    <foreign-key id="531" parent="468" name="FK_TYPEVENTE">
+      <ModifiedTimestamp>2018-11-21.12:30:05</ModifiedTimestamp>
       <ColNames>ID_TYPE_VENTE</ColNames>
       <RefSchemaName>LOUTERA</RefSchemaName>
       <RefTableName>TYPE_VENTE</RefTableName>
       <RefKeyName>TYPE_VENTE_PK</RefKeyName>
-      <OnDelete>restrict</OnDelete>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="532" parent="468" name="FK_ID_PRODUIT">
+      <ModifiedTimestamp>2018-11-21.13:19:29</ModifiedTimestamp>
+      <ColNames>ID_PRODUIT</ColNames>
+      <RefSchemaName>LOUTERA</RefSchemaName>
+      <RefTableName>PRODUIT</RefTableName>
+      <RefKeyName>PRODUIT_PK</RefKeyName>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
   </database-model>
 </dataSource>

@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45cf48c9-7aa9-445b-9672-a232a9e9f7d3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e8f4d8ad-a35b-4642-a940-9e24d5d3fee8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e8f4d8ad-a35b-4642-a940-9e24d5d3fee8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/storage_v2/_src_/schema/LOUTERA.knr9Pw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/storage_v2/_src_/schema/LOUTERA.knr9Pw.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/Tests/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetBd/Tests/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/connexion/Actions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetBd/connexion/Actions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/connexion/IdentificationUtilisateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetBd/connexion/IdentificationUtilisateur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/requetes/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetBd/requetes/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/requetes/Query.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetBd/requetes/Query.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/requetes/StringRequete.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetBd/requetes/StringRequete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_bd.dia" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tests/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/connexion/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connexion/Actions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/connexion/IdentificationUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connexion/IdentificationUtilisateur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/requetes/ParamQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/requetes/ParamQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requetes/StringRequete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/requetes/StringRequete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/requetes/StringRequete.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +45,18 @@
         <item name="ensioracle1" type="feb32156:DbDataSourceImpl" />
         <item name="LOUTERA: schema" type="ac44c5e0:OracleImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ensioracle1" type="feb32156:DbDataSourceImpl" />
+        <item name="LOUTERA: schema" type="ac44c5e0:OracleImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ensioracle1" type="feb32156:DbDataSourceImpl" />
+        <item name="LOUTERA: schema" type="ac44c5e0:OracleImplModel$Schema" />
+        <item name="sequences" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
     </expand>
     <select />
   </component>
@@ -48,61 +71,97 @@
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.16" value="2" />
-          <entry key="project.open.time.17" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.open.time.17" value="2" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="AFFECTATION_ENCHERE" value="1" />
-          <entry key="CATEGORIE_PRODUIT" value="2" />
-          <entry key="ENCHERE" value="6" />
-          <entry key="PRODUIT" value="2" />
-          <entry key="SALLE_VENTE" value="3" />
-          <entry key="SE_VEND" value="1" />
-          <entry key="UTILISATEUR" value="4" />
-          <entry key="VENTE" value="2" />
-          <entry key="class" value="3" />
+          <entry key="AFFECTATION_ENCHERE" value="4" />
+          <entry key="CARACTERISTIQUES" value="2" />
+          <entry key="CATEGORIE_PRODUIT" value="4" />
+          <entry key="ENCHERE" value="18" />
+          <entry key="ID_ENCHERE" value="1" />
+          <entry key="PRODUIT" value="4" />
+          <entry key="SALLE_VENTE" value="5" />
+          <entry key="SE_VEND" value="3" />
+          <entry key="UTILISATEUR" value="9" />
+          <entry key="VENTE" value="3" />
+          <entry key="class" value="4" />
           <entry key="classpath" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="23" />
+          <entry key="java" value="29" />
           <entry key="project" value="1" />
-          <entry key="sql" value="2" />
+          <entry key="sql" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="3" />
-          <entry key="Database Element" value="21" />
+          <entry key="CLASS" value="4" />
+          <entry key="Database Element" value="52" />
           <entry key="Eclipse" value="2" />
-          <entry key="JAVA" value="23" />
+          <entry key="JAVA" value="29" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Scratch" value="2" />
+          <entry key="SQL" value="11" />
+          <entry key="Scratch" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="3686" />
+          <entry key="java" value="5116" />
+          <entry key="sql" value="205" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="3686" />
+          <entry key="JAVA" value="5116" />
+          <entry key="SQL" value="6" />
+          <entry key="Scratch" value="199" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4429029">
+    <splitter split-orientation="horizontal" split-proportion="0.48132336">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/connexion/IdentificationUtilisateur.java">
+            <entry file="file://$PROJECT_DIR$/src/requetes/SimpleQuery.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="315">
-                  <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+                  <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/AFFECTATION_ENCHERE">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/sequence/ID_ENCHERE">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="30">
+                  <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/CARACTERISTIQUES">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                  <column-attributes>
+                    <column name="ROWID" enabled="false" />
+                  </column-attributes>
                 </state>
               </provider>
             </entry>
@@ -111,7 +170,7 @@
             <entry file="file://$PROJECT_DIR$/src/connexion/DataBaseAccess.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="659">
-                  <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+                  <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -119,29 +178,25 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Tests/test.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" selection-start-line="17" selection-end-line="17" />
+                <state relative-caret-position="225">
+                  <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#290#291#0" expanded="true" />
+                    <element signature="e#348#349#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/requetes/ParamQuery.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="77" column="76" selection-start-line="77" selection-start-column="76" selection-end-line="77" selection-end-column="76" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/connexion/Actions.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="449">
-                  <caret line="46" column="10" selection-start-line="45" selection-start-column="5" selection-end-line="46" selection-end-column="10" />
+                <state relative-caret-position="780">
+                  <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -151,55 +206,24 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/requetes/SimpleQuery.java">
+            <entry file="file://$PROJECT_DIR$/src/requetes/Query.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="25" selection-start-line="25" selection-end-line="25" />
+                <state relative-caret-position="975">
+                  <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/requetes/StringRequete.java">
+            <entry file="file://$PROJECT_DIR$/src/connexion/Actions.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="28" column="73" selection-start-line="28" selection-start-column="73" selection-end-line="28" selection-end-column="73" />
-                  <folding>
-                    <element signature="e#115#116#0" expanded="true" />
-                    <element signature="e#173#174#0" expanded="true" />
-                    <element signature="e#1102#1103#0" expanded="true" />
-                    <element signature="e#1122#1123#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/requetes/Query.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="456">
-                  <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Tests/login.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret selection-end-line="124" />
+                <state relative-caret-position="690">
+                  <caret line="104" column="72" selection-start-line="104" selection-start-column="72" selection-end-line="104" selection-end-column="72" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1152#1153#0" expanded="true" />
-                    <element signature="e#1171#1172#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/requetes/SimpleQuery.class">
-              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
@@ -217,6 +241,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>getStr</find>
+      <find>setInt</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -231,15 +256,18 @@
         <option value="$PROJECT_DIR$/src/requetes/Actions.java" />
         <option value="$PROJECT_DIR$/src/Actions.java" />
         <option value="$PROJECT_DIR$/src/actions/Actions.java" />
-        <option value="$PROJECT_DIR$/src/connexion/IdentificationUtilisateur.java" />
         <option value="$PROJECT_DIR$/src/requetes/SimpleQuery.java" />
         <option value="$PROJECT_DIR$/src/Tests/signup.java" />
         <option value="$PROJECT_DIR$/src/Tests/login.java" />
         <option value="$PROJECT_DIR$/src/requetes/Query.java" />
-        <option value="$PROJECT_DIR$/src/connexion/Actions.java" />
+        <option value="$PROJECT_DIR$/src/connexion/IdentificationUtilisateur.java" />
         <option value="$PROJECT_DIR$/src/Tests/test.java" />
-        <option value="$PROJECT_DIR$/src/requetes/ParamQuery.java" />
+        <option value="e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/ENCHERE.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/console.sql" />
         <option value="$PROJECT_DIR$/src/requetes/StringRequete.java" />
+        <option value="$PROJECT_DIR$/src/requetes/ParamQuery.java" />
+        <option value="$PROJECT_DIR$/src/connexion/Actions.java" />
+        <option value="e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/SE_VEND.sql" />
       </list>
     </option>
   </component>
@@ -254,12 +282,33 @@
     <option name="width" value="1252" />
     <option name="height" value="714" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>JavadocJava</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>JavaDoc</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -293,14 +342,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="oracle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543079446104" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543219478235" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/bin/ojdbc6.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -361,15 +409,47 @@
       <workItem from="1542896132221" duration="137000" />
       <workItem from="1542904300249" duration="1215000" />
       <workItem from="1542968924976" duration="5140000" />
+      <workItem from="1543147503911" duration="8879000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21545000" />
+    <option name="totallyTimeSpent" value="30424000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="632" y="0" width="1252" height="714" extended-state="0" />
+    <frame x="-4" y="0" width="1928" height="1084" extended-state="7" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12966916" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32912722" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21451104" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.22082019" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32912722" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.533123" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info active="true" anchor="right" id="Database" order="5" visible="true" weight="0.1456777" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" weight="0.12966916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
@@ -395,38 +475,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.1456777" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12966916" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21451104" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.22082019" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32912722" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.533123" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="right" id="Database" order="5" visible="true" weight="0.1456777" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.1456777" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
@@ -439,90 +488,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/requetes/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/src/.classpath">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/.project">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/test.class" />
-    <entry file="file://$PROJECT_DIR$/src/connexion/IdentificationUtilisateur.class" />
-    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/AFFECTATION_ENCHERE" />
-    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/SE_VEND" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/CATEGORIE_PRODUIT" />
-    <entry file="file://$PROJECT_DIR$/src/Tests/package-info.java" />
-    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/PRODUIT" />
-    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/UTILISATEUR" />
-    <entry file="file://$PROJECT_DIR$/src/requetes/SimpleQuery.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/signup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="128" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="124" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1152#1153#0" expanded="true" />
-            <element signature="e#1171#1172#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/requetes/SimpleQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/requetes/Query.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/SALLE_VENTE">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/connexion/IdentificationUtilisateur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/VENTE">
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/UTILISATEUR">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -536,37 +502,364 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/ENCHERE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/ENCHERE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests/login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-900">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#1152#1153#0" expanded="true" />
+            <element signature="e#1171#1172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/UTILISATEUR">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/UTILISATEUR">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/UTILISATEUR">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/UTILISATEUR.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/ENCHERE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/ENCHERE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/PRODUIT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/PRODUIT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/PRODUIT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/SALLE_VENTE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/SALLE_VENTE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/UTILISATEUR">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/SALLE_VENTE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/ENCHERE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/CATEGORIE_PRODUIT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/CATEGORIE_PRODUIT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/PRODUIT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/CATEGORIE_PRODUIT.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/SALLE_VENTE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/PRODUIT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/ENCHERE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/ENCHERE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/SALLE_VENTE.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/PRODUIT.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/SALLE_VENTE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/CATEGORIE_PRODUIT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/AFFECTATION_ENCHERE.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/ENCHERE.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/requetes/Query.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/connexion/DataBaseAccess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="659">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/requetes/SimpleQuery.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/requetes/StringRequete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/connexion/Actions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="46" column="10" selection-start-line="45" selection-start-column="5" selection-end-line="46" selection-end-column="10" />
+        <state relative-caret-position="690">
+          <caret line="104" column="72" selection-start-line="104" selection-start-column="72" selection-end-line="104" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/VENTE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/SE_VEND.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/SE_VEND">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/ENCHERE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/UTILISATEUR">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/requetes/ParamQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="77" column="76" selection-start-line="77" selection-start-column="76" selection-end-line="77" selection-end-column="76" />
+        <state relative-caret-position="780">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/requetes/StringRequete.java">
+    <entry file="file://$PROJECT_DIR$/src/connexion/IdentificationUtilisateur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="28" column="73" selection-start-line="28" selection-start-column="73" selection-end-line="28" selection-end-column="73" />
-          <folding>
-            <element signature="e#115#116#0" expanded="true" />
-            <element signature="e#173#174#0" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-            <element signature="e#1122#1123#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="495">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/requetes/SimpleQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/AFFECTATION_ENCHERE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/sequence/ID_ENCHERE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/schema/LOUTERA/table/CARACTERISTIQUES">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ROWID" enabled="false" />
+          </column-attributes>
         </state>
       </provider>
     </entry>
