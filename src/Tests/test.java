@@ -30,7 +30,7 @@ public class test {
         DataBaseAccess data = new DataBaseAccess();
         Actions act = new Actions("leila.kany@gmail.com", data);
         try {
-            act.newSalle("voiture", 52);
+            act.newEnchereAsc(2, 7, 6);
         } catch (SQLException e) {
             e.printStackTrace();
         }
