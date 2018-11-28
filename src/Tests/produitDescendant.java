@@ -1,3 +1,4 @@
+
 package Tests;
 
 import java.awt.EventQueue;
@@ -31,9 +32,9 @@ public class produitDescendant {
 	 * Create the application.
 	 */
 	public produitDescendant(DataBaseAccess data, String email, int idProduit, String nomProduit) {
-		this.data = data;
-		this.email = email;
-		this.idProduit = idProduit;
+		produitDescendant.data = data;
+		produitDescendant.email = email;
+		produitDescendant.idProduit = idProduit;
 		initialize(nomProduit);
 	}
 
@@ -43,31 +44,31 @@ public class produitDescendant {
 	private void initialize(String nomProduit) {
 		try {
 		Actions act = new Actions(email, data);
-			
-		Vector<String> caracteristiques = act.getCaracteristiques();
+
+		Vector<String> caracteristiques = act.getCaracteristiques(produitDescendant.idProduit).affichageCaracteristiquesProduit();
 		int nbr_caracteristique = caracteristiques.size();
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 80 + 80*nbr_caracteristique);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+
 		JLabel lblNomproduit = new JLabel(nomProduit);
 		lblNomproduit.setBounds(167, 12, 101, 22);
 		frame.getContentPane().add(lblNomproduit);
-		
+
 		textField = new JTextField();
 		textField.setBounds(314, 46, 114, 19);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
-		
+
 		JLabel lblEnchre = new JLabel("Enchère ?");
 		lblEnchre.setBounds(237, 48, 70, 15);
 		frame.getContentPane().add(lblEnchre);
-		
+
 		JLabel lblPrixActuel = new JLabel("Prix actuel :");
 		lblPrixActuel.setBounds(25, 46, 184, 22);
 		frame.getContentPane().add(lblPrixActuel);
-		
+
 		for(int j =0; j <= nbr_caracteristique; j++) {
 			String texte = caracteristiques.elementAt(j);
 			JLabel lblAjouterCaracteristiques = new JLabel(texte);

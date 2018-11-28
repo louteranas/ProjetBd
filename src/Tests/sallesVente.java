@@ -1,17 +1,15 @@
 package Tests;
 
-import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.Vector;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import connexion.Actions;
-import connexion.DataBaseAccess;
-import requetes.SimpleQuery;
-
-import javax.swing.JButton;
+import connexion.*;
 
 public class sallesVente {
 
@@ -40,29 +38,44 @@ public class sallesVente {
 		Vector<String> salles = act.affichageSallesDeVente().getNomSallesVente();
 		Vector<Integer> idSalles = act.affichageSallesDeVente().getIdSallesVente();
 		Vector<Integer> idEnchereSalles = act.affichageSallesDeVente().getIdEnchereSallesVente();
-		int nbr_ligne = salles.size()%2;
 		int nbr_salle = salles.size();
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 90*(nbr_ligne +1) );
+		frame.setBounds(100, 100, 650, 90*(nbr_salle-1) );
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblSallesDeVente = new JLabel("Salles de vente");
-		lblSallesDeVente.setBounds(165, 12, 218, 15);
+		lblSallesDeVente.setBounds(250, 12, 400, 15);
 		frame.getContentPane().add(lblSallesDeVente);
 		
-		
-		for(int j =0; j <= nbr_salle; j=j+2) {
-			String nom = idSalles.elementAt(j) + salles.elementAt(j) + idEnchereSalles.elementAt(j);
-			JButton btnNewButton1 = new JButton(nom);
-			btnNewButton1.setBounds(45, 40+25*j, 117, 25);
-			frame.getContentPane().add(btnNewButton1);
-			if(j+1<=nbr_salle-1) {
-				nom = salles.elementAt(j+1);
-				JButton btnNewButton2 = new JButton(nom);
-				btnNewButton2.setBounds(285, 40+ 25*j, 117, 25);
-				frame.getContentPane().add(btnNewButton2);
+		JButton btnNewButton0 = new JButton("retour");
+		btnNewButton0.setBounds(10, 12, 100, 25);
+		btnNewButton0.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent arg0) {
+				
 			}
+		});
+		frame.getContentPane().add(btnNewButton0);
+		
+		
+		for(int j =0; j < nbr_salle; j++) {
+			String nom = salles.elementAt(j) + act.typeEnchere(idEnchereSalles.elementAt(j)).getTypeEnchere();
+			int id = idEnchereSalles.elementAt(j);
+			String salle = salles.elementAt(j);
+			JButton btnNewButton1 = new JButton(nom);
+			btnNewButton1.setBounds(45, 80+40*j, 560, 25);
+			btnNewButton1.addActionListener(new ActionListener(){
+				public void actionPerformed(ActionEvent arg0) {
+					try {
+						produitSalleVente window = new produitSalleVente(data, email, id, salle);
+						window.frame.setVisible(true);
+						frame.dispose();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			});
+			frame.getContentPane().add(btnNewButton1);
 		}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

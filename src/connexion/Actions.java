@@ -86,9 +86,9 @@ public class Actions {
     /**
      * Insertion dans la table Enchere
      */
-    public ParamQuery insertIntoEnchere(int id_enchere, int prixAchat, int quantite, int id_type_enchere) {
+    public ParamQuery insertIntoEnchere(int id_enchere, int prixAchat, int quantite) {
         try {
-            return (new ParamQuery(data, "insert into ENCHERE values(?, ?,sysdate, ?, ?)", id_enchere, prixAchat, quantite, id_type_enchere));
+            return (new ParamQuery(data, "insert into ENCHERE values(?, ?,sysdate, ?)", id_enchere, prixAchat, quantite));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -137,10 +137,19 @@ public class Actions {
     }
 
     /**
-     * Retourne true si l'enchere est descendante, false si montante
+     * Retourne l'id_vente à partir de l'id_enchere
      */
-    private boolean enchereDesc(int id_enchere) throws SQLException {
-        ParamQuery sq = new ParamQuery(data, "select montante_descendante from type_enchere t, enchere e where id_enchere = ? and e.id_type_enchere = t.id_type_enchere", id_enchere);
+    private int getIdVente(int idEnchere) throws SQLException {
+        ParamQuery sreq;
+        sreq = new ParamQuery(data, "select id_vente from AFFECTATION_ENCHERE where id_enchere = ?", idEnchere);
+        return (sreq.getSimpleResult(sreq.getResult()));
+    }
+
+    /**
+     * Retourne true si l'enchere est montante, false si descendante
+     */
+    private boolean enchereMont(int idTypeEnchere) throws SQLException {
+        ParamQuery sq = new ParamQuery(data, "select montante_descendante from type_enchere  where id_type_enchere = ?", idTypeEnchere);
         if (sq.getStrResult(sq.getResult()) == null){
             return false;
         }
@@ -148,29 +157,29 @@ public class Actions {
     }
 
     /**
-     * Rajoute un champ dans les tables Enchèeres et affectation enchère pour une enchère ascendante
+     * Rajoute un champ dans les tables Enchères et affectation enchère pour une enchère ascendante
      *
      * @throws SQLException
      */
-    public void newEnchereAcs(int id_vente, int prixAchat, int quantite) throws SQLException {
-        int id_enchere = getIdEnchere();
-        int id_typeEnchere = getIdTypeEnchere(getIdSalleVente(id_vente));
-        insertIntoEnchere(id_enchere, prixAchat, quantite, id_typeEnchere);
-        insertIntoAffectationEnchere(id_enchere, id_vente);
+    public void newEnchereAsc(int idVente, int prixAchat, int quantite) throws SQLException {
+        int idEnchere = getIdEnchere();
+        int prixCourant = prixCourant(idVente);
+        if (prixAchat < prixCourant){
+            throw new IllegalArgumentException("Le prix doit être supérieur au prix courant!");
+        }
+        insertIntoEnchere(idEnchere, prixAchat, quantite);
+        insertIntoAffectationEnchere(idEnchere, idVente);
     }
 
     /**
      * Idem pour enchère descendante
      */
-    public void newEnchereDesc(int id_vente, int prixAchat, int quantite) throws SQLException {
+    public void newEnchereDesc(int id_vente, int quantite) throws SQLException {
         int id_enchere = getIdEnchere();
         int id_typeEnchere = getIdTypeEnchere(getIdSalleVente(id_vente));
-        
-
-        insertIntoEnchere(id_enchere, prixAchat, quantite, id_typeEnchere);
+        int prixAchat = prixCourant(id_vente);
+        insertIntoEnchere(id_enchere, prixAchat, quantite);
         insertIntoAffectationEnchere(id_enchere, id_vente);
-
-
     }
 
 
@@ -180,7 +189,7 @@ public class Actions {
      */
     public ParamQuery newSalle(String categorie_produit, int typeEnchere) throws SQLException {
         try {
-            return (new ParamQuery(data, "insert into SALLE_VENTE values(id_salle_vente.nextval, ?, ?", categorie_produit, typeEnchere));
+            return (new ParamQuery(data, "insert into SALLE_VENTE values(id_salle_vente.nextval, ?, ?)", categorie_produit, typeEnchere));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -193,7 +202,7 @@ public class Actions {
      **/
     public ParamQuery insertIntoProduit(String nom, int prix, int stock, String categorie, int id_salle) {
         try {
-            return (new ParamQuery(data, "insert into PRODUIT values(idi_produit.nextval, ?, ?, ?, ?, ?)", nom, prix, stock, categorie, id_salle));
+            return (new ParamQuery(data, "insert into PRODUIT values(id_produit.nextval, ?, ?, ?, ?, ?)", nom, prix, stock, categorie, id_salle));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -213,7 +222,7 @@ public class Actions {
     public int prixCourant(int idVente) throws SQLException {
         int idTypeEnchere = getIdTypeEnchere(getIdSalleVente(idVente));
         ParamQuery sreq;
-        if(!enchereDesc(idTypeEnchere)){
+        if(enchereMont(idTypeEnchere)){
             sreq = new ParamQuery(data, "select max(prix_achat) from ENCHERE where id_enchere in (SELECT id_enchere FROM AFFECTATION_ENCHERE where id_vente = ?)", idVente);
         }else{
             sreq = new ParamQuery(data, "select prix_courant from (select prix_depart-(sysdate-DATE_DEBUT)*24*60 as prix_courant, id_vente from TYPE_VENTE t1, VENTE t2 WHERE t1.id_type_vente = t2.id_type_vente) where id_vente = ?", idVente);
@@ -225,9 +234,60 @@ public class Actions {
      * Renvoie les caractéristiques d'un produit
      */
     public ParamQuery getCaracteristiques(int idProduit) throws SQLException {
-        return (new ParamQuery(data, "select ", idProduit));
+        return (new ParamQuery(data, "select * CARACTERISTIQUES where id_produit = ?", idProduit));
 
     }
+    
+    /********************************NEW******************************************/
+    
+    /**
+     * Insertion d'une caracteristique produit 
+     **/
+    public ParamQuery insertIntoCaracteristiques(String caracteristique, int id_produit) {
+        try {
+            return (new ParamQuery(data, "insert into CARACTERISTIQUES values(?, ?)", caracteristique, id_produit));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+    /**
+     * Insertion d'un type de vente (recupere une duree en h)
+     **/
+    public ParamQuery insertIntoTypeVente(int prix_depart,int duree) {
+        try {
+            return (new ParamQuery(data, "insert into TYPE_VENTE values(id_produit.nextval, ?, sysdate + ?/24, sysdate)", prix_depart, duree));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+    /**
+     * Insertion DANS TABLE vente
+     **/
+    public ParamQuery insertIntoVente(int id_type_vente, int id_produit) {
+        try {
+            return (new ParamQuery(data, "insert into VENTE values(id_vente.nextval, ?, ?)",id_type_vente, id_produit));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+    /**
+     * Insertion DANS TABLE CATEGORIE_PRODUIT
+     **/
+    public ParamQuery insertIntoCategorieProduit(String nom_categorie_produit, String description) {
+        try {
+            return (new ParamQuery(data, "insert into CATEGORIE_PRODUIT values(?, ?)",nom_categorie_produit, description));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
 
 
 }
