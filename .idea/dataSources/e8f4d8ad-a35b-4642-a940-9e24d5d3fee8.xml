@@ -1616,13 +1616,13 @@ ID_VENTE</ColNames>
     <column id="496" parent="467" name="PRIX_REVIENT">
       <Position>3</Position>
       <DataType>NUMBER(*)|0s</DataType>
-      <DefaultExpression>0 </DefaultExpression>
+      <DefaultExpression>0</DefaultExpression>
     </column>
     <column id="497" parent="467" name="STOCK">
       <Position>4</Position>
       <Comment>Par défaut il y a un stock de 1.</Comment>
       <DataType>NUMBER(*)|0s</DataType>
-      <DefaultExpression>1 </DefaultExpression>
+      <DefaultExpression>1</DefaultExpression>
     </column>
     <column id="498" parent="467" name="ID_SALLE_VENTE">
       <Position>5</Position>
@@ -1710,7 +1710,7 @@ ID_VENTE</ColNames>
     </column>
     <column id="511" parent="469" name="PLUSIEURS_ENCHERES">
       <Position>3</Position>
-      <Comment>Si null, alors l&apos;enchère n&apos;accepte pas plusieurs enchères du même utilisateur. Sinon, elle l&apos;accepte </Comment>
+      <Comment>Si null, alors l&apos;enchère n&apos;accepte pas plusieurs enchères du même utilisateur. Sinon, elle l&apos;accepte</Comment>
       <DataType>VARCHAR2(20 byte)|0s</DataType>
     </column>
     <column id="512" parent="469" name="REVOCABLE">
