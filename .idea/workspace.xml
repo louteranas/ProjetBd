@@ -1,57 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df548718-7983-4229-8514-a60c9068117e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ProjetBd.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e8f4d8ad-a35b-4642-a940-9e24d5d3fee8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e8f4d8ad-a35b-4642-a940-9e24d5d3fee8/storage_v2/_src_/schema/LOUTERA.knr9Pw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Analyse/DF.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Analyse/projet_bd.dia.autosave" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProjetBd/Tests/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProjetBd/connexion/DataBaseAccess.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProjetBd/connexion/IdentificationUtilisateur.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProjetBd/requetes/Query.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ProjetBd/requetes/SimpleQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tests/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tests/choixDebut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tests/login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tests/produitAscendant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tests/produitDescendant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tests/produitSalleVente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tests/sallesVente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tests/signup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connexion/Actions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connexion/AjoutUtilisateur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/requetes/ParamQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analyse/projet_bd.dia" beforeDir="false" afterPath="$PROJECT_DIR$/Analyse/projet_bd.dia" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documents/tnsnames.ora" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetBd/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/ProjetBd.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/Tests/.test.java.swp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/connexion/.DataBaseAccess.java.swp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/connexion/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetBd/connexion/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/requetes/.Query.java.swp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/requetes/.SimpleQuery.java.swp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/requetes/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetBd/requetes/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetBd/src.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connexion/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/connexion/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connexion/IdentificationUtilisateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/connexion/IdentificationUtilisateur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connexion/IdentificationUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/connexion/IdentificationUtilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requetes/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/requetes/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requetes/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/requetes/Query.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requetes/SimpleQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/requetes/SimpleQuery.java" afterDir="false" />
-    </list>
+    <list default="true" id="df548718-7983-4229-8514-a60c9068117e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +109,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/connexion/Actions.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="106">
+                <state relative-caret-position="1922">
                   <caret line="238" column="44" lean-forward="true" selection-start-line="238" selection-start-column="44" selection-end-line="238" selection-end-column="44" />
                 </state>
               </provider>
@@ -298,7 +248,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543406116130" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543406951087" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/bin/ojdbc6.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -353,12 +303,12 @@
       <workItem from="1542194056501" duration="1517000" />
       <workItem from="1542276115801" duration="36000" />
       <workItem from="1542626525420" duration="1261000" />
-      <workItem from="1543401468585" duration="4237000" />
+      <workItem from="1543401468585" duration="4501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3569000" />
+    <option name="totallyTimeSpent" value="3833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1680" height="988" extended-state="6" />
@@ -388,7 +338,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="right" id="Database" order="5" visible="true" weight="0.32965687" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32965687" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
@@ -482,7 +432,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/connexion/Actions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
+        <state relative-caret-position="1922">
           <caret line="238" column="44" lean-forward="true" selection-start-line="238" selection-start-column="44" selection-end-line="238" selection-end-column="44" />
         </state>
       </provider>
