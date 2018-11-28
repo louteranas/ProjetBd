@@ -2,6 +2,7 @@ package Tests;
 
 import java.awt.EventQueue;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import connexion.Actions;
 import connexion.DataBaseAccess;
@@ -28,8 +29,11 @@ public class test {
 //    public static void main(String[] args) {
 //        DataBaseAccess data = new DataBaseAccess();
 //        Actions act = new Actions("leila.kany@gmail.com", data);
+//        ArrayList<String> car = new ArrayList<>();
+//        car.add("BMW");
+//        car.add("rapide");
 //        try {
-//            act.newEnchereAsc(2, 7, 6);
+//            act.newVente(car, 40000, 35, "Voiture BMW", 30000, 5, 4  );
 //        } catch (SQLException e) {
 //            e.printStackTrace();
 //        }

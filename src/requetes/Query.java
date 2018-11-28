@@ -82,16 +82,22 @@ public abstract class Query {
 		
 	}
 	
-//	public String getTypeSalleProduit() throws SQLException{
-//		ResultSetMetaData rsetmd = result.getMetaData();
-//		while (this.result.next()) {
-//        	if(this.result.getString(2) == "montante") {
-//        		return "montante";
-//        	}
-//		}
-//	}
+	public String getTypeSalleProduit(int id) throws SQLException{
+		ResultSetMetaData rsetmd = result.getMetaData();
+		while (this.result.next()) {
+			if(Integer.valueOf(this.result.getString(1)) == id) {
+        	if(this.result.getString(2) == "montante") {
+        		return "montante";
+        	}
+        	else {
+        		return "descendante";
+        	}
+			}
+		}
+		return null;
+	}
 	
-	public Vector<String> getPoduitSalle() throws SQLException{
+	public Vector<String> getProduitSalle() throws SQLException{
 		Vector<String> salles = new Vector<String>();
         ResultSetMetaData rsetmd = this.result.getMetaData();
         while (this.result.next()) {
@@ -101,6 +107,16 @@ public abstract class Query {
 		
 	}
 
+	public Vector<Integer> getIdProduitSalle() throws SQLException{
+		Vector<Integer> salles = new Vector<Integer>();
+        ResultSetMetaData rsetmd = this.result.getMetaData();
+        while (this.result.next()) {
+        	salles.add(Integer.valueOf(this.result.getString(1)));
+	    }
+        return salles;
+		
+	}
+	
 	public boolean affichageResultatUser(ResultSet resultat) throws SQLException{
         ResultSetMetaData rsetmd = resultat.getMetaData();
         int i = rsetmd.getColumnCount();

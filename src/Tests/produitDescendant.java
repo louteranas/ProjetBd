@@ -21,7 +21,7 @@ import javax.swing.JTextField;
 
 public class produitDescendant {
 
-	private JFrame frame;
+	public JFrame frame;
 	private JTextField textField;
 	private static String email;
 	private static DataBaseAccess data;
@@ -48,12 +48,12 @@ public class produitDescendant {
 		Vector<String> caracteristiques = act.getCaracteristiques(produitDescendant.idProduit).affichageCaracteristiquesProduit();
 		int nbr_caracteristique = caracteristiques.size();
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 80 + 80*nbr_caracteristique);
+		frame.setBounds(100, 100, 450, 80 + 80*(nbr_caracteristique+1));
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
 		JLabel lblNomproduit = new JLabel(nomProduit);
-		lblNomproduit.setBounds(167, 12, 101, 22);
+		lblNomproduit.setBounds(80, 5, 300, 12);
 		frame.getContentPane().add(lblNomproduit);
 
 		textField = new JTextField();
@@ -62,7 +62,7 @@ public class produitDescendant {
 		textField.setColumns(10);
 
 		JLabel lblEnchre = new JLabel("Enchère ?");
-		lblEnchre.setBounds(237, 48, 70, 15);
+		lblEnchre.setBounds(237, 48, 100, 15);
 		frame.getContentPane().add(lblEnchre);
 		
 		JButton btnEnchere = new JButton("Enchérir");
@@ -73,7 +73,7 @@ public class produitDescendant {
 		lblPrixActuel.setBounds(25, 46, 184, 22);
 		frame.getContentPane().add(lblPrixActuel);
 
-		for(int j =0; j <= nbr_caracteristique; j++) {
+		for(int j =0; j < nbr_caracteristique; j++) {
 			String texte = caracteristiques.elementAt(j);
 			JLabel lblAjouterCaracteristiques = new JLabel(texte);
 			lblAjouterCaracteristiques.setBounds(25, 80+80*j, 400, 80);

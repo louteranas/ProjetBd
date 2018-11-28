@@ -4,6 +4,7 @@ import requetes.ParamQuery;
 import requetes.SimpleQuery;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 
 public class Actions {
@@ -137,6 +138,25 @@ public class Actions {
     }
 
     /**
+     * Retourne l'idProduit à utiliser
+     */
+    private int getIdProduit() throws SQLException {
+        SimpleQuery sreq;
+        sreq = new SimpleQuery(data, "select id_produit.nextval from dual");
+        return (sreq.getSimpleResult(sreq.getResult()));
+    }
+
+
+    /**
+     * Retourne l'idTypeVente à utiliser
+     */
+    private int getIdTypeVente() throws SQLException {
+        SimpleQuery sreq;
+        sreq = new SimpleQuery(data, "select id_type_vente.nextval from dual");
+        return (sreq.getSimpleResult(sreq.getResult()));
+    }
+
+    /**
      * Retourne l'id_vente à partir de l'id_enchere
      */
     private int getIdVente(int idEnchere) throws SQLException {
@@ -200,9 +220,9 @@ public class Actions {
     /**
      * Insertion d'un nouveau produit
      **/
-    public ParamQuery insertIntoProduit(String nom, int prix, int stock, String categorie, int id_salle) {
+    public ParamQuery insertIntoProduit( int idProduit, String nom, int prix, int stock, int id_salle) {
         try {
-            return (new ParamQuery(data, "insert into PRODUIT values(id_produit.nextval, ?, ?, ?, ?, ?)", nom, prix, stock, categorie, id_salle));
+            return (new ParamQuery(data, "insert into PRODUIT values(?, ?, ?, ?, ?)", idProduit, nom, prix, stock, id_salle));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -215,7 +235,14 @@ public class Actions {
     public ParamQuery typeEnchere(int id) throws SQLException {
         return (new ParamQuery(data, "select * from TYPE_ENCHERE where id_type_enchere = ?", id));
     }
-
+    /**
+     * Renvoie l'iDdVente à partir de l'idProduit
+     */
+    public int getIdProduit(int idVente) throws SQLException {
+        ParamQuery sreq;
+        sreq = new ParamQuery(data, "select id_produit from vente where id_vente = ?", idVente);
+        return (sreq.getSimpleResult(sreq.getResult()));
+    }
     /**
      * Renvoie le prix courant pour une enchère donnée (max)
      */
@@ -234,7 +261,7 @@ public class Actions {
      * Renvoie les caractéristiques d'un produit
      */
     public ParamQuery getCaracteristiques(int idProduit) throws SQLException {
-        return (new ParamQuery(data, "select * CARACTERISTIQUES where id_produit = ?", idProduit));
+        return (new ParamQuery(data, "select * from CARACTERISTIQUES where id_produit = ?", idProduit));
 
     }
     
@@ -255,9 +282,9 @@ public class Actions {
     /**
      * Insertion d'un type de vente (recupere une duree en h)
      **/
-    public ParamQuery insertIntoTypeVente(int prix_depart,int duree) {
+    public ParamQuery insertIntoTypeVente(int idTypeVente, int prix_depart, int duree) {
         try {
-            return (new ParamQuery(data, "insert into TYPE_VENTE values(id_produit.nextval, ?, sysdate + ?/24, sysdate)", prix_depart, duree));
+            return (new ParamQuery(data, "insert into TYPE_VENTE values(?, ?, sysdate + ?/24, sysdate)", idTypeVente, prix_depart, duree));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -287,7 +314,21 @@ public class Actions {
         }
         return null;
     }
-    
+
+    /**
+     * Création d'une nouvelle vente
+     */
+    public void newVente(ArrayList<String> caracteristiques, int prixDepart, int duree, String nomProduit, int prixRevient, int stock, int idSalleVente) throws SQLException {
+        int idProduit = getIdProduit();
+        int idTypeVente = getIdTypeVente();
+        insertIntoProduit(idProduit, nomProduit, prixRevient, stock, idSalleVente);
+        for(String car : caracteristiques){
+            insertIntoCaracteristiques(car, idProduit);
+        }
+        insertIntoTypeVente(idTypeVente, prixDepart, duree);
+        insertIntoVente(idTypeVente, idProduit);
+
+    }
 
 
 }
