@@ -44,7 +44,7 @@ public class produitDescendant {
 		try {
 		Actions act = new Actions(email, data);
 			
-		Vector<String> caracteristiques = act.affichageCaracteristiques().getCaracteristiques();
+		Vector<String> caracteristiques = act.getCaracteristiques();
 		int nbr_caracteristique = caracteristiques.size();
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 80 + 80*nbr_caracteristique);
