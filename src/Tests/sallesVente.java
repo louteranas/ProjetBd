@@ -21,17 +21,18 @@ public class sallesVente {
 	
 	/**
 	 * Create the application.
+	 * @param parentFrame 
 	 */
-	public sallesVente(DataBaseAccess data, String email) {
-		this.data = data;
-		this.email = email;
-		initialize();
+	public sallesVente(DataBaseAccess data, String email, JFrame parentFrame) {
+		sallesVente.data = data;
+		sallesVente.email = email;
+		initialize(parentFrame);
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize(JFrame parentFrame) {
 		try {
 		Actions act = new Actions(email, data);
 		
@@ -53,6 +54,8 @@ public class sallesVente {
 		btnNewButton0.setBounds(10, 12, 100, 25);
 		btnNewButton0.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0) {
+				frame.setVisible(false);
+				parentFrame.setVisible(true);
 				
 			}
 		});
@@ -61,16 +64,17 @@ public class sallesVente {
 		
 		for(int j =0; j < nbr_salle; j++) {
 			String nom = salles.elementAt(j) + act.typeEnchere(idEnchereSalles.elementAt(j)).getTypeEnchere();
-			int id = idEnchereSalles.elementAt(j);
+			int id = idSalles.elementAt(j);
 			String salle = salles.elementAt(j);
 			JButton btnNewButton1 = new JButton(nom);
 			btnNewButton1.setBounds(45, 80+40*j, 560, 25);
 			btnNewButton1.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent arg0) {
 					try {
-						produitSalleVente window = new produitSalleVente(data, email, id, salle);
+						
+						produitSalleVente window = new produitSalleVente(data, email, id, salle, frame);
 						window.frame.setVisible(true);
-						frame.dispose();
+						frame.setVisible(false);
 					} catch (Exception e) {
 						e.printStackTrace();
 					}

@@ -58,9 +58,9 @@ public class choixDebut {
 		btnAcheter.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					sallesVente window = new sallesVente(data, email);
+					sallesVente window = new sallesVente(data, email, frame);
 					window.frame.setVisible(true);
-					frame.dispose();
+					frame.setVisible(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
