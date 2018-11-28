@@ -1,22 +1,15 @@
 
 package Tests;
 
-import java.awt.EventQueue;
 import java.sql.SQLException;
 import java.util.Vector;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import connexion.Actions;
+import Actions.Actions;
 import connexion.DataBaseAccess;
-import requetes.SimpleQuery;
 
-import javax.swing.JButton;
-
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTextPane;
 import javax.swing.JTextField;
 
 public class produitDescendant {

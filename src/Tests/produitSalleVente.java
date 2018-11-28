@@ -1,6 +1,5 @@
 package Tests;
 
-import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
@@ -10,9 +9,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import connexion.Actions;
+import Actions.Actions;
 import connexion.DataBaseAccess;
-import requetes.SimpleQuery;
 
 public class produitSalleVente {
 

@@ -1,10 +1,9 @@
 package Tests;
 
-import java.awt.EventQueue;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import connexion.Actions;
+import Actions.Actions;
 import connexion.DataBaseAccess;
 
 public class test {
@@ -33,7 +32,7 @@ public class test {
         car.add("BMW");
         car.add("rapide");
         try {
-            act.newVente(car, 40000, 35, "Voiture BMW", 30000, 5, 4  );
+            act.newSalle("immobilier", 1);
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -7,7 +7,7 @@
 //import javax.swing.JFrame;
 //import javax.swing.JLabel;
 //
-//import connexion.Actions;
+//import Actions;
 //import connexion.DataBaseAccess;
 //import requetes.SimpleQuery;
 //
