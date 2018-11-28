@@ -1,6 +1,6 @@
 package requetes;
 
-import connexion.DataBaseAccess;
+import connexion.*;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -54,6 +54,52 @@ public abstract class Query {
 	    }
         return salles;
     }
+	
+	public String getTypeEnchere() throws SQLException{
+        ResultSetMetaData rsetmd = result.getMetaData();
+		String type = " (";
+		while (this.result.next()) {
+        	if(this.result.getString(2) == "montante") {
+        		type = type + "montante /";
+        	}
+        	else {
+        		type = type + "descendante /";
+        	}
+        	if(this.result.getString(3) == "oui") {
+        		type = type + "plusieurs enchères /";
+        	}
+        	else {
+        		type = type + "une enchère /";
+        	}
+        	if(this.result.getString(4) == "revocable") {
+        		type = type + "revocable)";
+        	}
+        	else {
+        		type = type + "non revocable)";
+        	}
+		}
+		return type;
+		
+	}
+	
+//	public String getTypeSalleProduit() throws SQLException{
+//		ResultSetMetaData rsetmd = result.getMetaData();
+//		while (this.result.next()) {
+//        	if(this.result.getString(2) == "montante") {
+//        		return "montante";
+//        	}
+//		}
+//	}
+	
+	public Vector<String> getPoduitSalle() throws SQLException{
+		Vector<String> salles = new Vector<String>();
+        ResultSetMetaData rsetmd = this.result.getMetaData();
+        while (this.result.next()) {
+        	salles.add(this.result.getString(2) + " (stock = " + this.result.getString(4)+ ")");
+	    }
+        return salles;
+		
+	}
 
 	public boolean affichageResultatUser(ResultSet resultat) throws SQLException{
         ResultSetMetaData rsetmd = resultat.getMetaData();
