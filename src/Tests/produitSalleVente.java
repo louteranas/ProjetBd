@@ -23,20 +23,21 @@ public class produitSalleVente {
 
 	/**
 	 * Create the application.
+	 * @param frame2 
 	 */
 
-	public produitSalleVente(DataBaseAccess data, String email, int idSalleVente, String nomSalleVente) {
+	public produitSalleVente(DataBaseAccess data, String email, int idSalleVente, String nomSalleVente, JFrame parentFrame) {
 		produitSalleVente.data = data;
 		produitSalleVente.email = email;
       	produitSalleVente.idSalleVente = idSalleVente;
-		initialize(nomSalleVente);
+		initialize(nomSalleVente, parentFrame);
 	}
 
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize(String nomSalleVente) {
+	private void initialize(String nomSalleVente, JFrame parentFrame) {
 		try {
 		Actions act = new Actions(email, data);
 
@@ -47,7 +48,7 @@ public class produitSalleVente {
 		frame.setBounds(100, 100, 450, 90*(nbr_produit + 1) );
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+		String typeSalle = act.affichageSallesDeVente().getTypeSalleProduit(produitSalleVente.idSalleVente);
 		
 
 		JLabel lblProduitSalleVente = new JLabel(nomSalleVente);
@@ -56,6 +57,13 @@ public class produitSalleVente {
 		
 		JButton btnNewButton0 = new JButton("retour");
 		btnNewButton0.setBounds(10, 12, 100, 25);
+		btnNewButton0.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent arg0) {
+				frame.setVisible(false);
+				parentFrame.setVisible(true);
+				
+			}
+		});
 		frame.getContentPane().add(btnNewButton0);
 
 		for(int j =0; j < nbr_produit; j++) {
@@ -65,9 +73,17 @@ public class produitSalleVente {
 			btnNewButton1.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent arg0) {
 					try {
-						//produitSalleVente window = new produitSalleVente(data, email, id, salle);
-						//window.frame.setVisible(true);
-						frame.dispose();
+						if(typeSalle == "montante") {
+							//produitSalleVente window = new produitSalleVente(data, email, id, salle);
+							//window.frame.setVisible(true);
+							frame.dispose();
+						}
+						else {
+							//produitSalleVente window = new produitSalleVente(data, email, id, salle);
+							//window.frame.setVisible(true);
+							frame.dispose();
+						}
+						
 					} catch (Exception e) {
 						e.printStackTrace();
 					}

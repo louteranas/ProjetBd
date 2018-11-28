@@ -82,14 +82,20 @@ public abstract class Query {
 		
 	}
 	
-//	public String getTypeSalleProduit() throws SQLException{
-//		ResultSetMetaData rsetmd = result.getMetaData();
-//		while (this.result.next()) {
-//        	if(this.result.getString(2) == "montante") {
-//        		return "montante";
-//        	}
-//		}
-//	}
+	public String getTypeSalleProduit(int id) throws SQLException{
+		ResultSetMetaData rsetmd = result.getMetaData();
+		while (this.result.next()) {
+			if(Integer.valueOf(this.result.getString(1)) == id) {
+        	if(this.result.getString(2) == "montante") {
+        		return "montante";
+        	}
+        	else {
+        		return "descendante";
+        	}
+			}
+		}
+		return null;
+	}
 	
 	public Vector<String> getPoduitSalle() throws SQLException{
 		Vector<String> salles = new Vector<String>();
