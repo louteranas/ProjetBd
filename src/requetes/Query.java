@@ -143,6 +143,14 @@ public abstract class Query {
 	}
 
 
+	public Vector<String> affichageCaracteristiquesProduit() throws SQLException {
+		Vector<String> caract = new Vector<String>();
+		ResultSetMetaData rsetmd = this.result.getMetaData();
+		while(this.result.next()) {
+			caract.add(this.result.getString(1));
+		}
+		return caract;
+	}
 
 
 }

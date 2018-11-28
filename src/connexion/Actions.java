@@ -261,7 +261,7 @@ public class Actions {
      * Renvoie les caractéristiques d'un produit
      */
     public ParamQuery getCaracteristiques(int idProduit) throws SQLException {
-        return (new ParamQuery(data, "select ", idProduit));
+        return (new ParamQuery(data, "select * CARACTERISTIQUES where id_produit = ?", idProduit));
 
     }
     
