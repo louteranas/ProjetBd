@@ -137,7 +137,7 @@ public class Actions {
     }
 
     /**
-     * Retourne l'id vente à partir de l'id_enchere
+     * Retourne l'id_vente à partir de l'id_enchere
      */
     private int getIdVente(int idEnchere) throws SQLException {
         ParamQuery sreq;
@@ -157,7 +157,7 @@ public class Actions {
     }
 
     /**
-     * Rajoute un champ dans les tables Enchèeres et affectation enchère pour une enchère ascendante
+     * Rajoute un champ dans les tables Enchères et affectation enchère pour une enchère ascendante
      *
      * @throws SQLException
      */
@@ -202,7 +202,7 @@ public class Actions {
      **/
     public ParamQuery insertIntoProduit(String nom, int prix, int stock, String categorie, int id_salle) {
         try {
-            return (new ParamQuery(data, "insert into PRODUIT values(idi_produit.nextval, ?, ?, ?, ?, ?)", nom, prix, stock, categorie, id_salle));
+            return (new ParamQuery(data, "insert into PRODUIT values(id_produit.nextval, ?, ?, ?, ?, ?)", nom, prix, stock, categorie, id_salle));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -237,6 +237,57 @@ public class Actions {
         return (new ParamQuery(data, "select ", idProduit));
 
     }
+    
+    /********************************NEW******************************************/
+    
+    /**
+     * Insertion d'une caracteristique produit 
+     **/
+    public ParamQuery insertIntoCaracteristiques(String caracteristique, int id_produit) {
+        try {
+            return (new ParamQuery(data, "insert into CARACTERISTIQUES values(?, ?)", caracteristique, id_produit));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+    /**
+     * Insertion d'un type de vente (recupere une duree en h)
+     **/
+    public ParamQuery insertIntoTypeVente(int prix_depart,int duree) {
+        try {
+            return (new ParamQuery(data, "insert into TYPE_VENTE values(id_produit.nextval, ?, sysdate + ?/24, sysdate)", prix_depart, duree));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+    /**
+     * Insertion DANS TABLE vente
+     **/
+    public ParamQuery insertIntoVente(int id_type_vente, int id_produit) {
+        try {
+            return (new ParamQuery(data, "insert into VENTE values(id_vente.nextval, ?, ?)",id_type_vente, id_produit));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+    /**
+     * Insertion DANS TABLE CATEGORIE_PRODUIT
+     **/
+    public ParamQuery insertIntoCategorieProduit(String nom_categorie_produit, String description) {
+        try {
+            return (new ParamQuery(data, "insert into CATEGORIE_PRODUIT values(?, ?)",nom_categorie_produit, description));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
 
 
 }
