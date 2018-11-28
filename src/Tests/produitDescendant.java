@@ -64,6 +64,10 @@ public class produitDescendant {
 		JLabel lblEnchre = new JLabel("Enchère ?");
 		lblEnchre.setBounds(237, 48, 70, 15);
 		frame.getContentPane().add(lblEnchre);
+		
+		JButton btnEnchere = new JButton("Enchérir");
+		btnEnchere.setBounds(237, 48, 70, 15);
+		frame.getContentPane().add(btnEnchere);
 
 		JLabel lblPrixActuel = new JLabel("Prix actuel :");
 		lblPrixActuel.setBounds(25, 46, 184, 22);
