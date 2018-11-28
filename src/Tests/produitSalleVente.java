@@ -42,7 +42,8 @@ public class produitSalleVente {
 		Actions act = new Actions(email, data);
 
 
-		Vector<String> produits = act.produitsSalle(produitSalleVente.idSalleVente).getPoduitSalle();
+		Vector<String> produits = act.produitsSalle(produitSalleVente.idSalleVente).getProduitSalle();
+		Vector<Integer> idProduit = act.produitsSalle(produitSalleVente.idSalleVente).getIdProduitSalle();
 		int nbr_produit = produits.size();
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 90*(nbr_produit + 1) );
@@ -68,19 +69,21 @@ public class produitSalleVente {
 
 		for(int j =0; j < nbr_produit; j++) {
 			String nom = produits.elementAt(j);
+			int id = idProduit.elementAt(j);
+			
 			JButton btnNewButton1 = new JButton(nom);
 			btnNewButton1.setBounds(45, 80+40*j, 350, 25);	
 			btnNewButton1.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent arg0) {
 					try {
 						if(typeSalle == "montante") {
-							//produitSalleVente window = new produitSalleVente(data, email, id, salle);
-							//window.frame.setVisible(true);
+							produitDescendant window = new produitDescendant(data, email, id, nom);
+							window.frame.setVisible(true);
 							frame.dispose();
 						}
 						else {
-							//produitSalleVente window = new produitSalleVente(data, email, id, salle);
-							//window.frame.setVisible(true);
+							produitDescendant window = new produitDescendant(data, email, id, nom);
+							window.frame.setVisible(true);
 							frame.dispose();
 						}
 						
