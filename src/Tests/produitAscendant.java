@@ -1,6 +1,8 @@
 package Tests;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.Vector;
 
@@ -20,7 +22,7 @@ import javax.swing.JTextField;
 
 public class produitAscendant {
 
-	private JFrame frame;
+	public JFrame frame;
 	private JTextField textField;
 	private static String email;
 	private static DataBaseAccess data;
@@ -29,18 +31,19 @@ public class produitAscendant {
 
 	/**
 	 * Create the application.
+	 * @param parentFrame 
 	 */
-	public produitAscendant(DataBaseAccess data, String email, int idProduit, String nomProduit) {
+	public produitAscendant(DataBaseAccess data, String email, int idProduit, String nomProduit, JFrame parentFrame) {
 		this.data = data;
 		this.email = email;
 		this.idProduit = idProduit;
-		initialize(nomProduit);
+		initialize(nomProduit, parentFrame);
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize(String nomProduit) {
+	private void initialize(String nomProduit, JFrame parentFrame) {
 		try {
 		Actions act = new Actions(email, data);
 
@@ -52,7 +55,7 @@ public class produitAscendant {
 		frame.getContentPane().setLayout(null);
 
 		JLabel lblNomproduit = new JLabel(nomProduit);
-		lblNomproduit.setBounds(167, 12, 101, 22);
+		lblNomproduit.setBounds(200, 12, 101, 22);
 		frame.getContentPane().add(lblNomproduit);
 
 		textField = new JTextField();
@@ -60,9 +63,21 @@ public class produitAscendant {
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 
-		JLabel lblEnchre = new JLabel("Enchère ?");
-		lblEnchre.setBounds(237, 48, 70, 15);
-		frame.getContentPane().add(lblEnchre);
+		JButton btnNewButton0 = new JButton("retour");
+		btnNewButton0.setBounds(10, 12, 100, 25);
+		btnNewButton0.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent arg0) {
+				frame.setVisible(false);
+				parentFrame.setVisible(true);
+				
+			}
+		});
+		frame.getContentPane().add(btnNewButton0);
+		
+		
+		JButton btnEnchere = new JButton("Enchérir");
+		btnEnchere.setBounds(237, 48, 100, 15);
+		frame.getContentPane().add(btnEnchere);
 
 		JLabel lblPrixActuel = new JLabel("Prix actuel :");
 		lblPrixActuel.setBounds(25, 46, 184, 22);

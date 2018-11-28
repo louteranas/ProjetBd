@@ -63,13 +63,14 @@ public class sallesVente {
 		
 		for(int j =0; j < nbr_salle; j++) {
 			String nom = salles.elementAt(j) + act.typeEnchere(idEnchereSalles.elementAt(j)).getTypeEnchere();
-			int id = idEnchereSalles.elementAt(j);
+			int id = idSalles.elementAt(j);
 			String salle = salles.elementAt(j);
 			JButton btnNewButton1 = new JButton(nom);
 			btnNewButton1.setBounds(45, 80+40*j, 560, 25);
 			btnNewButton1.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent arg0) {
 					try {
+						
 						produitSalleVente window = new produitSalleVente(data, email, id, salle, frame);
 						window.frame.setVisible(true);
 						frame.setVisible(false);
