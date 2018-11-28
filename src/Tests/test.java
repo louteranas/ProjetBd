@@ -1,21 +1,41 @@
 package Tests;
 
+import java.awt.EventQueue;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
+import connexion.Actions;
 import connexion.DataBaseAccess;
-import connexion.IdentificationUtilisateur;
-import requetes.*;
 
 public class test {
-	public static void main(String[] args){
-		try {
-		DataBaseAccess data = new DataBaseAccess();	
-		IdentificationUtilisateur user = new IdentificationUtilisateur(data);
-		//String requete = "select nom from utilisateur where email = 'truc@gmail.com'";
-		//SimpleQuery req = new SimpleQuery(data, requete);
-		}
-		catch(SQLException e) {
-			
-		}
+
+    /**
+     * Launch the application.
+     */
+
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					login window = new login();
+//					window.frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
+
+    public static void main(String[] args) {
+        DataBaseAccess data = new DataBaseAccess();
+        Actions act = new Actions("leila.kany@gmail.com", data);
+        ArrayList<String> car = new ArrayList<>();
+        car.add("BMW");
+        car.add("rapide");
+        try {
+            act.newVente(car, 40000, 35, "Voiture BMW", 30000, 5, 4  );
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 	}
 }
