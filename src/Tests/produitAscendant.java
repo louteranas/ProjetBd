@@ -10,7 +10,7 @@ import java.util.Vector;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import connexion.Actions;
+import Actions.*;
 import connexion.DataBaseAccess;
 import requetes.SimpleQuery;
 
@@ -35,9 +35,9 @@ public class produitAscendant {
 	 * @param parentFrame 
 	 */
 	public produitAscendant(DataBaseAccess data, String email, int idProduit, String nomProduit, JFrame parentFrame) {
-		this.data = data;
-		this.email = email;
-		this.idProduit = idProduit;
+		produitAscendant.data = data;
+		produitAscendant.email = email;
+		produitAscendant.idProduit = idProduit;
 		initialize(nomProduit, parentFrame);
 	}
 
@@ -63,6 +63,8 @@ public class produitAscendant {
 		textField.setBounds(314, 46, 114, 19);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
+		
+		
 
 		JButton btnNewButton0 = new JButton("retour");
 		btnNewButton0.setBounds(10, 12, 100, 25);
@@ -96,4 +98,4 @@ public class produitAscendant {
 		}
 	}
 }
->>>>>>> a658b4f7bb7ae9a7174902f0cb8d8c98da19f85d
+

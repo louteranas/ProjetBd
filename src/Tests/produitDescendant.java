@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.Vector;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -51,7 +52,7 @@ public class produitDescendant {
 		JLabel lblNomproduit = new JLabel(nomProduit);
 		lblNomproduit.setBounds(200, 12, 300, 12);
 		frame.getContentPane().add(lblNomproduit);
-
+		
 		
 		JButton btnEnchere = new JButton("Enchérir");
 		btnEnchere.setBounds(237, 48, 100, 15);
