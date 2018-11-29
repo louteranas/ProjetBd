@@ -1,9 +1,10 @@
-package Tests;
+package Start;
 
 import java.awt.EventQueue;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import Graphics.*;
 import Actions.Actions;
 import connexion.DataBaseAccess;
 
