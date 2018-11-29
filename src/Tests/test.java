@@ -12,7 +12,6 @@ public class test {
      * Launch the application.
      */
 
-<<<<<<< HEAD
 //	public static void main(String[] args) {
 //		EventQueue.invokeLater(new Runnable() {
 //			public void run() {
@@ -64,4 +63,5 @@ public class test {
 //            e.printStackTrace();
 //        }
 //	}
+
 }
