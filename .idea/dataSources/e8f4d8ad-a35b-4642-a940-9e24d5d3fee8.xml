@@ -6,10 +6,10 @@
     </root>
     <schema id="2" parent="1" name="LOUTERA">
       <ObjectId>2462</ObjectId>
-      <IntrospectionTimestamp>2018-11-26.14:57:37</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-11-28.14:31:05</IntrospectionTimestamp>
       <CreatedTimestamp>2018-11-15.11:00:09</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-26.14:37:35</ModifiedTimestamp>
-      <CommentsHash>43779935731227</CommentsHash>
+      <ModifiedTimestamp>2018-11-28.11:41:07</ModifiedTimestamp>
+      <CommentsHash>43803236445087</CommentsHash>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -1453,7 +1453,7 @@
     <table id="470" parent="2" name="TYPE_VENTE">
       <ObjectId>1119774</ObjectId>
       <CreatedTimestamp>2018-11-15.11:04:51</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-26.14:37:35</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-28.11:41:07</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="471" parent="2" name="UTILISATEUR">
@@ -1616,13 +1616,13 @@ ID_VENTE</ColNames>
     <column id="496" parent="467" name="PRIX_REVIENT">
       <Position>3</Position>
       <DataType>NUMBER(*)|0s</DataType>
-      <DefaultExpression>0 </DefaultExpression>
+      <DefaultExpression>0</DefaultExpression>
     </column>
     <column id="497" parent="467" name="STOCK">
       <Position>4</Position>
       <Comment>Par défaut il y a un stock de 1.</Comment>
       <DataType>NUMBER(*)|0s</DataType>
-      <DefaultExpression>1 </DefaultExpression>
+      <DefaultExpression>1</DefaultExpression>
     </column>
     <column id="498" parent="467" name="ID_SALLE_VENTE">
       <Position>5</Position>
@@ -1705,7 +1705,7 @@ ID_VENTE</ColNames>
     </column>
     <column id="510" parent="469" name="MONTANTE_DESCENDANTE">
       <Position>2</Position>
-      <Comment>Si null, alors l&apos;enchère est de type montante. Sinon, l&apos;enchère est de type descendante.</Comment>
+      <Comment>Montante si contient qq chose, Si null, alors l&apos;enchère est de type descendante</Comment>
       <DataType>VARCHAR2(20 byte)|0s</DataType>
     </column>
     <column id="511" parent="469" name="PLUSIEURS_ENCHERES">
@@ -1743,7 +1743,7 @@ ID_VENTE</ColNames>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="517" parent="470" name="DUREE">
+    <column id="517" parent="470" name="DATE_FIN">
       <Position>3</Position>
       <Comment>date de fin s&apos;il y en a une autrement null
 </Comment>
