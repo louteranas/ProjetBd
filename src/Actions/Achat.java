@@ -25,13 +25,23 @@ public class Achat extends Actions {
         return null;
     }
 
+    /**
+     * Renvoi true si la date est passée ou que le stock est nul
+     * @param idVente
+     * @return boolean
+     * @throws SQLException
+     */
+
     public boolean venteFinie(int idVente) throws SQLException {
         ParamQuery sq = new ParamQuery(data, "select date_fin_pro - sysdate from TYPE_VENTE t1 join vente t2 on t1.ID_TYPE_VENTE= t2.ID_TYPE_VENTE where id_vente = ?", idVente );
-        if (sq.getSimpleResult(sq.getResult())<0){
-            return true;
+        if (!(sq.getSimpleResult(sq.getResult())<0)){
+            return false;
         }
-        return false;
-
+        ParamQuery p = new ParamQuery(data, "select stock from produit where idProduit = ?", getIdProduit(idVente));
+        if (p.getSimpleResult(p.getResult()) != 0){
+            return false;
+        }
+        return true;
     }
 
 
