@@ -20,7 +20,7 @@ public class Actions {
         this.data = data;
     }
 
-    private String getDate() {
+    public String getDate() {
         return ("select to_char(sysdate, 'dd/mm/yyyy; HH:MI:SS' from dual");
     }
 
@@ -149,7 +149,7 @@ public class Actions {
     /**
      * Retourne true si l'enchere est montante, false si descendante
      */
-    protected boolean enchereMont(int idTypeEnchere) throws SQLException {
+    public boolean enchereMont(int idTypeEnchere) throws SQLException {
         ParamQuery sq = new ParamQuery(data, "select montante_descendante from type_enchere  where id_type_enchere = ?", idTypeEnchere);
         if (sq.getStrResult(sq.getResult()) == null){
             return false;
@@ -175,10 +175,16 @@ public class Actions {
      * Insertion d'un nouveau produit
      **/
     public ParamQuery insertIntoProduit( int idProduit, String nom, int prix, int stock, int id_salle) {
-        try {
-            return (new ParamQuery(data, "insert into PRODUIT values(?, ?, ?, ?, ?)", idProduit, nom, prix, stock, id_salle));
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if (stock <= 0) {
+            throw new IllegalArgumentException("Le stock doit être strictement positif!");
+
+        } else {
+
+            try {
+                return (new ParamQuery(data, "insert into PRODUIT values(?, ?, ?, ?, ?)", idProduit, nom, prix, stock, id_salle));
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return null;
     }
@@ -230,5 +236,61 @@ public class Actions {
         return (sreq.getSimpleResult(sreq.getResult()));
     }
 
+    /**
+     * Retourne true si la vente est révocable
+     */
+    public boolean getRevocable(int idTypeEnchere) throws SQLException {
+        ParamQuery sq = new ParamQuery(data, "select revocable from type_enchere  where id_type_enchere = ?", idTypeEnchere);
+        if (sq.getStrResult(sq.getResult()) == null){
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Retourne le prix de revient à partir de l'idProduit
+     */
+    public int getPrixRevient(int idProduit) throws SQLException {
+        ParamQuery sreq;
+        sreq = new ParamQuery(data, "select prix_revient from produit where id_produit = ?", idProduit);
+        return (sreq.getSimpleResult(sreq.getResult()));
+
+    }
+
+    /**
+     * Renfvoie l'id type vente à partir de l'id vente
+     */
+    public int getIdTypeVente(int idVente) throws SQLException {
+        ParamQuery req;
+        req = new ParamQuery(data, "select id_type_vente from vente where id_vente=?", idVente);
+        return (req.getSimpleResult(req.getResult()));
+
+    }
+
+
+
+
+
+    /**
+     * Renvoie la requete Set autocommit of
+     */
+
+    public SimpleQuery setAutocommitOff() throws SQLException {
+        return (new SimpleQuery(data, "set autocommit off"));
+    }
+
+    /**
+     * Renvoie la requete qui permet de faire un savepoint
+     */
+    public ParamQuery savePoint(String nom) throws SQLException {
+        return(new ParamQuery(data, "savepoint ?", nom));
+    }
+
+    /**
+     * Renvoie la requête Rollback to savepoint souhaité
+     */
+    public ParamQuery rollback(String savepoint) throws SQLException {
+        return new ParamQuery(data, "rollback to ?", savepoint);
+    }
 
 }
