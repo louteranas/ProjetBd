@@ -115,7 +115,7 @@ public class produitDescendant {
 							Achat achat = new Achat(email, data);
 							achat.newEnchereDesc(idVente, quantiteInt);
 							JOptionPane.showMessageDialog(null, "Enchère bien enregistrée");
-						} catch (IllegalArgumentException e) {
+						} catch (Exception e) {
 							JOptionPane.showMessageDialog(null, e.getMessage());
 						}
 					} catch (SQLException e) {

@@ -144,12 +144,14 @@ public class Achat extends Actions {
         }
         if (quantite == 0) {
         	throw new IllegalArgumentException("Veuillez mettre une quantité strictement positive.");
+        }
         if (getDateFin(idVente) == null){
             updateDate(idVente);
-        }
+         }
         insertIntoEnchere(idEnchere, prixAchat, quantite);
         insertIntoAffectationEnchere(idEnchere, idVente);
     }
+    
 
 
 
