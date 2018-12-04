@@ -51,6 +51,9 @@ public class Achat extends Actions {
         if (quantite>getStock(getIdProduit(idVente))){
             throw new IllegalArgumentException("Il n'y a pas assez de stock!");
         }
+        if (quantite == 0) {
+        	throw new IllegalArgumentException("Veuillez mettre une quantité strictement positive.");
+        }
         insertIntoEnchere(idEnchere, prixAchat, quantite);
         insertIntoAffectationEnchere(idEnchere, idVente);
     }
@@ -63,6 +66,12 @@ public class Achat extends Actions {
         int id_enchere = getIdEnchere();
         int id_typeEnchere = getIdTypeEnchere(getIdSalleVente(id_vente));
         int prixAchat = prixCourant(id_vente);
+        if (quantite>getStock(getIdProduit(id_vente))){
+            throw new IllegalArgumentException("Il n'y a pas assez de stock!");
+        }
+        if (quantite == 0) {
+        	throw new IllegalArgumentException("Veuillez mettre une quantité strictement positive.");
+        }
         insertIntoEnchere(id_enchere, prixAchat, quantite);
         insertIntoAffectationEnchere(id_enchere, id_vente);
     }

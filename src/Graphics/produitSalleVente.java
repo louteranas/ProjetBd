@@ -9,8 +9,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import Actions.Actions;
+import Actions.*;
 import connexion.DataBaseAccess;
+import requetes.*;
 
 public class produitSalleVente {
 
@@ -45,11 +46,17 @@ public class produitSalleVente {
 		
 		
 		int nbr_produit = produits.size();
+		
+		
+		/**
+		 * Supprimer les produits finis de "produits" et diminuer nbr_produit
+ 		 */
+		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 90*(nbr_produit + 1) );
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		String typeSalle = act.affichageSallesDeVente().getTypeSalleProduit(produitSalleVente.idSalleVente);
+		boolean typeSalle = act.enchereMont(act.getIdTypeEnchere(produitSalleVente.idSalleVente));
 		
 
 		JLabel lblProduitSalleVente = new JLabel(nomSalleVente);
@@ -75,7 +82,7 @@ public class produitSalleVente {
 			btnNewButton1.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent arg0) {
 					try {
-						if(typeSalle == "montante") {
+						if(typeSalle) {
 							produitAscendant window = new produitAscendant(data, email, id, nom, frame);
 							window.frame.setVisible(true);
 							frame.setVisible(false);
@@ -84,8 +91,7 @@ public class produitSalleVente {
 							produitDescendant window = new produitDescendant(data, email, id, nom, frame);
 							window.frame.setVisible(true);
 							frame.setVisible(false);
-						}
-						
+						}	
 					} catch (Exception e) {
 						e.printStackTrace();
 					}

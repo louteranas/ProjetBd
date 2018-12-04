@@ -149,7 +149,7 @@ public class Actions {
     /**
      * Retourne true si l'enchere est montante, false si descendante
      */
-    protected boolean enchereMont(int idTypeEnchere) throws SQLException {
+    public boolean enchereMont(int idTypeEnchere) throws SQLException {
         ParamQuery sq = new ParamQuery(data, "select montante_descendante from type_enchere  where id_type_enchere = ?", idTypeEnchere);
         if (sq.getStrResult(sq.getResult()) == null){
             return false;
@@ -190,11 +190,19 @@ public class Actions {
         return (new ParamQuery(data, "select * from TYPE_ENCHERE where id_type_enchere = ?", id));
     }
     /**
-     * Renvoie l'iDdVente à partir de l'idProduit
+     * Renvoie l'idProduit à partir de l'idVente
      */
     public int getIdProduit(int idVente) throws SQLException {
         ParamQuery sreq;
         sreq = new ParamQuery(data, "select id_produit from vente where id_vente = ?", idVente);
+        return (sreq.getSimpleResult(sreq.getResult()));
+    }
+    /**
+     * Renvoie l'idVente à partir de l'idProduit
+     */
+    public int getIdVenteProduit(int idProduit) throws SQLException {
+        ParamQuery sreq;
+        sreq = new ParamQuery(data, "select id_vente from vente where id_produit = ?", idProduit);
         return (sreq.getSimpleResult(sreq.getResult()));
     }
     /**

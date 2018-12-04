@@ -81,7 +81,7 @@ public class login {
 		btnLogin.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0) {
 				if(email.getText().isEmpty()) {
-					JOptionPane.showMessageDialog(null, "Vous n'avez pas inserer votre email !");
+					JOptionPane.showMessageDialog(null, "Vous n'avez pas inseré votre email !");
 				}
 				else {
 					DataBaseAccess data = new DataBaseAccess();
