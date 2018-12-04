@@ -55,19 +55,19 @@ public abstract class Query {
 	public String getTypeEnchere() throws SQLException{
 		String type = " (";
 		while (this.result.next()) {
-        	if(this.result.getString(2) == "montante") {
-        		type = type + "montante /";
+        	if(this.result.getString(2) == null) {
+        		type = type +  "descendante /";
         	}
         	else {
-        		type = type + "descendante /";
+        		type = type + "montante /";
         	}
-        	if(this.result.getString(3) == "oui") {
+        	if(this.result.getString(3) != null) {
         		type = type + "plusieurs enchères /";
         	}
         	else {
         		type = type + "une enchère /";
         	}
-        	if(this.result.getString(4) == "revocable") {
+        	if(this.result.getString(4) != null) {
         		type = type + "revocable)";
         	}
         	else {
