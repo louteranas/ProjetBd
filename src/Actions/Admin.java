@@ -32,13 +32,13 @@ public class Admin extends Actions {
                 ParamQuery req =new ParamQuery(data, "select *from (select email, to_char(date_enchere, 'dd/mm/yyy hh24:mi:ss'), " +
                         "prix_achat, quantite from ENCHERE join affectation_enchere on ENCHERE.ID_ENCHERE = affectation_enchere.ID_ENCHERE where id_vente = ?" +
                         "order by date_enchere desc) where rownum = ?", idVente, numVainqueurs);
-                listeVainqueurs.add(req.getLigneVainqueur()) ;
+                req.getLigneVainqueur(listeVainqueurs) ;
             }//cas ou ce vainqueur recupere que le reste du stock
             else{
                 ParamQuery req =new ParamQuery(data, "select *from (select email, to_char(date_enchere, 'dd/mm/yyy hh24:mi:ss'), " +
                         "prix_achat from ENCHERE join affectation_enchere on ENCHERE.ID_ENCHERE = affectation_enchere.ID_ENCHERE where id_vente = ?" +
                         "order by date_enchere desc) where rownum = ?", idVente, numVainqueurs);
-                listeVainqueurs.add(req.getLigneSemiVainqueur(stockCourant)) ;
+                req.getLigneSemiVainqueur(stockCourant, listeVainqueurs) ;
                 stockCourant = 0;
             }
 

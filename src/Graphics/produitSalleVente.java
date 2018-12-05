@@ -22,21 +22,23 @@ public class produitSalleVente {
 
 	/**
 	 * Create the application.
+	 * @param besoin 
 	 * @param frame2 
 	 */
 
-	public produitSalleVente(DataBaseAccess data, String email, int idSalleVente, String nomSalleVente, JFrame parentFrame) {
+	public produitSalleVente(DataBaseAccess data, String email, int idSalleVente, String nomSalleVente, String besoin, JFrame parentFrame) {
 		produitSalleVente.data = data;
 		produitSalleVente.email = email;
       	produitSalleVente.idSalleVente = idSalleVente;
-		initialize(nomSalleVente, parentFrame);
+		initialize(nomSalleVente, besoin, parentFrame);
 	}
 
 
 	/**
 	 * Initialize the contents of the frame.
+	 * @param besoin 
 	 */
-	private void initialize(String nomSalleVente, JFrame parentFrame) {
+	private void initialize(String nomSalleVente, String besoin, JFrame parentFrame) {
 		try {
 		Actions act = new Actions(email, data);
 		Achat achat = new Achat(email, data);
@@ -77,22 +79,29 @@ public class produitSalleVente {
 
 		for(int j =0; j < nbr_produit; j++) {
 			String nom = produits.elementAt(j);
-			int id = idProduit.elementAt(j);
+			int idProd = idProduit.elementAt(j);
 			JButton btnNewButton1 = new JButton(nom);
 			btnNewButton1.setBounds(45, 80+40*j, 350, 25);	
 			btnNewButton1.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent arg0) {
 					try {
-						if(typeSalle) {
-							produitAscendant window = new produitAscendant(data, email, id, nom, frame);
+						if(besoin.equals("achat")) {
+							if(typeSalle) {
+								produitAscendant window = new produitAscendant(data, email, idProd, nom, frame);
+								window.frame.setVisible(true);
+								frame.setVisible(false);
+							}
+							else {
+								produitDescendant window = new produitDescendant(data, email, idProd, nom, frame);
+								window.frame.setVisible(true);
+								frame.setVisible(false);
+							}	
+						}
+						else if(besoin.equals("historique")) {
+							historiqueProduit window = new historiqueProduit(data, email, idProd, nom, typeSalle, frame);
 							window.frame.setVisible(true);
 							frame.setVisible(false);
 						}
-						else {
-							produitDescendant window = new produitDescendant(data, email, id, nom, frame);
-							window.frame.setVisible(true);
-							frame.setVisible(false);
-						}	
 					} catch (Exception e) {
 						e.printStackTrace();
 					}

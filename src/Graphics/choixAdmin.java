@@ -60,9 +60,9 @@ public class choixAdmin {
 		btnHistorique.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					sallesVente window = new sallesVente(data, email, frame);
+					sallesVente window = new sallesVente(data, email, frame, "historique");
 					window.frame.setVisible(true);
-					frame.setVisible(false);
+					frame.setVisible(false);	
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

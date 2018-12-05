@@ -1,20 +1,16 @@
 package Graphics;
 
-import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Vector;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import Actions.Actions;
 import connexion.DataBaseAccess;
-import requetes.ParamQuery;
-
 import javax.swing.JCheckBox;
 import javax.swing.JButton;
 
@@ -48,16 +44,17 @@ public class ajoutSalle {
 	 * @param data2 
 	 * @param data 
 	 */
-	public ajoutSalle(DataBaseAccess data, String email, JFrame frame2) {
+	public ajoutSalle(DataBaseAccess data, String email, JFrame parentFrame) {
 		ajoutSalle.data = data;
 		ajoutSalle.email = email;
-		initialize();
+		initialize(parentFrame);
 	}
 
 	/**
 	 * Initialize the contents of the frame.
+	 * @param parentFrame 
 	 */
-	private void initialize() {
+	private void initialize(JFrame parentFrame) {
 		Actions act = new Actions(email, data);
 		Vector<Integer> idEnchere = new Vector<Integer>();
 		Vector<String> charactEnchere = new Vector<String>();
@@ -89,9 +86,21 @@ public class ajoutSalle {
 			frame.getContentPane().add(chckbxNewCheckBox);
 		}
 		
+		
 		JLabel lblNewLabel = new JLabel("Type d'enchère");
 		lblNewLabel.setBounds(26, 117, 117, 15);
 		frame.getContentPane().add(lblNewLabel);
+		
+		JButton btnNewButton0 = new JButton("retour");
+		btnNewButton0.setBounds(10, 12, 100, 25);
+		btnNewButton0.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent arg0) {
+				frame.setVisible(false);
+				parentFrame.setVisible(true);
+				
+			}
+		});
+		frame.getContentPane().add(btnNewButton0);
 		
 		JButton btnCrer = new JButton("créer");
 		btnCrer.setBounds(151, 90*(nbr_enchere-1), 117, 25);
