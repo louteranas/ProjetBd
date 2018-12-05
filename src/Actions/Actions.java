@@ -3,11 +3,7 @@ package Actions;
 import connexion.DataBaseAccess;
 import requetes.ParamQuery;
 import requetes.SimpleQuery;
-import sun.java2d.pipe.SpanShapeRenderer;
-
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Vector;
 
 
 public class Actions {
