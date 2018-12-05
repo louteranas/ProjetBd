@@ -28,13 +28,14 @@ public abstract class Query {
 		int i = rsetmd.getColumnCount();
 		while (resultat.next()) {
 			output = output + "email: " + resultat.getString(1);
-			output = output + "date: " + resultat.getString(2);
-			output = output + "prix unitaire: " + resultat.getString(3);
-			output = output + "quantité: " + resultat.getString(4);
+			output = output + " date: " + resultat.getString(2);
+			output = output + " prix unitaire: " + resultat.getString(3);
+			output = output + " quantité: " + resultat.getString(4) + "\n";
 			//for (int j = 1; j <= i; j++) {
 			//	output = output + resultat.getString(j);
 			//}
 		}
+		output += "\n";
 		return output;
 	}
 	/*
@@ -46,12 +47,13 @@ public abstract class Query {
 		ResultSetMetaData rsetmd = resultat.getMetaData();
 		int i = rsetmd.getColumnCount();
 		while (resultat.next()) {
-			output = output + "email: " + resultat.getString(1);
-			output = output + "date: " + resultat.getString(2);
-			output = output + "prix unitaire: " + resultat.getString(3);
-			output = output + "quantité: " + newQuantite;
+			output = output + "email: " + resultat.getString(1) ;
+			output = output + " date: " + resultat.getString(2) ;
+			output = output + " prix unitaire: " + resultat.getString(3) ;
+			output = output + " quantité: " + newQuantite;
 
 		}
+		output += "\n";
 		return output;
 	}
 	public void affichageResultat() throws SQLException{
