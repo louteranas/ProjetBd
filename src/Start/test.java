@@ -15,7 +15,6 @@ public class test {
      */
 
 
-/*
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -31,67 +30,21 @@ public class test {
 	}
 
 
-*/
-
-    public static void main(String[] args) {
-        DataBaseAccess data = new DataBaseAccess();
-        Admin act = new Admin("leila.kany@gmail.com", data);
-
-        try {
-            System.out.println(act.vainqueursDesc(22));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 /*
     public static void main(String[] args) {
         DataBaseAccess data = new DataBaseAccess();
         Achat act = new Achat("leila.kany@gmail.com", data);
 
         try {
-            System.out.println(act.newEnchereDesc(3, ););
+            System.out.println(act.plusieuresEncheres(2));
+            System.out.println("yoyo");
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-*/
-
-//    public static void main(String[] args) {
-//        DataBaseAccess data = new DataBaseAccess();
-//        Achat act = new Achat("test", data);
-
-//    public static void main(String[] args) {
-//        DataBaseAccess data = new DataBaseAccess();
-//        Achat act = new Achat("leila.kany@gmail.com", data);
-//        try {
-//            System.out.println(act.plusieuresEncheres(2));
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        } catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
-
-//    public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					login window = new login();
-//					window.frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
-
-
+			e.printStackTrace();
+		}
+	}
+	*/
 
 //    public static void main(String[] args) {
 //        DataBaseAccess data = new DataBaseAccess();

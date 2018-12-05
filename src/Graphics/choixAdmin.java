@@ -43,6 +43,13 @@ public class choixAdmin {
 		btnAjouter.setBounds(12, 89, 190, 25);
 		btnAjouter.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0) {
+				try {
+					ajoutSalle window = new ajoutSalle(data, email, frame);
+					window.frame.setVisible(true);
+					frame.setVisible(false);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
 		});
 		frame.getContentPane().add(btnAjouter);

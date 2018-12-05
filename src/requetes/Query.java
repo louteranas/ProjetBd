@@ -28,14 +28,13 @@ public abstract class Query {
 		int i = rsetmd.getColumnCount();
 		while (resultat.next()) {
 			output = output + "email: " + resultat.getString(1);
-			output = output + " date: " + resultat.getString(2);
-			output = output + " prix unitaire: " + resultat.getString(3);
-			output = output + " quantité: " + resultat.getString(4) + "\n";
+			output = output + "date: " + resultat.getString(2);
+			output = output + "prix unitaire: " + resultat.getString(3);
+			output = output + "quantité: " + resultat.getString(4);
 			//for (int j = 1; j <= i; j++) {
 			//	output = output + resultat.getString(j);
 			//}
 		}
-		output += "\n";
 		return output;
 	}
 	/*
@@ -47,13 +46,12 @@ public abstract class Query {
 		ResultSetMetaData rsetmd = resultat.getMetaData();
 		int i = rsetmd.getColumnCount();
 		while (resultat.next()) {
-			output = output + "email: " + resultat.getString(1) ;
-			output = output + " date: " + resultat.getString(2) ;
-			output = output + " prix unitaire: " + resultat.getString(3) ;
-			output = output + " quantité: " + newQuantite;
+			output = output + "email: " + resultat.getString(1);
+			output = output + "date: " + resultat.getString(2);
+			output = output + "prix unitaire: " + resultat.getString(3);
+			output = output + "quantité: " + newQuantite;
 
 		}
-		output += "\n";
 		return output;
 	}
 	public void affichageResultat() throws SQLException{
@@ -184,13 +182,17 @@ public abstract class Query {
 	 * (lorsque le résultat attendu est un id par exemple)
 	 */
 	public int getSimpleResult(ResultSet resultat) throws SQLException {
-		resultat.next();
-		return(resultat.getInt(1));
+		while(resultat.next()) {
+			return(resultat.getInt(1));
+		}
+		return 0;
 	}
 
 	public String getStrResult(ResultSet resultat) throws SQLException {
-		resultat.next();
-		return(resultat.getString(1));
+		while(resultat.next()) {
+			return(resultat.getString(1));
+		}
+		return "";
 	}
 
 
