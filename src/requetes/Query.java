@@ -6,6 +6,9 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.Vector;
 
+import Actions.Achat;
+import Actions.Actions;
+
 public abstract class Query {
 	protected DataBaseAccess data;
 	protected String requete;
@@ -127,10 +130,12 @@ public abstract class Query {
 		return null;
 	}
 	
-	public Vector<String> getProduitSalle() throws SQLException{
+	public Vector<String> getProduitSalle(Actions act, Achat achat) throws SQLException{
 		Vector<String> salles = new Vector<String>();
         while (this.result.next()) {
-        	salles.add(this.result.getString(2) + " (stock = " + this.result.getString(4)+ ")");
+        	if (!achat.venteFinie(act.getIdVenteProduit(Integer.valueOf(this.result.getString(1))))) {
+        		salles.add(this.result.getString(2) + " (stock = " + this.result.getString(4)+ ")");
+        	}
 	    }
         return salles;
 		

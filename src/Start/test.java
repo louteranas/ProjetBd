@@ -14,7 +14,10 @@ public class test {
      * Launch the application.
      */
 
+<<<<<<< HEAD
 /*
+=======
+>>>>>>> de8163e741fd4769550f687891d0a0acff8cd260
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -28,6 +31,7 @@ public class test {
 		});
 	}
 
+<<<<<<< HEAD
 */
     public static void main(String[] args) {
         DataBaseAccess data = new DataBaseAccess();
@@ -42,6 +46,23 @@ public class test {
 			e.printStackTrace();
 		}
 	}
+=======
+//    public static void main(String[] args) {
+//        DataBaseAccess data = new DataBaseAccess();
+//        Achat act = new Achat("test", data);
+
+//    public static void main(String[] args) {
+//        DataBaseAccess data = new DataBaseAccess();
+//        Achat act = new Achat("leila.kany@gmail.com", data);
+//        try {
+//            System.out.println(act.plusieuresEncheres(2));
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        } catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
+>>>>>>> de8163e741fd4769550f687891d0a0acff8cd260
 
 //    public static void main(String[] args) {
 //		EventQueue.invokeLater(new Runnable() {
@@ -55,6 +76,8 @@ public class test {
 //			}
 //		});
 //	}
+
+
 
 //    public static void main(String[] args) {
 //        DataBaseAccess data = new DataBaseAccess();
