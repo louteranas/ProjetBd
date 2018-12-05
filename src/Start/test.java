@@ -30,7 +30,10 @@ public class test {
 //    public static void main(String[] args) {
 //        DataBaseAccess data = new DataBaseAccess();
 //        Achat act = new Achat("test", data);
-//
+
+//    public static void main(String[] args) {
+//        DataBaseAccess data = new DataBaseAccess();
+//        Achat act = new Achat("leila.kany@gmail.com", data);
 //        try {
 //            System.out.println(act.plusieuresEncheres(2));
 //        } catch (SQLException e) {
@@ -52,6 +55,8 @@ public class test {
 //			}
 //		});
 //	}
+
+
 
 //    public static void main(String[] args) {
 //        DataBaseAccess data = new DataBaseAccess();

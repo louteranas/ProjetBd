@@ -2,33 +2,17 @@ package Graphics;
 
 import connexion.DataBaseAccess;
 import connexion.IdentificationUtilisateur;
-import requetes.*;
-
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-import java.awt.BorderLayout;
 import javax.swing.JTextField;
 import javax.swing.JButton;
-import javax.swing.DropMode;
-import javax.swing.JTextArea;
-import javax.swing.SwingConstants;
-import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 
-import javax.swing.JTextPane;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
 import javax.swing.JPanel;
-import java.awt.Component;
-import java.awt.Dimension;
-import javax.swing.JTable;
-import javax.swing.JSeparator;
 
 public class login {
 
@@ -80,14 +64,17 @@ public class login {
 		JButton btnLogin = new JButton("login");
 		btnLogin.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0) {
+				DataBaseAccess data = new DataBaseAccess();
 				if(email.getText().isEmpty()) {
-					JOptionPane.showMessageDialog(null, "Vous n'avez pas inseré votre email !");
+					JOptionPane.showMessageDialog(null, "Bienvenue Admin !");
+					choixAdmin windowDebut = new choixAdmin(data,email.getText());
+					windowDebut.frame.setVisible(true);
+					frame.setVisible(false);
+					
 				}
-				else {
-					DataBaseAccess data = new DataBaseAccess();
+				else {				
 					try {
 						IdentificationUtilisateur user = new IdentificationUtilisateur(data, email.getText());
-						//System.out.println("user.VerificationUser() = "+user.VerificationUser());
 						if(!user.VerificationUser()) {
 							choixDebut windowDebut = new choixDebut(data,email.getText());
 							windowDebut.frame.setVisible(true);
@@ -96,16 +83,16 @@ public class login {
 						else {
 							signup window = new signup(data);
 							window.frame.setVisible(true);
-							//frame.setVisible(false);
-							frame.dispose();
+							frame.setVisible(false);
 						}
-					} catch (SQLException e) {
+					}
+					 catch (SQLException e) {
 						// TODO Auto-generated catch block
 						JOptionPane.showMessageDialog(null, "sql error");
 						e.printStackTrace();
 					}
 				}
-			}
+				}
 		});
 		panel_3.add(btnLogin);
 
