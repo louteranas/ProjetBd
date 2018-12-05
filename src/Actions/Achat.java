@@ -20,7 +20,8 @@ public class Achat extends Actions {
         try {
             return (new ParamQuery(super.data, "insert into ENCHERE values(?, ?,sysdate, ?)", id_enchere, prixAchat, quantite));
         } catch (SQLException e) {
-            e.printStackTrace();
+        	System.out.print("insertIntoEnchere");
+    
         }
         return null;
     }
@@ -33,11 +34,11 @@ public class Achat extends Actions {
      */
 
     public boolean venteFinie(int idVente) throws SQLException {
-        ParamQuery sq = new ParamQuery(data, "select date_fin_pro - sysdate from TYPE_VENTE t1 join vente t2 on t1.ID_TYPE_VENTE= t2.ID_TYPE_VENTE where id_vente = ?", idVente );
+        ParamQuery sq = new ParamQuery(super.data, "select date_fin_pro - sysdate from TYPE_VENTE t1 join vente t2 on t1.ID_TYPE_VENTE= t2.ID_TYPE_VENTE where id_vente = ?", idVente );
         if (!(sq.getSimpleResult(sq.getResult())<0)){
             return false;
         }
-        ParamQuery p = new ParamQuery(data, "select stock from produit where idProduit = ?", getIdProduit(idVente));
+        ParamQuery p = new ParamQuery(super.data, "select stock from produit where id_Produit = ?", this.getIdProduit(idVente));
         if (p.getSimpleResult(p.getResult()) != 0){
             return false;
         }
@@ -52,7 +53,7 @@ public class Achat extends Actions {
         try {
             return (new ParamQuery(data, "insert into AFFECTATION_ENCHERE values(?, ?, ?)", utilisateur, id_enchere, id_vente));
         } catch (SQLException e) {
-            e.printStackTrace();
+        	System.out.print("insertIntoAffectatio");
         }
         return null;
     }
@@ -87,7 +88,6 @@ public class Achat extends Actions {
      */
     private boolean dejaEncheri(int idVente) throws SQLException {
         ParamQuery p = new ParamQuery(data, "select count(*) from AFFECTATION_ENCHERE where email = ? and ID_VENTE = ?", utilisateur, idVente);
-        p.affichageResultat();
         if (p.getSimpleResult(p.getResult())==0){
             return false;
         }else{

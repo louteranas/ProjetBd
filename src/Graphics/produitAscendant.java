@@ -141,9 +141,15 @@ public class produitAscendant {
 							Achat achat = new Achat(email, data);
 							achat.newEnchereAsc(idVente, prixInt, quantiteInt);
 							JOptionPane.showMessageDialog(null, "Enchère bien enregistrée");
-						} catch (Exception e) {
+						} catch (IllegalArgumentException e) {
+							e.printStackTrace();
 							JOptionPane.showMessageDialog(null, e.getMessage());
 						}
+						catch (Exception e) {
+							e.printStackTrace();
+							JOptionPane.showMessageDialog(null, e.getMessage());
+						}
+						
 					} catch (SQLException e) {
 						// TODO Auto-generated catch block
 						JOptionPane.showMessageDialog(null, "Il y a eu une erreur, contactez un administrateur !");

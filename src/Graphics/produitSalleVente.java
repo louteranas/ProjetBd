@@ -39,9 +39,10 @@ public class produitSalleVente {
 	private void initialize(String nomSalleVente, JFrame parentFrame) {
 		try {
 		Actions act = new Actions(email, data);
+		Achat achat = new Achat(email, data);
 
 		System.out.println("on est en salle d'id"+ produitSalleVente.idSalleVente);
-		Vector<String> produits = act.produitsSalle(produitSalleVente.idSalleVente).getProduitSalle();
+		Vector<String> produits = act.produitsSalle(produitSalleVente.idSalleVente).getProduitSalle(act, achat);
 		Vector<Integer> idProduit = act.produitsSalle(produitSalleVente.idSalleVente).getIdProduitSalle();
 		
 		
