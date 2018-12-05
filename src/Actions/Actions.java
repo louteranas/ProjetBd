@@ -21,7 +21,7 @@ public class Actions {
     }
 
     public String getDate() {
-        return ("select to_char(sysdate, 'dd/mm/yyyy; HH:MI:SS' from dual");
+        return ("select to_char(sysdate, 'dd/mm/yyyy; HH24:MI:SS' from dual");
     }
 
 

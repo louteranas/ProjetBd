@@ -15,7 +15,42 @@ public abstract class Query {
 		this.data= data;
 		this.requete = requete;		 
 	}
-	
+	/*
+	*Fait la String pour un vainqueur
+	*/
+	public String getLigneVainqueur() throws SQLException{
+		String output = "";
+		ResultSet resultat = this.getResult();
+		ResultSetMetaData rsetmd = resultat.getMetaData();
+		int i = rsetmd.getColumnCount();
+		while (resultat.next()) {
+			output = output + "email: " + resultat.getString(1);
+			output = output + "date: " + resultat.getString(2);
+			output = output + "prix unitaire: " + resultat.getString(3);
+			output = output + "quantité: " + resultat.getString(4);
+			//for (int j = 1; j <= i; j++) {
+			//	output = output + resultat.getString(j);
+			//}
+		}
+		return output;
+	}
+	/*
+	*Fait la String pour le dernier vainqueur qui na pas toute la quantite voulu
+	*/
+	public String getLigneSemiVainqueur(int newQuantite) throws SQLException{
+		String output = "";
+		ResultSet resultat = this.getResult();
+		ResultSetMetaData rsetmd = resultat.getMetaData();
+		int i = rsetmd.getColumnCount();
+		while (resultat.next()) {
+			output = output + "email: " + resultat.getString(1);
+			output = output + "date: " + resultat.getString(2);
+			output = output + "prix unitaire: " + resultat.getString(3);
+			output = output + "quantité: " + newQuantite;
+
+		}
+		return output;
+	}
 	public void affichageResultat() throws SQLException{
 		ResultSet resultat = this.getResult();
         ResultSetMetaData rsetmd = resultat.getMetaData();
