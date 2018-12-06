@@ -42,7 +42,6 @@ public class produitDescendant {
 	private void initialize(String nomProduit, JFrame parentFrame) {
 		try {
 		Actions act = new Actions(email, data);
-
 		Vector<String> caracteristiques = act.getCaracteristiques(produitDescendant.idProduit).affichageCaracteristiquesProduit();
 		int nbr_caracteristique = caracteristiques.size();
 		frame = new JFrame();
