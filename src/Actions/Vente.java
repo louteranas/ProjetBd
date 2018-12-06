@@ -15,19 +15,14 @@ public class Vente extends Actions {
     /**
      * Insertion d'une caracteristique produit
      **/
-    private ParamQuery insertIntoCaracteristiques(String caracteristique, int id_produit) {
-        try {
-            return (new ParamQuery(data, "insert into CARACTERISTIQUES values(?, ?)", caracteristique, id_produit));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+    private void insertIntoCaracteristiques(String caracteristique, int id_produit) throws SQLException {
+           new ParamQuery(data, "insert into CARACTERISTIQUES values(?, ?)", caracteristique, id_produit);
     }
 
     /**
      * Insertion d'un type de vente (recupere une duree en h)
      **/
-    private ParamQuery insertIntoTypeVente(int idVente, int idTypeVente, int prix_depart, int duree) throws SQLException {
+    private void insertIntoTypeVente(int idVente, int idTypeVente, int prix_depart, int duree) throws SQLException {
         int idTypeEnchere = getIdTypeEnchere(getIdSalleVente(idVente));
         int idProduit = getIdProduit(idVente);
         boolean asc = enchereMont(idTypeEnchere);
@@ -40,46 +35,25 @@ public class Vente extends Actions {
         }
 
         if (duree == 0) {
-            try {
-                return (new ParamQuery(data, "insert into TYPE_VENTE values(?, ?, null, sysdate, sysdate + 10/(24*60))", idTypeVente, prix_depart));
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            return null;
+            new ParamQuery(data, "insert into TYPE_VENTE values(?, ?, null, sysdate, sysdate + 10/(24*60))", idTypeVente, prix_depart);
+
         }else{
-
-                try {
-                    return (new ParamQuery(data, "insert into TYPE_VENTE values(?, ?, sysdate + ?/24, sysdate, ?, sysdate + ?/24)", idTypeVente, prix_depart, duree));
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-                return null;
-            }
-
+            new ParamQuery(data, "insert into TYPE_VENTE values(?, ?, sysdate + ?/24, sysdate, ?, sysdate + ?/24)", idTypeVente, prix_depart, duree);
+        }
     }
 
     /**
      * Insertion DANS TABLE vente
      **/
-    private ParamQuery insertIntoVente(int id_vente, int id_type_vente, int id_produit) {
-        try {
-            return (new ParamQuery(data, "insert into VENTE values(?, ?, ?)",id_vente, id_type_vente, id_produit));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+    private void insertIntoVente(int id_vente, int id_type_vente, int id_produit) throws SQLException {
+        new ParamQuery(data, "insert into VENTE values(?, ?, ?)",id_vente, id_type_vente, id_produit);
     }
 
     /**
      * Insertion DANS TABLE CATEGORIE_PRODUIT
      **/
-    public ParamQuery insertIntoCategorieProduit(String nom_categorie_produit, String description) {
-        try {
-            return (new ParamQuery(data, "insert into CATEGORIE_PRODUIT values(?, ?)",nom_categorie_produit, description));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public void insertIntoCategorieProduit(String nom_categorie_produit, String description) throws SQLException {
+            new ParamQuery(data, "insert into CATEGORIE_PRODUIT values(?, ?)",nom_categorie_produit, description);
     }
 
     /**
@@ -106,6 +80,7 @@ public class Vente extends Actions {
         }
         insertIntoTypeVente(idVente, idTypeVente, prixDepart, duree);
         insertIntoVente(idVente, idTypeVente, idProduit);
+        this.commit();
 
     }
 

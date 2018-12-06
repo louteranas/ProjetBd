@@ -16,14 +16,9 @@ public class Achat extends Actions {
     /**
      * Insertion dans la table Enchere
      */
-    private ParamQuery insertIntoEnchere(int id_enchere, int prixAchat, int quantite) {
-        try {
-            return (new ParamQuery(super.data, "insert into ENCHERE values(?, ?,sysdate, ?)", id_enchere, prixAchat, quantite));
-        } catch (SQLException e) {
-        	System.out.print("insertIntoEnchere");
-    
-        }
-        return null;
+    private void insertIntoEnchere(int id_enchere, int prixAchat, int quantite) throws SQLException {
+            new ParamQuery(super.data, "insert into ENCHERE values(?, ?,sysdate, ?)", id_enchere, prixAchat, quantite);
+
     }
 
     /**
@@ -49,29 +44,29 @@ public class Achat extends Actions {
     /**
      * Insertion dans la table affectation enchere
      */
-    private ParamQuery insertIntoAffectationEnchere(int id_enchere, int id_vente) {
+    private void insertIntoAffectationEnchere(int id_enchere, int id_vente) {
         try {
-            return (new ParamQuery(data, "insert into AFFECTATION_ENCHERE values(?, ?, ?)", utilisateur, id_enchere, id_vente));
+            new ParamQuery(data, "insert into AFFECTATION_ENCHERE values(?, ?, ?)", utilisateur, id_enchere, id_vente);
         } catch (SQLException e) {
-        	System.out.print("insertIntoAffectatio");
+        	System.out.print("insertIntoAffectation");
         }
-        return null;
+
     }
 
     /**
      * Décrémente le stock de l'id produit indiqué de la quantité nb
      * @return ParamQuery
      */
-    public ParamQuery decrementeStock(int nb, int idProduit) throws SQLException {
-        return new ParamQuery(data, "update produit set stock=(select stock from produit where id_produit = ?)-? where id_produit = ?", idProduit, nb, idProduit);
+    public void decrementeStock(int nb, int idProduit) throws SQLException {
+        new ParamQuery(data, "update produit set stock=(select stock from produit where id_produit = ?)-? where id_produit = ?", idProduit, nb, idProduit);
     }
 
     /**
      * Met à jour la date de fin dans le cas d'un enchère ascendante sans date de fin fixée
      */
-    public ParamQuery updateDate(int idVente) throws SQLException {
+    public void updateDate(int idVente) throws SQLException {
         int idTypeVente = getIdTypeVente(idVente);
-        return new ParamQuery(data, "update type_vente set date_fin_pro=sysdate + 10/24/60 where id_type_vente = ?", idTypeVente);
+        new ParamQuery(data, "update type_vente set date_fin_pro=sysdate + 10/24/60 where id_type_vente = ?", idTypeVente);
     }
 
     /**
@@ -150,6 +145,7 @@ public class Achat extends Actions {
          }
         insertIntoEnchere(idEnchere, prixAchat, quantite);
         insertIntoAffectationEnchere(idEnchere, idVente);
+        this.commit();
     }
     
 
@@ -182,6 +178,7 @@ public class Achat extends Actions {
         decrementeStock(quantite, idProduit);
         insertIntoEnchere(id_enchere, prixAchat, quantite);
         insertIntoAffectationEnchere(id_enchere, idVente);
+        this.commit();
     }
 
 

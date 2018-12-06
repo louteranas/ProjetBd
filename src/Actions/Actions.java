@@ -26,40 +26,22 @@ public class Actions {
      * Exécute la commande pour avoir accès à toutes les salles de vente
      */
 
-    public SimpleQuery affichageSallesDeVente() {
-
-        try {
-            return new SimpleQuery(data, "SELECT * from SALLE_VENTE");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public void affichageSallesDeVente() throws SQLException {
+        new SimpleQuery(data, "SELECT * from SALLE_VENTE");
     }
 
     /**
      * Affiche tous les produits en vente dans la salle de l'id indiqué
      */
-    public ParamQuery produitsSalle(int id_salle) {
-        try {
-            return (new ParamQuery(data, "select * from produit where id_salle_vente = ?", id_salle));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public void produitsSalle(int id_salle) throws SQLException {
+        new ParamQuery(data, "select * from produit where id_salle_vente = ?", id_salle);
     }
 
     /**
      * Affiche tous les produits d'une catégorie donnée
-     *
-     * @return PramQuery
      */
-    public ParamQuery produitsCat(String categorie) throws SQLException {
-        try {
-            return (new ParamQuery(data, "SELECT * from PRODUIT where nom_categorie_produit = ?", categorie));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public void produitsCat(String categorie) throws SQLException {
+        new ParamQuery(data, "SELECT * from PRODUIT where nom_categorie_produit = ?", categorie);
     }
 
     /**
@@ -89,20 +71,15 @@ public class Actions {
     /**
      * Compte le nombre de salles de vente
      */
-    public SimpleQuery getNbSallesVentes() throws SQLException {
-        return (new SimpleQuery(data, "select count(id_salle_vente) from salle_vente"));
+    public void getNbSallesVentes() throws SQLException {
+        new SimpleQuery(data, "select count(id_salle_vente) from salle_vente");
     }
 
     /**
      * Renvoie les ventes concernant un produit
      */
-    public ParamQuery ventesProduit(int id_produit) {
-        try {
-            return (new ParamQuery(data, "select id_vente from produit where id_produit = ?", id_produit));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public void ventesProduit(int id_produit) throws SQLException {
+        new ParamQuery(data, "select id_vente from produit where id_produit = ?", id_produit);
     }
 
 
@@ -158,14 +135,8 @@ public class Actions {
     /**
      * Mise en place d'une nouvelle salle de vente (admin)
      */
-    public ParamQuery newSalle(String categorie_produit, int typeEnchere) throws SQLException {
-        try {
-            return (new ParamQuery(data, "insert into SALLE_VENTE values(id_salle_vente.nextval, ?, ?)", categorie_produit, typeEnchere));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-
+    public void newSalle(String categorie_produit, int typeEnchere) throws SQLException {
+        new ParamQuery(data, "insert into SALLE_VENTE values(id_salle_vente.nextval, ?, ?)", categorie_produit, typeEnchere);
     }
     
     /**
@@ -183,19 +154,12 @@ public class Actions {
     /**
      * Insertion d'un nouveau produit
      **/
-    public ParamQuery insertIntoProduit( int idProduit, String nom, int prix, int stock, int id_salle) {
+    public ParamQuery insertIntoProduit( int idProduit, String nom, int prix, int stock, int id_salle) throws SQLException {
         if (stock <= 0) {
             throw new IllegalArgumentException("Le stock doit être strictement positif!");
-
         } else {
-
-            try {
-                return (new ParamQuery(data, "insert into PRODUIT values(?, ?, ?, ?, ?)", idProduit, nom, prix, stock, id_salle));
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            return (new ParamQuery(data, "insert into PRODUIT values(?, ?, ?, ?, ?)", idProduit, nom, prix, stock, id_salle));
         }
-        return null;
     }
 
     /**
@@ -287,9 +251,24 @@ public class Actions {
 
 
 
+    /**
+     * Renvoie la requete commit
+     */
+
+    public SimpleQuery commit() throws SQLException {
+        return (new SimpleQuery(data, "commit"));
+    }
 
     /**
-     * Renvoie la requete Set autocommit of
+     * Renvoie la requete Set autocommit on
+     */
+
+    public SimpleQuery setAutocommitOn() throws SQLException {
+        return (new SimpleQuery(data, "set autocommit on"));
+    }
+
+    /**
+     * Renvoie la requete Set autocommit off
      */
 
     public SimpleQuery setAutocommitOff() throws SQLException {
