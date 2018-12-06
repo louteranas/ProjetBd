@@ -4,6 +4,7 @@ import connexion.DataBaseAccess;
 import requetes.ParamQuery;
 import requetes.SimpleQuery;
 import java.sql.SQLException;
+import java.util.Vector;
 
 
 public class Actions {
@@ -166,6 +167,18 @@ public class Actions {
         return null;
 
     }
+    
+    /**
+     * Mise en place d'une nouvelle categorie de produit (admin)
+     */
+    public void newCat(String categorie_produit) throws SQLException {
+        try {
+            new ParamQuery(data, "insert into CATEGORIE_PRODUIT values(?, ?)", categorie_produit, "nouvelle categorie");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     /**
      * Insertion d'un nouveau produit
@@ -296,5 +309,39 @@ public class Actions {
     public ParamQuery rollback(String savepoint) throws SQLException {
         return new ParamQuery(data, "rollback to ?", savepoint);
     }
+
+	public void getDataEnchere(Vector<Integer> idEnchere, Vector<String> charactEnchere){
+		// TODO Auto-generated method stub
+		try {
+			SimpleQuery req = new SimpleQuery(data, "select * from type_enchere");
+			while (req.getResult().next()) {
+				idEnchere.add(req.getResult().getInt(1));
+				String type = "(";
+	        	if(req.getResult().getString(2) == null) {
+	        		type = type +  "descendante /";
+	        	}
+	        	else {
+	        		type = type + "montante /";
+	        	}
+	        	if(req.getResult().getString(3) != null) {
+	        		type = type + "plusieurs enchères /";
+	        	}
+	        	else {
+	        		type = type + "une enchère /";
+	        	}
+	        	if(req.getResult().getString(4) != null) {
+	        		type = type + "revocable)";
+	        	}
+	        	else {
+	        		type = type + "non revocable)";
+	        	}
+	        	charactEnchere.add(type);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 
 }

@@ -4,6 +4,7 @@ import connexion.*;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Vector;
 
 import Actions.Achat;
@@ -21,40 +22,38 @@ public abstract class Query {
 	/*
 	*Fait la String pour un vainqueur
 	*/
-	public String getLigneVainqueur() throws SQLException{
-		String output = "";
+	public void getLigneVainqueur(ArrayList<String> listeVainqueurs) throws SQLException{
 		ResultSet resultat = this.getResult();
 		ResultSetMetaData rsetmd = resultat.getMetaData();
 		int i = rsetmd.getColumnCount();
 		while (resultat.next()) {
+			String output = "";
 			output = output + "email: " + resultat.getString(1);
-			output = output + " date: " + resultat.getString(2);
-			output = output + " prix unitaire: " + resultat.getString(3);
-			output = output + " quantité: " + resultat.getString(4) + "\n";
+			output = output + "date: " + resultat.getString(2);
+			output = output + "prix unitaire: " + resultat.getString(3);
+			output = output + "quantité: " + resultat.getString(4);
 			//for (int j = 1; j <= i; j++) {
 			//	output = output + resultat.getString(j);
 			//}
+			listeVainqueurs.add(output);
 		}
-		output += "\n";
-		return output;
 	}
 	/*
 	*Fait la String pour le dernier vainqueur qui na pas toute la quantite voulu
 	*/
-	public String getLigneSemiVainqueur(int newQuantite) throws SQLException{
-		String output = "";
+	public void getLigneSemiVainqueur(int newQuantite, ArrayList<String> listeVainqueurs) throws SQLException{
+		
 		ResultSet resultat = this.getResult();
 		ResultSetMetaData rsetmd = resultat.getMetaData();
 		int i = rsetmd.getColumnCount();
 		while (resultat.next()) {
-			output = output + "email: " + resultat.getString(1) ;
-			output = output + " date: " + resultat.getString(2) ;
-			output = output + " prix unitaire: " + resultat.getString(3) ;
-			output = output + " quantité: " + newQuantite;
-
+			String output = "";
+			output = output + "email: " + resultat.getString(1);
+			output = output + "date: " + resultat.getString(2);
+			output = output + "prix unitaire: " + resultat.getString(3);
+			output = output + "quantité: " + newQuantite;
+			listeVainqueurs.add(output);
 		}
-		output += "\n";
-		return output;
 	}
 	public void affichageResultat() throws SQLException{
 		ResultSet resultat = this.getResult();
@@ -184,13 +183,17 @@ public abstract class Query {
 	 * (lorsque le résultat attendu est un id par exemple)
 	 */
 	public int getSimpleResult(ResultSet resultat) throws SQLException {
-		resultat.next();
-		return(resultat.getInt(1));
+		while(resultat.next()) {
+			return(resultat.getInt(1));
+		}
+		return 0;
 	}
 
 	public String getStrResult(ResultSet resultat) throws SQLException {
-		resultat.next();
-		return(resultat.getString(1));
+		while(resultat.next()) {
+			return(resultat.getString(1));
+		}
+		return "";
 	}
 
 

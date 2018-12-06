@@ -48,6 +48,13 @@ public class choixDebut {
 		btnVendre.setBounds(34, 89, 117, 25);
 		btnVendre.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0) {
+				try {
+					sallesVente window = new sallesVente(data, email, frame, "vente");
+					window.frame.setVisible(true);
+					frame.setVisible(false);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
 		});
 		frame.getContentPane().add(btnVendre);
@@ -58,7 +65,7 @@ public class choixDebut {
 		btnAcheter.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					sallesVente window = new sallesVente(data, email, frame);
+					sallesVente window = new sallesVente(data, email, frame, "achat");
 					window.frame.setVisible(true);
 					frame.setVisible(false);
 				} catch (Exception e) {
