@@ -29,9 +29,9 @@ public abstract class Query {
 		while (resultat.next()) {
 			String output = "";
 			output = output + "email: " + resultat.getString(1);
-			output = output + " date: " + resultat.getString(2);
-			output = output + " prix unitaire: " + resultat.getString(3);
-			output = output + " quantité: " + resultat.getString(4);
+			output = output + " || date: " + resultat.getString(2);
+			output = output + " || prix unitaire: " + resultat.getString(3);
+			output = output + " || quantité: " + resultat.getString(4);
 			//for (int j = 1; j <= i; j++) {
 			//	output = output + resultat.getString(j);
 			//}
@@ -49,9 +49,9 @@ public abstract class Query {
 		while (resultat.next()) {
 			String output = "";
 			output = output + "email: " + resultat.getString(1);
-			output = output + "date: " + resultat.getString(2);
-			output = output + "prix unitaire: " + resultat.getString(3);
-			output = output + "quantité: " + newQuantite;
+			output = output + " || date: " + resultat.getString(2);
+			output = output + " || prix unitaire: " + resultat.getString(3);
+			output = output + " || quantité: " + newQuantite;
 			listeVainqueurs.add(output);
 		}
 	}

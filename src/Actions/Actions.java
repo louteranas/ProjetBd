@@ -26,15 +26,15 @@ public class Actions {
      * Exécute la commande pour avoir accès à toutes les salles de vente
      */
 
-    public void affichageSallesDeVente() throws SQLException {
-        new SimpleQuery(data, "SELECT * from SALLE_VENTE");
+    public SimpleQuery affichageSallesDeVente() throws SQLException {
+        return(new SimpleQuery(data, "SELECT * from SALLE_VENTE"));
     }
 
     /**
      * Affiche tous les produits en vente dans la salle de l'id indiqué
      */
-    public void produitsSalle(int id_salle) throws SQLException {
-        new ParamQuery(data, "select * from produit where id_salle_vente = ?", id_salle);
+    public ParamQuery produitsSalle(int id_salle) throws SQLException {
+        return(new ParamQuery(data, "select * from produit where id_salle_vente = ?", id_salle));
     }
 
     /**
@@ -71,15 +71,15 @@ public class Actions {
     /**
      * Compte le nombre de salles de vente
      */
-    public void getNbSallesVentes() throws SQLException {
-        new SimpleQuery(data, "select count(id_salle_vente) from salle_vente");
+    public SimpleQuery getNbSallesVentes() throws SQLException {
+        return(new SimpleQuery(data, "select count(id_salle_vente) from salle_vente"));
     }
 
     /**
      * Renvoie les ventes concernant un produit
      */
-    public void ventesProduit(int id_produit) throws SQLException {
-        new ParamQuery(data, "select id_vente from produit where id_produit = ?", id_produit);
+    public ParamQuery ventesProduit(int id_produit) throws SQLException {
+        return(new ParamQuery(data, "select id_vente from produit where id_produit = ?", id_produit));
     }
 
 
@@ -135,20 +135,15 @@ public class Actions {
     /**
      * Mise en place d'une nouvelle salle de vente (admin)
      */
-    public void newSalle(String categorie_produit, int typeEnchere) throws SQLException {
-        new ParamQuery(data, "insert into SALLE_VENTE values(id_salle_vente.nextval, ?, ?)", categorie_produit, typeEnchere);
+    public ParamQuery newSalle(String categorie_produit, int typeEnchere) throws SQLException {
+        return(new ParamQuery(data, "insert into SALLE_VENTE values(id_salle_vente.nextval, ?, ?)", categorie_produit, typeEnchere));
     }
     
     /**
      * Mise en place d'une nouvelle categorie de produit (admin)
      */
-    public void newCat(String categorie_produit) throws SQLException {
-        try {
-            new ParamQuery(data, "insert into CATEGORIE_PRODUIT values(?, ?)", categorie_produit, "nouvelle categorie");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
+    public ParamQuery newCat(String categorie_produit) throws SQLException {
+        return(new ParamQuery(data, "insert into CATEGORIE_PRODUIT values(?, ?)", categorie_produit, "nouvelle categorie"));
     }
 
     /**

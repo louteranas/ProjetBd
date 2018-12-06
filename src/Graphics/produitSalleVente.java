@@ -8,6 +8,7 @@ import java.util.Vector;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 import Actions.*;
 import connexion.DataBaseAccess;
@@ -76,7 +77,6 @@ public class produitSalleVente {
 			}
 		});
 		frame.getContentPane().add(btnNewButton0);
-
 		for(int j =0; j < nbr_produit; j++) {
 			String nom = produits.elementAt(j);
 			int idProd = idProduit.elementAt(j);
@@ -98,9 +98,16 @@ public class produitSalleVente {
 							}	
 						}
 						else if(besoin.equals("historique")) {
+							Achat ach = new Achat(email, data);
+							//System.out.println(ach.venteFinie(act.getIdVenteProduit(idProd)));
+							//if(ach.venteFinie(act.getIdVenteProduit(idProd))) {
 							historiqueProduit window = new historiqueProduit(data, email, idProd, nom, typeSalle, frame);
 							window.frame.setVisible(true);
 							frame.setVisible(false);
+							//}
+							//else {
+							//	JOptionPane.showMessageDialog(null, "la vente pour ce produit n'est pas finie !");
+							//}
 						}
 					} catch (Exception e) {
 						e.printStackTrace();
