@@ -30,14 +30,14 @@ public class Achat extends Actions {
 
     public boolean venteFinie(int idVente) throws SQLException {
         ParamQuery sq = new ParamQuery(super.data, "select 24*3600*(date_fin_pro - sysdate) from TYPE_VENTE t1 join vente t2 on t1.ID_TYPE_VENTE= t2.ID_TYPE_VENTE where id_vente = ?", idVente );
-        if (!(sq.getSimpleResult(sq.getResult())<=0)){
-            return false;
+        if (sq.getSimpleResult(sq.getResult())<0){
+            return true;
         }
         ParamQuery p = new ParamQuery(super.data, "select stock from produit where id_Produit = ?", this.getIdProduit(idVente));
-        if (p.getSimpleResult(p.getResult()) != 0){
-            return false;
+        if (p.getSimpleResult(p.getResult()) == 0){
+            return true;
         }
-        return true;
+        return false;
     }
 
 

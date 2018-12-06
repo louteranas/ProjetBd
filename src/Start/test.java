@@ -55,16 +55,14 @@ public class test {
 //	}
     public static void main(String[] args) {
         DataBaseAccess data = new DataBaseAccess();
-        Admin act = new Admin("leila.kany@gmail.com", data);
+        Achat act = new Achat("leila.kany@gmail.com", data);
 
         try {
 
-            System.out.println(act.vainqueursAsc(41));
+            System.out.println(act.venteFinie(22));
 
 
         } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
             e.printStackTrace();
         }
     }
