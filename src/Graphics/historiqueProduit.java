@@ -59,7 +59,7 @@ public class historiqueProduit {
 			System.out.println(idVente);
 			ArrayList<String> listeVainqueurs = new ArrayList<>();
 			if(typeSalle) {
-				listeVainqueurs = adm.vainquersAsc(idVente);
+				listeVainqueurs = adm.vainqueursAsc(idVente);
 			}
 			else {
 					ParamQuery req = adm.vainqueursDesc(idVente);
