@@ -59,7 +59,7 @@ public class test {
 
         try {
 
-            System.out.println(act.venteFinie(22));
+            System.out.println(act.prixCourant(43));
 
 
         } catch (SQLException e) {

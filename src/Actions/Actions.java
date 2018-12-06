@@ -185,9 +185,12 @@ public class Actions {
     public int prixCourant(int idVente) throws SQLException {
         int idTypeEnchere = getIdTypeEnchere(getIdSalleVente(idVente));
         ParamQuery sreq;
-        if(enchereMont(idTypeEnchere)){
+        if (enchereMont(idTypeEnchere)) {
             sreq = new ParamQuery(data, "select max(prix_achat) from ENCHERE where id_enchere in (SELECT id_enchere FROM AFFECTATION_ENCHERE where id_vente = ?)", idVente);
-        }else{
+            if(sreq.getSimpleResult(sreq.getResult())==0){
+                sreq = new ParamQuery(data, "select prix_depart from TYPE_VENTE t1 JOIN VENTE t2 ON t1.ID_TYPE_VENTE = t2.ID_TYPE_VENTE where t1.ID_TYPE_VENTE = t2.ID_TYPE_VENTE and t2.id_vente = ?", idVente);
+            }
+        } else {
             sreq = new ParamQuery(data, "select prix_courant from (select prix_depart-(sysdate-DATE_DEBUT)*24*60 as prix_courant, id_vente from TYPE_VENTE t1, VENTE t2 WHERE t1.id_type_vente = t2.id_type_vente) where id_vente = ?", idVente);
         }
         return (sreq.getSimpleResult(sreq.getResult()));
