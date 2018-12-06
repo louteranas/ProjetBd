@@ -22,12 +22,15 @@ public class Admin extends Actions {
     public ArrayList<String>  vainqueursAsc(int idVente) throws SQLException {
         int idProduit = getIdProduit(idVente);
         int stockCourant = getStock(idProduit);
+        System.out.println(stockCourant);
         ArrayList<String> listeVainqueurs= new ArrayList<String>();
         int numVainqueurs = 1;
         int nbEnchere = getNbEnchere(idVente);
         ParamQuery req =new ParamQuery(data, "select * from (select * from (select * from (select email, to_char(date_enchere, 'dd/mm/yyy hh24:mi:ss'), prix_achat , quantite from ENCHERE join affectation_enchere on ENCHERE.ID_ENCHERE = affectation_enchere.ID_ENCHERE where id_vente = ? order by prix_achat desc) where rownum <=1) order by PRIX_ACHAT asc ) where rownum =1", idVente);
         listeVainqueurs.add(req.getLigneVainqueur());
         stockCourant = stockCourant - getQuantite(idVente, numVainqueurs);
+        System.out.println(stockCourant);
+
 
 
         while ( (stockCourant>0) && (numVainqueurs < nbEnchere) ){
@@ -44,6 +47,8 @@ public class Admin extends Actions {
                 listeVainqueurs.add(req.getLigneSemiVainqueur(stockCourant)) ;
                 stockCourant = 0;
             }
+            System.out.println(stockCourant);
+
 
 
         }

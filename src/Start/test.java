@@ -38,7 +38,7 @@ public class test {
         Admin act = new Admin("leila.kany@gmail.com", data);
 
         try {
-            System.out.println(act.vainqueursDesc(22));
+            System.out.println(act.vainqueursAsc(2));
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (Exception e) {
