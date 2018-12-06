@@ -55,11 +55,11 @@ public class test {
 //	}
     public static void main(String[] args) {
         DataBaseAccess data = new DataBaseAccess();
-        Achat act = new Achat("leila.kany@gmail.com", data);
+        Admin act = new Admin("leila.kany@gmail.com", data);
 
         try {
 
-            System.out.println(act.prixCourant(43));
+            System.out.println(act.vainqueursAsc(22));
 
 
         } catch (SQLException e) {

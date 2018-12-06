@@ -25,25 +25,20 @@ public class Admin extends Actions {
         ParamQuery req =new ParamQuery(data, "select * from (select * from (select * from (select email, to_char(date_enchere, 'dd/mm/yyy hh24:mi:ss'), prix_achat , quantite from ENCHERE join affectation_enchere on ENCHERE.ID_ENCHERE = affectation_enchere.ID_ENCHERE where id_vente = ? order by prix_achat desc) where rownum <=1) order by PRIX_ACHAT asc ) where rownum =1", idVente);
         req.getLigneVainqueur(listeVainqueurs);
         stockCourant = stockCourant - getQuantite(idVente, numVainqueurs);
-
-
-
         while ( (stockCourant>0) && (numVainqueurs < nbEnchere) ){
             numVainqueurs += 1;
             //cas ou ce vainqueur a toute la quantite voulu
             if(getQuantite(idVente, numVainqueurs) < stockCourant){
-                stockCourant = stockCourant - getQuantite(idVente, 1);
-                ParamQuery nreq =new ParamQuery(data, "select *from (select email, to_char(date_enchere, 'dd/mm/yyy hh24:mi:ss'), prix_achat, quantite from ENCHERE join affectation_enchere on ENCHERE.ID_ENCHERE = affectation_enchere.ID_ENCHERE where id_vente = ? order by date_enchere desc) where rownum = ?", idVente, numVainqueurs);
+                stockCourant = stockCourant - getQuantite(idVente, numVainqueurs);
+                System.out.println(stockCourant);
+                ParamQuery nreq =new ParamQuery(data, "select * from (select * from (select * from (select email, to_char(date_enchere, 'dd/mm/yyy hh24:mi:ss'), prix_achat , quantite from ENCHERE join affectation_enchere on ENCHERE.ID_ENCHERE = affectation_enchere.ID_ENCHERE where id_vente = ? order by prix_achat desc) where rownum <=?) order by PRIX_ACHAT asc ) where rownum =1", idVente, numVainqueurs);
                 nreq.getLigneVainqueur(listeVainqueurs) ;
             }//cas ou ce vainqueur recupere que le reste du stock
             else{
-                ParamQuery nreq =new ParamQuery(data, "select *from (select email, to_char(date_enchere, 'dd/mm/yyy hh24:mi:ss'), prix_achat from ENCHERE join affectation_enchere on ENCHERE.ID_ENCHERE = affectation_enchere.ID_ENCHERE where id_vente = ? order by date_enchere desc) where rownum = ?", idVente, numVainqueurs);
+                ParamQuery nreq =new ParamQuery(data, "select * from (select * from (select * from (select email, to_char(date_enchere, 'dd/mm/yyy hh24:mi:ss'), prix_achat from ENCHERE join affectation_enchere on ENCHERE.ID_ENCHERE = affectation_enchere.ID_ENCHERE where id_vente = ? order by prix_achat desc)where rownum <=?) order by PRIX_ACHAT asc ) where rownum =1", idVente, numVainqueurs);
                 nreq.getLigneSemiVainqueur(stockCourant, listeVainqueurs) ;
                 stockCourant = 0;
             }
-            System.out.println(stockCourant);
-
-
 
         }
         return  listeVainqueurs;
@@ -55,7 +50,7 @@ public class Admin extends Actions {
      */
     public int getQuantite(int idVente, int i) throws SQLException {
         ParamQuery sreq;
-        sreq = new ParamQuery(data, "select quantite from (select email, to_char(date_enchere, 'dd/mm/yyy hh24:mi:ss'), prix_achat, quantite from ENCHERE join affectation_enchere on ENCHERE.ID_ENCHERE = affectation_enchere.ID_ENCHERE where id_vente = ? order by date_enchere desc) where rownum = ?", idVente, i);
+        sreq = new ParamQuery(data, "select quantite from (select * from (select * from (select email, quantite, to_char(date_enchere, 'dd/mm/yyy hh24:mi:ss'), prix_achat from ENCHERE join affectation_enchere on ENCHERE.ID_ENCHERE = affectation_enchere.ID_ENCHERE where id_vente = ? order by prix_achat desc) where rownum <=?) order by PRIX_ACHAT asc ) where rownum =1", idVente, i);
         return (sreq.getSimpleResult(sreq.getResult()));
     }
 

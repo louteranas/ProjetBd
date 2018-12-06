@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df548718-7983-4229-8514-a60c9068117e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Actions/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/Actions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Start/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -74,7 +74,7 @@
           <entry key="TYPE_VENTE" value="3" />
           <entry key="VENTE" value="8" />
           <entry key="iml" value="1" />
-          <entry key="java" value="18" />
+          <entry key="java" value="19" />
           <entry key="xml" value="14" />
         </counts>
       </usages-collector>
@@ -82,18 +82,18 @@
         <counts>
           <entry key="Database Element" value="25" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="18" />
+          <entry key="JAVA" value="19" />
           <entry key="XML" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8451" />
+          <entry key="java" value="8632" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8451" />
+          <entry key="JAVA" value="8632" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -108,14 +108,23 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7905983">
+    <splitter split-orientation="horizontal" split-proportion="0.49305555">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Actions/Actions.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="189" column="56" selection-start-line="189" selection-start-column="56" selection-end-line="189" selection-end-column="56" />
+                <state relative-caret-position="450">
+                  <caret line="200" column="7" lean-forward="true" selection-start-line="200" selection-start-column="7" selection-end-line="200" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/connexion/DataBaseAccess.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-240">
+                  <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
                 </state>
               </provider>
             </entry>
@@ -123,8 +132,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Start/test.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="355">
-                  <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+                <state relative-caret-position="370">
+                  <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -190,13 +199,14 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Actions/Admin.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+                <state relative-caret-position="285">
+                  <caret line="32" column="34" selection-start-line="32" selection-end-line="33" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#822#830#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -214,7 +224,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Actions/Vente.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="211">
@@ -229,8 +239,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/requetes/Query.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="129">
-                  <caret line="133" column="26" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
+                <state relative-caret-position="180">
+                  <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -263,19 +273,14 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getIdTypeV</find>
-      <find>getId</find>
-      <find>getIdS</find>
       <find>p.getResult())==null</find>
       <find>enchereM</find>
       <find>getIdProduit</find>
       <find>getD</find>
       <find>stock</find>
       <find>getStock</find>
-      <find>getQ</find>
       <find>getQuant</find>
       <find>ventePro</find>
-      <find>getL</find>
       <find>getLi</find>
       <find>venteProduit</find>
       <find>getP</find>
@@ -293,6 +298,11 @@
       <find>ventef</find>
       <find>newV</find>
       <find>prixC</find>
+      <find>conn</find>
+      <find>vainqueu</find>
+      <find>vainqueurs</find>
+      <find>getL</find>
+      <find>getQ</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -310,12 +320,12 @@
         <option value="$PROJECT_DIR$/src/Tests/produitDescendant.java" />
         <option value="$PROJECT_DIR$/src/requetes/ParamQuery.java" />
         <option value="$PROJECT_DIR$/src/Graphics/historiqueProduit.java" />
-        <option value="$PROJECT_DIR$/src/Actions/Admin.java" />
         <option value="$PROJECT_DIR$/src/requetes/Query.java" />
         <option value="$PROJECT_DIR$/src/Actions/Vente.java" />
         <option value="$PROJECT_DIR$/src/Actions/Achat.java" />
-        <option value="$PROJECT_DIR$/src/Start/test.java" />
         <option value="$PROJECT_DIR$/src/Actions/Actions.java" />
+        <option value="$PROJECT_DIR$/src/Start/test.java" />
+        <option value="$PROJECT_DIR$/src/Actions/Admin.java" />
       </list>
     </option>
   </component>
@@ -397,7 +407,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544107679551" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544109370237" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -476,15 +486,15 @@
       <workItem from="1544005570791" duration="8484000" />
       <workItem from="1544081392025" duration="63000" />
       <workItem from="1544086262781" duration="3383000" />
-      <workItem from="1544105316565" duration="2291000" />
+      <workItem from="1544105316565" duration="3993000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37788000" />
+    <option name="totallyTimeSpent" value="39490000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="28" width="1920" height="1018" extended-state="6" />
+    <frame x="0" y="28" width="1920" height="1018" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.10294118" />
@@ -540,13 +550,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/connexion/DataBaseAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/ProjetBd.iml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -626,26 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Actions/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/requetes/SimpleQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graphics/historiqueProduit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -660,30 +643,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/requetes/Query.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="133" column="26" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Actions/Achat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Actions/Vente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -697,19 +660,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Actions/Vente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/connexion/DataBaseAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240">
+          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/requetes/Query.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Actions/Actions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="189" column="56" selection-start-line="189" selection-start-column="56" selection-end-line="189" selection-end-column="56" />
+        <state relative-caret-position="180">
+          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/requetes/SimpleQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Start/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+        <state relative-caret-position="370">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Actions/Admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="32" column="34" selection-start-line="32" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#822#830#0" expanded="true" />
           </folding>
         </state>
       </provider>
