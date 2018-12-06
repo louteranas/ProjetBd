@@ -138,7 +138,7 @@ public class Actions {
     public ParamQuery newSalle(String categorie_produit, int typeEnchere) throws SQLException {
         return(new ParamQuery(data, "insert into SALLE_VENTE values(id_salle_vente.nextval, ?, ?)", categorie_produit, typeEnchere));
     }
-    
+
     /**
      * Mise en place d'une nouvelle categorie de produit (admin)
      */
