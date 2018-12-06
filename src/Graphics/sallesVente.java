@@ -82,6 +82,7 @@ public class sallesVente {
 							window.frame.setVisible(true);
 						}
 						else if(type.equals("historique")) {
+							System.out.println("historique");
 							produitSalleVente window = new produitSalleVente(data, email, idSalle, salle, "historique", frame);
 							window.frame.setVisible(true);
 						}
