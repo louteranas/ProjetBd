@@ -1,12 +1,5 @@
 --Script permettant de peupler la base données
 
---Ajout d'utilisateurs
-
-insert into UTILISATEUR values('pierre@mail.com','Dupont','Pierre','Grenoble');
-insert into UTILISATEUR values('paul@mail.com','Dupond','Paul','Paris');
-insert into UTILISATEUR values('jacques@mail.com','Martin','Jacques','Lyon');
-insert into UTILISATEUR values('martine@mail.com','Untelle','Martine','Tours');
-
 --Ajout de catégories de produits
 insert into CATEGORIE_PRODUIT values('vélo', 'pour se déplacer');
 insert into CATEGORIE_PRODUIT values('électroménager', 'lave-vaisselle, micro-ondes, aspirateur...');
@@ -14,10 +7,16 @@ insert into CATEGORIE_PRODUIT values('ordinateur', 'avec écran et clavier');
 insert into CATEGORIE_PRODUIT values('jouets', 'pour Noël');
 
 --Ajout de tous les types d'enchères
-insert into TYPE_ENCHERE(id_type_enchere.nextval, 'montante', 'oui', 'revocable' );
+insert into TYPE_ENCHERE(id_type_enchere.nextval, 'montante', 'oui', 'revocable');
+insert into TYPE_ENCHERE(id_type_enchere.nextval, 'montante', 'oui', NULL);
+insert into TYPE_ENCHERE(id_type_enchere.nextval, 'montante', NULL, 'revocable');
+insert into TYPE_ENCHERE(id_type_enchere.nextval, 'montante', NULL, NULL);
+
 insert into TYPE_ENCHERE(id_type_enchere.nextval, NULL, 'oui', 'revocable' );
-insert into TYPE_ENCHERE(id_type_enchere.nextval, 'montante', 'oui', NULL );
-insert into TYPE_ENCHERE(id_type_enchere.nextval, 'montante', NULL, NULL );
+insert into TYPE_ENCHERE(id_type_enchere.nextval, NULL, 'oui', NULL);
+insert into TYPE_ENCHERE(id_type_enchere.nextval, NULL, NULL, 'revocable');
+insert into TYPE_ENCHERE(id_type_enchere.nextval, NULL, NULL, NULL);
+
 
 --Ajout de salles de ventes
 insert into SALLE_VENTE values(id_salle_vente.nextval, 'vélo', 1);
