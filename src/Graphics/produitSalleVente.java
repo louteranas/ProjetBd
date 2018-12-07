@@ -130,7 +130,7 @@ public class produitSalleVente {
 			}
 		}
 		else if (besoin.equals("historique")) {
-			System.out.println(produitsFinis.size());
+			//System.out.println(produitsFinis.size());
 			for(int j =0; j < nbrProduitFinis; j++) {
 				String nom = produitsFinis.elementAt(j);
 				int idProd = idProduitFinis.elementAt(j);

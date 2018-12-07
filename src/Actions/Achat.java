@@ -34,7 +34,7 @@ public class Achat extends Actions {
             return true;
         }
         ParamQuery p = new ParamQuery(super.data, "select stock from produit where id_Produit = ?", this.getIdProduit(idVente));
-        if (p.getSimpleResult(p.getResult()) == 0){
+        if (p.getSimpleResult(p.getResult()) <= 0){
             return true;
         }
         return false;
