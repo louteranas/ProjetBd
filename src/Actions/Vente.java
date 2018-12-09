@@ -22,7 +22,7 @@ public class Vente extends Actions {
     /**
      * Insertion d'un type de vente (recupere une duree en h)
      **/
-    private void insertIntoTypeVente(int idVente, int idTypeVente, int prix_depart, int duree) throws SQLException {
+    public void insertIntoTypeVente(int idVente, int idTypeVente, int prix_depart, int duree) throws SQLException {
         int idTypeEnchere = getIdTypeEnchere(getIdSalleVente(idVente));
         int idProduit = getIdProduit(idVente);
         boolean asc = enchereMont(idTypeEnchere);
@@ -38,7 +38,7 @@ public class Vente extends Actions {
             new ParamQuery(data, "insert into TYPE_VENTE values(?, ?, null, sysdate, sysdate + 10/(24*60))", idTypeVente, prix_depart);
 
         }else{
-            new ParamQuery(data, "insert into TYPE_VENTE values(?, ?, sysdate + ?/24, sysdate, ?, sysdate + ?/24)", idTypeVente, prix_depart, duree);
+            new ParamQuery(data, "insert into TYPE_VENTE values(?, ?, sysdate + ?/24, sysdate, sysdate + ?/24)", idTypeVente, prix_depart, duree, duree);
         }
     }
 
