@@ -22,22 +22,6 @@ public class ajoutSalle {
 	private static DataBaseAccess data;
 
 	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					ajoutSalle window = new ajoutSalle();
-//					window.frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
-
-	/**
 	 * Create the application.
 	 * @param frame2 
 	 * @param email2 
