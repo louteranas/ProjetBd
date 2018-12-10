@@ -12,9 +12,20 @@ public class Admin extends Actions {
         super(mail_utilisateur, data);
     }
 
+    /**
+     * Renvoie le liste des vainqueurs pour une vente descendante
+     * @throws SQLException
+     */
     public ParamQuery vainqueursDesc(int idVente) throws SQLException {
         return new ParamQuery(data, "select email, quantite, enchere.PRIX_ACHAT, enchere.DATE_ENCHERE from enchere join AFFECTATION_ENCHERE on enchere.ID_ENCHERE = AFFECTATION_ENCHERE.ID_ENCHERE where id_vente = ?", idVente);
     }
+
+    /**
+     * Renvoie le liste des vainqueurs pour une ventre descendante
+     * @param idVente
+     * @return
+     * @throws SQLException
+     */
 
     public ArrayList<String> vainqueursAsc(int idVente) throws SQLException {
         int idProduit = getIdProduit(idVente);
@@ -52,6 +63,13 @@ public class Admin extends Actions {
         sreq = new ParamQuery(data, "select quantite from (select * from (select * from (select email, quantite, to_char(date_enchere, 'dd/mm/yyy hh24:mi:ss'), prix_achat from ENCHERE join affectation_enchere on ENCHERE.ID_ENCHERE = affectation_enchere.ID_ENCHERE where id_vente = ? order by prix_achat desc) where rownum <=?) order by PRIX_ACHAT asc ) where rownum =1", idVente, i);
         return (sreq.getSimpleResult(sreq.getResult()));
     }
+
+    /**
+     * Renvoie le nombre d'nchères pour une vente
+     * @param idVente
+     * @return
+     * @throws SQLException
+     */
 
     public int getNbEnchere(int idVente) throws SQLException {
         ParamQuery sreq;
