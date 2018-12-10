@@ -1,12 +1,5 @@
 --Script permettant de peupler la base données
 
---Ajout d'utilisateurs
-
-insert into UTILISATEUR values('pierre@mail.com','Dupont','Pierre','Grenoble');
-insert into UTILISATEUR values('paul@mail.com','Dupond','Paul','Paris');
-insert into UTILISATEUR values('jacques@mail.com','Martin','Jacques','Lyon');
-insert into UTILISATEUR values('martine@mail.com','Untelle','Martine','Tours');
-
 --Ajout de catégories de produits
 insert into CATEGORIE_PRODUIT values('vélo', 'pour se déplacer');
 insert into CATEGORIE_PRODUIT values('électroménager', 'lave-vaisselle, micro-ondes, aspirateur...');
@@ -14,10 +7,16 @@ insert into CATEGORIE_PRODUIT values('ordinateur', 'avec écran et clavier');
 insert into CATEGORIE_PRODUIT values('jouets', 'pour Noël');
 
 --Ajout de tous les types d'enchères
-insert into TYPE_ENCHERE(id_type_enchere.nextval, 'montante', 'oui', 'revocable' );
+insert into TYPE_ENCHERE(id_type_enchere.nextval, 'montante', 'oui', 'revocable');
+insert into TYPE_ENCHERE(id_type_enchere.nextval, 'montante', 'oui', NULL);
+insert into TYPE_ENCHERE(id_type_enchere.nextval, 'montante', NULL, 'revocable');
+insert into TYPE_ENCHERE(id_type_enchere.nextval, 'montante', NULL, NULL);
+
 insert into TYPE_ENCHERE(id_type_enchere.nextval, NULL, 'oui', 'revocable' );
-insert into TYPE_ENCHERE(id_type_enchere.nextval, 'montante', 'oui', NULL );
-insert into TYPE_ENCHERE(id_type_enchere.nextval, 'montante', NULL, NULL );
+insert into TYPE_ENCHERE(id_type_enchere.nextval, NULL, 'oui', NULL);
+insert into TYPE_ENCHERE(id_type_enchere.nextval, NULL, NULL, 'revocable');
+insert into TYPE_ENCHERE(id_type_enchere.nextval, NULL, NULL, NULL);
+
 
 --Ajout de salles de ventes
 insert into SALLE_VENTE values(id_salle_vente.nextval, 'vélo', 1);
@@ -45,19 +44,21 @@ insert into PRODUIT values(id_produit.nextval, 'LEGO', 100, 10, 4);
 insert into PRODUIT values(id_produit.nextval, 'peluche', 30, 5, 1);
 
 --Ajout des types de ventes
-insert into TYPE_VENTE values(id_type_vente.nextval, 100, null, sysdate, sysdate + 10/(24*60));
+insert into TYPE_VENTE values(id_type_vente.nextval, 100, null, sysdate+5, sysdate + 10/(24*60));
+insert into TYPE_VENTE values(id_type_vente.nextval, 100, sysdate + 6, sysdate+5, sysdate + 6;
+
 
 --Insertion dans la table vente (une vente par produit)
 insert into VENTE values(id_vente.nextval, 1, 1)
-insert into VENTE values(id_vente.nextval, 1, 2)
+insert into VENTE values(id_vente.nextval, 2, 2)
 insert into VENTE values(id_vente.nextval, 1, 3)
-insert into VENTE values(id_vente.nextval, 1, 4)
+insert into VENTE values(id_vente.nextval, 2, 4)
 insert into VENTE values(id_vente.nextval, 1, 5)
-insert into VENTE values(id_vente.nextval, 1, 6)
+insert into VENTE values(id_vente.nextval, 2, 6)
 insert into VENTE values(id_vente.nextval, 1, 7)
-insert into VENTE values(id_vente.nextval, 1, 8)
+insert into VENTE values(id_vente.nextval, 2, 8)
 insert into VENTE values(id_vente.nextval, 1, 9)
-insert into VENTE values(id_vente.nextval, 1, 10)
+insert into VENTE values(id_vente.nextval, 2, 10)
 insert into VENTE values(id_vente.nextval, 1, 11)
-insert into VENTE values(id_vente.nextval, 1, 12)
+insert into VENTE values(id_vente.nextval, 2, 12)
 insert into VENTE values(id_vente.nextval, 1, 13)

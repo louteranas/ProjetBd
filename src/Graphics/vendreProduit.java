@@ -125,7 +125,8 @@ public class vendreProduit {
 					Vente sell = new Vente(email, data);
 					ArrayList<String> caratProduit = new ArrayList<>();
 					caratProduit.add(caract.getText());
-					sell.newVente(caratProduit, Integer.valueOf(prixDepart.getText()), Integer.valueOf(duree.getText()), nomProduit.getText(), Integer.valueOf(prixRevient.getText()), Integer.valueOf(stock.getText()), idSalle);
+					String time = duree.getText();
+					sell.newVente(caratProduit, Integer.valueOf(prixDepart.getText()), Integer.parseInt(time), nomProduit.getText(), Integer.valueOf(prixRevient.getText()), Integer.valueOf(stock.getText()), idSalle);
 					JOptionPane.showMessageDialog(null, "Vente bien crée !");
 					frame.setVisible(false);
 					parentFrame.setVisible(true);

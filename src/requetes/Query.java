@@ -29,9 +29,9 @@ public abstract class Query {
 		while (resultat.next()) {
 			String output = "";
 			output = output + "email: " + resultat.getString(1);
-			output = output + " || date: " + resultat.getString(2);
 			output = output + " || prix unitaire: " + resultat.getString(3);
-			output = output + " || quantité: " + resultat.getString(4);
+			output = output + " || quantité: " + resultat.getString(2);
+			output = output + " || date: " + resultat.getString(4);
 			//for (int j = 1; j <= i; j++) {
 			//	output = output + resultat.getString(j);
 			//}
@@ -131,25 +131,27 @@ public abstract class Query {
 		return null;
 	}
 	
-	public Vector<String> getProduitSalle(Actions act, Achat achat) throws SQLException{
-		Vector<String> salles = new Vector<String>();
+	public void getProduitSalle(Actions act, Achat achat, Vector<String> produits, Vector<Integer> idProduit) throws SQLException{
         while (this.result.next()) {
-        	if (!achat.venteFinie(act.getIdVenteProduit(Integer.valueOf(this.result.getString(1))))) {
-        		salles.add(this.result.getString(2) + " (stock = " + this.result.getString(4)+ ")");
-        	}
+        	//if (!achat.venteFinie(act.getIdVenteProduit(Integer.valueOf(this.result.getString(1))))) {
+        		produits.add(this.result.getString(2) + " (stock = " + this.result.getString(4)+ ")");
+        		idProduit.add(Integer.valueOf(this.result.getString(1)));
+        	//}
 	    }
-        return salles;
-		
+        	
 	}
+	
+//	public void getProduitSalleFinis(Actions act, Achat achat, Vector<String> produits, Vector<Integer> idProduit) throws SQLException{
+//        while (this.result.next()) {
+//        	if (achat.venteFinie(act.getIdVenteProduit(Integer.valueOf(this.result.getString(1))))) {
+//        		produits.add(this.result.getString(2) + " (stock = " + this.result.getString(4)+ ")");
+//        		idProduit.add(Integer.valueOf(this.result.getString(1)));
+//        	}
+//	    }
+//        	
+//	}
 
-	public Vector<Integer> getIdProduitSalle() throws SQLException{
-		Vector<Integer> salles = new Vector<Integer>();
-        while (this.result.next()) {
-        	salles.add(Integer.valueOf(this.result.getString(1)));
-	    }
-        return salles;
-		
-	}
+	
 	
 	public boolean affichageResultatUser(ResultSet resultat) throws SQLException{
         ResultSetMetaData rsetmd = resultat.getMetaData();

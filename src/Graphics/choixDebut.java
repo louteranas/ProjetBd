@@ -36,12 +36,12 @@ public class choixDebut {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 200);
+		frame.setBounds(100, 100, 560, 230);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblQueVoulezVous = new JLabel("Que voulez vous faire ?");
-		lblQueVoulezVous.setBounds(134, 24, 254, 23);
+		lblQueVoulezVous.setBounds(200, 24, 254, 23);
 		frame.getContentPane().add(lblQueVoulezVous);
 		
 		JButton btnVendre = new JButton("Vendre");
@@ -59,9 +59,24 @@ public class choixDebut {
 		});
 		frame.getContentPane().add(btnVendre);
 		
+		JButton btnDeco = new JButton("Deconnexion");
+		btnDeco.setBounds(200, 140, 125, 25);
+		btnDeco.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+					data.getConn().close();
+					login window = new login();
+					window.frame.setVisible(true);
+					frame.dispose();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		frame.getContentPane().add(btnDeco);
 		
 		JButton btnAcheter = new JButton("Acheter");
-		btnAcheter.setBounds(282, 89, 117, 25);
+		btnAcheter.setBounds(392, 89, 117, 25);
 		btnAcheter.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0) {
 				try {
