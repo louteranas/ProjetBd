@@ -44,7 +44,6 @@ public class produitSalleVente {
 		Actions act = new Actions(email, data);
 		Achat achat = new Achat(email, data);
 
-		System.out.println("on est en salle d'id"+ produitSalleVente.idSalleVente);
 		Vector<String> produits = new Vector<>();
 		Vector<Integer> idProduits = new Vector<>();
 		act.produitsSalle(produitSalleVente.idSalleVente).getProduitSalle(act, achat, produits, idProduits);
@@ -130,7 +129,7 @@ public class produitSalleVente {
 			}
 		}
 		else if (besoin.equals("historique")) {
-			//System.out.println(produitsFinis.size());
+
 			for(int j =0; j < nbrProduitFinis; j++) {
 				String nom = produitsFinis.elementAt(j);
 				int idProd = idProduitFinis.elementAt(j);
