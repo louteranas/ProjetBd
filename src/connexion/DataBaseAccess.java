@@ -25,6 +25,7 @@ public class DataBaseAccess {
 			System.out.print("Connecting to the database... "); 
 			this.conn = DriverManager.getConnection(DataBaseAccess.CONN_URL, this.USER, this.password);
 			System.out.println("connected");
+			conn.setAutoCommit(false);
 		} 
 		catch (SQLException excep) {
 			System.err.println("failed");

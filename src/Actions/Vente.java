@@ -81,7 +81,6 @@ public class Vente extends Actions {
         insertIntoTypeVente(idVente, idTypeVente, prixDepart, duree);
         insertIntoVente(idVente, idTypeVente, idProduit);
         this.commit();
-
     }
 
 }
