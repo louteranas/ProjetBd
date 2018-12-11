@@ -95,6 +95,7 @@ public class ajoutSalle {
 						if (box.isSelected() && !nomSalle.getText().isEmpty()) {
 							act.newCat(nomSalle.getText());
 							act.newSalle(nomSalle.getText(), idEnchere.elementAt(checkBox.indexOf(box)));
+							act.commit();
 							JOptionPane.showMessageDialog(null, "Salle bien crée !");
 						}
 						login window = new login();
