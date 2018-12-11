@@ -1,8 +1,8 @@
 
-insert into CATEGORIE_PRODUIT values('vélo', 'pour se déplacer');
---insert into CATEGORIE_PRODUIT values('électroménager', 'lave-vaisselle, micro-ondes, aspirateur...');
---insert into CATEGORIE_PRODUIT values('ordinateur', 'avec écran et clavier');
---insert into CATEGORIE_PRODUIT values('jouets', 'pour Noël');
+insert into CATEGORIE_PRODUIT values('velo', 'pour se déplacer');
+--insert into CATEGORIE_PRODUIT values('electroménager', 'lave-vaisselle, micro-ondes, aspirateur...');
+--insert into CATEGORIE_PRODUIT values('ordinateur', 'avec ecran et clavier');
+--insert into CATEGORIE_PRODUIT values('jouets', 'pour Noel');
 
   --Ajout de tous les types d'enchères
   insert into TYPE_ENCHERE values(1, 'montante', 'oui', 'revocable');
@@ -17,5 +17,5 @@ insert into CATEGORIE_PRODUIT values('vélo', 'pour se déplacer');
 
 
 --Ajout de salles de ventes
-insert into SALLE_VENTE values(1, 'vélo', 1);
+insert into SALLE_VENTE values(1, 'velo', 1);
 commit;
