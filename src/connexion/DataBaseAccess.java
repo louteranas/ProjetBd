@@ -13,8 +13,8 @@ public class DataBaseAccess {
 	private Connection conn;
 	
 	public DataBaseAccess() {
-		this.USER = "loutera";
-		this.password = "loutera";
+		this.USER = "kanyl";
+		this.password = "kanyl";
 		try {
 			// initialisation du driver Oracle
 			System.out.print("loading necessary drivers.."); 
