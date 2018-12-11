@@ -64,6 +64,7 @@ public class choixDebut {
 		btnDeco.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0) {
 				try {
+					data.getConn().setAutoCommit(true);
 					data.getConn().close();
 					login window = new login();
 					window.frame.setVisible(true);
