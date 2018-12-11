@@ -6,10 +6,7 @@
     </root>
     <schema id="2" parent="1" name="LOUTERA">
       <ObjectId>2462</ObjectId>
-      <IntrospectionTimestamp>2018-12-09.20:47:42</IntrospectionTimestamp>
-      <CreatedTimestamp>2018-11-15.11:00:09</CreatedTimestamp>
-      <ModifiedTimestamp>2018-12-04.19:05:26</ModifiedTimestamp>
-      <CommentsHash>43803236445087</CommentsHash>
+      <IntrospectionTimestamp>2018-12-11.17:36:38</IntrospectionTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -642,6 +639,12 @@
     </schema>
     <schema id="212" parent="1" name="KANYL">
       <ObjectId>2433</ObjectId>
+      <IntrospectionTimestamp>2018-12-11.17:36:38</IntrospectionTimestamp>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
+      <CommentsHash>43804294574178</CommentsHash>
+      <Current>1</Current>
+      <Visible>1</Visible>
     </schema>
     <schema id="213" parent="1" name="KHEYM">
       <ObjectId>2434</ObjectId>
@@ -1378,94 +1381,94 @@
     <schema id="457" parent="1" name="XS$NULL">
       <ObjectId>2147483638</ObjectId>
     </schema>
-    <sequence id="458" parent="2" name="ID_ENCHERE">
-      <ObjectId>1140805</ObjectId>
-      <CreatedTimestamp>2018-11-26.12:51:11</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-26.12:51:11</ModifiedTimestamp>
-      <SequenceIdentity>1..99999999</SequenceIdentity>
+    <sequence id="458" parent="212" name="ID_ENCHERE">
+      <ObjectId>1219714</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
+      <SequenceIdentity>10..99999999</SequenceIdentity>
     </sequence>
-    <sequence id="459" parent="2" name="ID_PRODUIT">
-      <ObjectId>1139356</ObjectId>
-      <CreatedTimestamp>2018-11-26.11:15:31</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-26.11:15:31</ModifiedTimestamp>
-      <SequenceIdentity>1</SequenceIdentity>
+    <sequence id="459" parent="212" name="ID_PRODUIT">
+      <ObjectId>1219715</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
+      <SequenceIdentity>20</SequenceIdentity>
     </sequence>
-    <sequence id="460" parent="2" name="ID_SALLE_VENTE">
-      <ObjectId>1139354</ObjectId>
-      <CreatedTimestamp>2018-11-26.11:15:04</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-26.11:15:04</ModifiedTimestamp>
-      <SequenceIdentity>1</SequenceIdentity>
+    <sequence id="460" parent="212" name="ID_SALLE_VENTE">
+      <ObjectId>1219716</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
+      <SequenceIdentity>10</SequenceIdentity>
     </sequence>
-    <sequence id="461" parent="2" name="ID_TYPE_VENTE">
-      <ObjectId>1139359</ObjectId>
-      <CreatedTimestamp>2018-11-26.11:15:57</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-26.11:15:57</ModifiedTimestamp>
-      <SequenceIdentity>1</SequenceIdentity>
+    <sequence id="461" parent="212" name="ID_TYPE_VENTE">
+      <ObjectId>1219717</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
+      <SequenceIdentity>10</SequenceIdentity>
     </sequence>
-    <sequence id="462" parent="2" name="ID_VENTE">
-      <ObjectId>1140722</ObjectId>
-      <CreatedTimestamp>2018-11-26.12:49:22</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-26.12:49:22</ModifiedTimestamp>
-      <SequenceIdentity>1..99999999999</SequenceIdentity>
+    <sequence id="462" parent="212" name="ID_VENTE">
+      <ObjectId>1219718</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
+      <SequenceIdentity>20..99999999999</SequenceIdentity>
     </sequence>
-    <table id="463" parent="2" name="AFFECTATION_ENCHERE">
-      <ObjectId>1119899</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:44:30</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-21.12:37:08</ModifiedTimestamp>
+    <table id="463" parent="212" name="AFFECTATION_ENCHERE">
+      <ObjectId>1219712</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="464" parent="2" name="CARACTERISTIQUES">
-      <ObjectId>1119903</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:50:50</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-21.12:45:21</ModifiedTimestamp>
+    <table id="464" parent="212" name="CARACTERISTIQUES">
+      <ObjectId>1219707</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="465" parent="2" name="CATEGORIE_PRODUIT">
-      <ObjectId>1119799</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:16:07</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-15.11:16:30</ModifiedTimestamp>
+    <table id="465" parent="212" name="CATEGORIE_PRODUIT">
+      <ObjectId>1219701</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="466" parent="2" name="ENCHERE">
-      <ObjectId>1119797</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:11:52</CreatedTimestamp>
-      <ModifiedTimestamp>2018-12-04.19:05:26</ModifiedTimestamp>
+    <table id="466" parent="212" name="ENCHERE">
+      <ObjectId>1219708</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="467" parent="2" name="PRODUIT">
-      <ObjectId>1119874</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:32:53</CreatedTimestamp>
-      <ModifiedTimestamp>2018-12-04.17:21:35</ModifiedTimestamp>
+    <table id="467" parent="212" name="PRODUIT">
+      <ObjectId>1219705</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="468" parent="2" name="SALLE_VENTE">
-      <ObjectId>1119825</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:26:41</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-21.12:52:04</ModifiedTimestamp>
+    <table id="468" parent="212" name="SALLE_VENTE">
+      <ObjectId>1219703</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="469" parent="2" name="TYPE_ENCHERE">
-      <ObjectId>1119801</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:17:57</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-15.11:25:29</ModifiedTimestamp>
+    <table id="469" parent="212" name="TYPE_ENCHERE">
+      <ObjectId>1219699</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="470" parent="2" name="TYPE_VENTE">
-      <ObjectId>1119774</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:04:51</CreatedTimestamp>
-      <ModifiedTimestamp>2018-12-04.15:21:43</ModifiedTimestamp>
+    <table id="470" parent="212" name="TYPE_VENTE">
+      <ObjectId>1219697</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="471" parent="2" name="UTILISATEUR">
-      <ObjectId>1119773</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:00:09</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-15.11:10:51</ModifiedTimestamp>
+    <table id="471" parent="212" name="UTILISATEUR">
+      <ObjectId>1219695</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="472" parent="2" name="VENTE">
-      <ObjectId>1119793</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:09:27</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-21.13:19:29</ModifiedTimestamp>
+    <table id="472" parent="212" name="VENTE">
+      <ObjectId>1219710</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <column id="473" parent="463" name="EMAIL">
@@ -1484,9 +1487,9 @@
       <NotNull>1</NotNull>
     </column>
     <index id="476" parent="463" name="AFFECTATION_ENCHERE_PK">
-      <ObjectId>1119900</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:44:30</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-15.11:44:30</ModifiedTimestamp>
+      <ObjectId>1219713</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TablespaceName>USERS</TablespaceName>
       <ColNames>EMAIL
 ID_ENCHERE
@@ -1494,7 +1497,7 @@ ID_VENTE</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="477" parent="463" name="AFFECTATION_ENCHERE_PK">
-      <ModifiedTimestamp>2018-11-15.11:44:30</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>EMAIL
 ID_ENCHERE
 ID_VENTE</ColNames>
@@ -1503,25 +1506,25 @@ ID_VENTE</ColNames>
       <Primary>1</Primary>
     </key>
     <foreign-key id="478" parent="463" name="FK_EMAIL">
-      <ModifiedTimestamp>2018-11-21.12:36:50</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>EMAIL</ColNames>
-      <RefSchemaName>LOUTERA</RefSchemaName>
+      <RefSchemaName>KANYL</RefSchemaName>
       <RefTableName>UTILISATEUR</RefTableName>
       <RefKeyName>UTILISATEUR_PK</RefKeyName>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="479" parent="463" name="FK_ID_ENCHERE">
-      <ModifiedTimestamp>2018-11-21.12:36:59</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>ID_ENCHERE</ColNames>
-      <RefSchemaName>LOUTERA</RefSchemaName>
+      <RefSchemaName>KANYL</RefSchemaName>
       <RefTableName>ENCHERE</RefTableName>
       <RefKeyName>ENCHERE_PK</RefKeyName>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="480" parent="463" name="FK_ID_VENTE">
-      <ModifiedTimestamp>2018-11-21.12:37:08</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>ID_VENTE</ColNames>
-      <RefSchemaName>LOUTERA</RefSchemaName>
+      <RefSchemaName>KANYL</RefSchemaName>
       <RefTableName>VENTE</RefTableName>
       <RefKeyName>VENTE_PK</RefKeyName>
       <OnDelete>cascade</OnDelete>
@@ -1537,9 +1540,9 @@ ID_VENTE</ColNames>
       <NotNull>1</NotNull>
     </column>
     <foreign-key id="483" parent="464" name="FK_PRODUIT">
-      <ModifiedTimestamp>2018-11-21.12:45:21</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>ID_PRODUIT</ColNames>
-      <RefSchemaName>LOUTERA</RefSchemaName>
+      <RefSchemaName>KANYL</RefSchemaName>
       <RefTableName>PRODUIT</RefTableName>
       <RefKeyName>PRODUIT_PK</RefKeyName>
       <OnDelete>cascade</OnDelete>
@@ -1554,15 +1557,15 @@ ID_VENTE</ColNames>
       <DataType>VARCHAR2(100 byte)|0s</DataType>
     </column>
     <index id="486" parent="465" name="CATEGORIE_PRODUIT_PK">
-      <ObjectId>1119800</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:16:07</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-15.11:16:07</ModifiedTimestamp>
+      <ObjectId>1219702</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TablespaceName>USERS</TablespaceName>
       <ColNames>NOM_CATEGORIE_PRODUIT</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="487" parent="465" name="CATEGORIE_PRODUIT_PK">
-      <ModifiedTimestamp>2018-11-15.11:16:07</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>NOM_CATEGORIE_PRODUIT</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>CATEGORIE_PRODUIT_PK</UnderlyingIndexName>
@@ -1589,22 +1592,22 @@ ID_VENTE</ColNames>
       <NotNull>1</NotNull>
     </column>
     <index id="492" parent="466" name="ENCHERE_PK">
-      <ObjectId>1119798</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:11:52</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-15.11:11:52</ModifiedTimestamp>
+      <ObjectId>1219709</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TablespaceName>USERS</TablespaceName>
       <ColNames>ID_ENCHERE</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="493" parent="466" name="ENCHERE_PK">
-      <ModifiedTimestamp>2018-11-15.11:11:52</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>ID_ENCHERE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>ENCHERE_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <check id="494" parent="466" name="ENCHERE_CHK1">
-      <ModifiedTimestamp>2018-12-04.19:05:26</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>QUANTITE</ColNames>
       <Predicate>QUANTITE &gt; 0</Predicate>
     </check>
@@ -1625,7 +1628,7 @@ ID_VENTE</ColNames>
     </column>
     <column id="498" parent="467" name="STOCK">
       <Position>4</Position>
-      <Comment>Par défaut il y a un stock de 1.</Comment>
+      <Comment>Par d¿¿faut il y a un stock de 1.</Comment>
       <DataType>NUMBER(*)|0s</DataType>
       <DefaultExpression>1</DefaultExpression>
     </column>
@@ -1635,30 +1638,30 @@ ID_VENTE</ColNames>
       <NotNull>1</NotNull>
     </column>
     <index id="500" parent="467" name="PRODUIT_PK">
-      <ObjectId>1119875</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:32:53</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-15.11:32:53</ModifiedTimestamp>
+      <ObjectId>1219706</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TablespaceName>USERS</TablespaceName>
       <ColNames>ID_PRODUIT</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="501" parent="467" name="PRODUIT_PK">
-      <ModifiedTimestamp>2018-11-15.11:32:53</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>ID_PRODUIT</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>PRODUIT_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="502" parent="467" name="FK_IDSALLEVENTE">
-      <ModifiedTimestamp>2018-11-21.12:51:18</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>ID_SALLE_VENTE</ColNames>
-      <RefSchemaName>LOUTERA</RefSchemaName>
+      <RefSchemaName>KANYL</RefSchemaName>
       <RefTableName>SALLE_VENTE</RefTableName>
       <RefKeyName>SALLE_VENTE_PK</RefKeyName>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
     <check id="503" parent="467" name="PRODUIT_CHK1">
-      <ModifiedTimestamp>2018-12-04.17:21:35</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>STOCK</ColNames>
       <Predicate>STOCK &gt; -1</Predicate>
     </check>
@@ -1678,32 +1681,32 @@ ID_VENTE</ColNames>
       <NotNull>1</NotNull>
     </column>
     <index id="507" parent="468" name="SALLE_VENTE_PK">
-      <ObjectId>1119826</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:26:41</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-15.11:26:41</ModifiedTimestamp>
+      <ObjectId>1219704</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TablespaceName>USERS</TablespaceName>
       <ColNames>ID_SALLE_VENTE</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="508" parent="468" name="SALLE_VENTE_PK">
-      <ModifiedTimestamp>2018-11-15.11:26:41</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>ID_SALLE_VENTE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>SALLE_VENTE_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="509" parent="468" name="FK_CATEGORIEPRODUCT">
-      <ModifiedTimestamp>2018-11-21.12:52:04</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>NOM_CATEGORIE_PRODUIT</ColNames>
-      <RefSchemaName>LOUTERA</RefSchemaName>
+      <RefSchemaName>KANYL</RefSchemaName>
       <RefTableName>CATEGORIE_PRODUIT</RefTableName>
       <RefKeyName>CATEGORIE_PRODUIT_PK</RefKeyName>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="510" parent="468" name="FK_TYPEENCHERE">
-      <ModifiedTimestamp>2018-11-21.12:52:04</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>ID_TYPE_ENCHERE</ColNames>
-      <RefSchemaName>LOUTERA</RefSchemaName>
+      <RefSchemaName>KANYL</RefSchemaName>
       <RefTableName>TYPE_ENCHERE</RefTableName>
       <RefKeyName>TYPE_ENCHERE_PK</RefKeyName>
       <OnDelete>cascade</OnDelete>
@@ -1715,29 +1718,29 @@ ID_VENTE</ColNames>
     </column>
     <column id="512" parent="469" name="MONTANTE_DESCENDANTE">
       <Position>2</Position>
-      <Comment>Montante si contient qq chose, Si null, alors l&apos;enchère est de type descendante</Comment>
+      <Comment>Montante si contient qq chose, Si null, alors l&apos;ench¿¿re est de type descendante</Comment>
       <DataType>VARCHAR2(20 byte)|0s</DataType>
     </column>
     <column id="513" parent="469" name="PLUSIEURS_ENCHERES">
       <Position>3</Position>
-      <Comment>Si null, alors l&apos;enchère n&apos;accepte pas plusieurs enchères du même utilisateur. Sinon, elle l&apos;accepte</Comment>
+      <Comment>Si null, alors l&apos;ench¿¿re n&apos;accepte pas plusieurs ench¿¿res du m¿¿me utilisateur. Sinon, elle l&apos;accepte </Comment>
       <DataType>VARCHAR2(20 byte)|0s</DataType>
     </column>
     <column id="514" parent="469" name="REVOCABLE">
       <Position>4</Position>
-      <Comment>Si null, alors l&apos;enchère n&apos;est pas revocable. Sinon, elle l&apos;est .</Comment>
+      <Comment>Si null, alors l&apos;ench¿¿re n&apos;est pas revocable. Sinon, elle l&apos;est .</Comment>
       <DataType>VARCHAR2(20 byte)|0s</DataType>
     </column>
     <index id="515" parent="469" name="TYPE_ENCHERE_PK">
-      <ObjectId>1119802</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:18:40</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-15.11:18:40</ModifiedTimestamp>
+      <ObjectId>1219700</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TablespaceName>USERS</TablespaceName>
       <ColNames>ID_TYPE_ENCHERE</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="516" parent="469" name="TYPE_ENCHERE_PK">
-      <ModifiedTimestamp>2018-11-15.11:18:40</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>ID_TYPE_ENCHERE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>TYPE_ENCHERE_PK</UnderlyingIndexName>
@@ -1761,7 +1764,7 @@ ID_VENTE</ColNames>
     </column>
     <column id="520" parent="470" name="DATE_DEBUT">
       <Position>4</Position>
-      <Comment>date de debut de vente (date d&apos;ajout du produit à la vente)</Comment>
+      <Comment>date de debut de vente (date d&apos;ajout du produit ¿¿ la vente)</Comment>
       <DataType>DATE|0s</DataType>
       <NotNull>1</NotNull>
     </column>
@@ -1771,15 +1774,15 @@ ID_VENTE</ColNames>
       <NotNull>1</NotNull>
     </column>
     <index id="522" parent="470" name="TYPE_VENTE_PK">
-      <ObjectId>1119794</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:10:36</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-15.11:10:36</ModifiedTimestamp>
+      <ObjectId>1219698</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TablespaceName>USERS</TablespaceName>
       <ColNames>ID_TYPE_VENTE</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="523" parent="470" name="TYPE_VENTE_PK">
-      <ModifiedTimestamp>2018-11-15.11:10:36</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>ID_TYPE_VENTE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>TYPE_VENTE_PK</UnderlyingIndexName>
@@ -1806,15 +1809,15 @@ ID_VENTE</ColNames>
       <NotNull>1</NotNull>
     </column>
     <index id="528" parent="471" name="UTILISATEUR_PK">
-      <ObjectId>1119795</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:10:51</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-15.11:10:51</ModifiedTimestamp>
+      <ObjectId>1219696</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TablespaceName>USERS</TablespaceName>
       <ColNames>EMAIL</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="529" parent="471" name="UTILISATEUR_PK">
-      <ModifiedTimestamp>2018-11-15.11:10:51</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>EMAIL</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>UTILISATEUR_PK</UnderlyingIndexName>
@@ -1836,32 +1839,32 @@ ID_VENTE</ColNames>
       <NotNull>1</NotNull>
     </column>
     <index id="533" parent="472" name="VENTE_PK">
-      <ObjectId>1119796</ObjectId>
-      <CreatedTimestamp>2018-11-15.11:11:03</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-15.11:11:03</ModifiedTimestamp>
+      <ObjectId>1219711</ObjectId>
+      <CreatedTimestamp>2018-12-11.17:32:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <TablespaceName>USERS</TablespaceName>
       <ColNames>ID_VENTE</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="534" parent="472" name="VENTE_PK">
-      <ModifiedTimestamp>2018-11-15.11:11:03</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>ID_VENTE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>VENTE_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="535" parent="472" name="FK_TYPEVENTE">
-      <ModifiedTimestamp>2018-11-21.12:30:05</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>ID_TYPE_VENTE</ColNames>
-      <RefSchemaName>LOUTERA</RefSchemaName>
+      <RefSchemaName>KANYL</RefSchemaName>
       <RefTableName>TYPE_VENTE</RefTableName>
       <RefKeyName>TYPE_VENTE_PK</RefKeyName>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="536" parent="472" name="FK_ID_PRODUIT">
-      <ModifiedTimestamp>2018-11-21.13:19:29</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-12-11.17:32:32</ModifiedTimestamp>
       <ColNames>ID_PRODUIT</ColNames>
-      <RefSchemaName>LOUTERA</RefSchemaName>
+      <RefSchemaName>KANYL</RefSchemaName>
       <RefTableName>PRODUIT</RefTableName>
       <RefKeyName>PRODUIT_PK</RefKeyName>
       <OnDelete>cascade</OnDelete>

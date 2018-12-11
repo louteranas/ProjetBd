@@ -19,5 +19,6 @@ public class AjoutUtilisateur {
 		this.addresse = addresse;
 		String addUser = "insert into utilisateur values('"+email+"','"+nom+"','"+prenom+"','"+addresse+"')";
 		SimpleQuery add = new SimpleQuery(this.data, addUser);
+		new SimpleQuery(this.data, "commit" );
 	}
 }
